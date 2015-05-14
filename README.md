@@ -3,13 +3,19 @@
 xway is an opensource project to update your home router into a full capable gateway for more than just WiFi. 
 You can download now our Raspberry Pi Distributions and put your dev skills to test.
 
-http://j.mp/xyos-for-rpi2
+Or you can join the community! Visit http://bit.ly/1FfOLZS
 
-Or you can join the community!
+## Download the xway os
+#### <a href="http://bit.ly/1dSz4NS">Raspberry Pi B, B+ Distro</a>
+#### <a href="http://bit.ly/1H3Sucm">Raspberry Pi 2 Distro</a>
 
-Visit http://bit.ly/1FfOLZS
+## Get Started!
+* <a href="https://github.com/netbeast-co/xway/wiki/Build-your-own-xway">What is xway? Build your own with Raspberry Pi!</a>
+* <a href="https://github.com/netbeast-co/xway/wiki/Install-your-own-app-into-xway">Develop and install your 1st app into xway</a>
+* <a href="https://github.com/netbeast-co/xway/wiki/Python-apps-in-xway">Python apps in xway</a>
+* <a href="https://github.com/netbeast-co/xway/wiki/How-to-set-a-logo-for-your-application">Set a logo for your applications</a>
 
-### xway project roadmap
+## xway project roadmap
 - [x] Raspberry Pi lightweight distro
  - [x] <a href="http://bit.ly/1dSz4NS">Raspberry Pi B, B+</a>
  - [x] <a href="http://bit.ly/1H3Sucm">Raspberry Pi 2</a>
