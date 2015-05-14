@@ -39,3 +39,6 @@ Or you can join the community! Visit http://bit.ly/1FfOLZS
   - [ ] Cloud services
 - [ ] Go native in mobile devices
 - [ ] Whatever awsome things you like to be in! Join our community or fork any of our current projects! http://apps.xway.io
+
+### Chat with us
+We are at gitter: http://bit.ly/1dQmFKt
