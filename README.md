@@ -45,3 +45,6 @@ Or you can join the community! Visit http://bit.ly/1FfOLZS
 
 ### Chat with us
 We are at gitter: http://bit.ly/1dQmFKt
+
+<br/>
+<img src="https://github.com/netbeast-co/xway/blob/master/img/open-source.png?raw=true" height="140px" width="auto"/><img src="https://github.com/netbeast-co/xway/blob/master/img/open-hw.png?raw=true" height="140px" width="auto"/>
