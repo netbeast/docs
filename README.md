@@ -15,6 +15,9 @@ Or you can join the community! Visit http://bit.ly/1FfOLZS
 * <a href="https://github.com/netbeast-co/xway/wiki/Python-apps-in-xway">Python apps in xway</a>
 * <a href="https://github.com/netbeast-co/xway/wiki/How-to-set-a-logo-for-your-application">Set a logo for your applications</a>
 
+## Report an issue or ask us
+<img src="https://github.com/netbeast-co/xway/blob/master/img/Screen%20Shot%202015-05-16%20at%2020.28.52.png?raw=true" />
+
 ## xway project roadmap
 - [x] Raspberry Pi lightweight distro
  - [x] <a href="http://bit.ly/1dSz4NS">Raspberry Pi B, B+</a>
