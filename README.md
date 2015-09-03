@@ -5,6 +5,8 @@ You can download now our Raspberry Pi Distributions and put your dev skills to t
 
 Or you can join the community! Visit http://bit.ly/1FfOLZS
 
+> Warning: This repo will pass to be called "router" in mid October 2015.
+
 ## Download the xway os
 #### <a href="http://bit.ly/1dSz4NS">Raspberry Pi B, B+ Distro</a>
 #### <a href="http://bit.ly/1H3Sucm">Raspberry Pi 2 Distro</a>
