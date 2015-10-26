@@ -14,20 +14,47 @@ In order to start developing applications or just trying our system, we propose:
 Under Development
 
 #### Dashboard
-You can install our **Netbeast dashboard** in your pc, and try how it looks. 
+
+**Prerequisites**
+
+You need to install: 
+- [nodejs](https://nodejs.org/en/download/) 
+
+If you are running on linux based system just:
+```
+sudo apt-get install nodejs
+```
+- npm
+
+Once you install Nodejs, npm is included. 
+
+**Install Netbeast Dashboard**
+
+You can install our dashboard in your pc, and try how it looks. Open your terminal and run:
 
 ```
-npm install netbeast
+sudo npm install -g nb-dashboard
 ```
+
+If no erro appears, you will have installed the **Netbeast Dashboard** successfully. Now, let's see how it looks like. Open a terminal and run:
+```
+nb-dashboard --port 3000
+```
+
+Then open your browser and type:
+```
+localhost:3000
+```
+
+And you will see the **Netbeast Dashboard** running on your pc. 
+
+If you want to see how to install an example application, go to our [WIKI](https://github.com/netbeast-co/docs/wiki) or just go to **Develope**r secction
 
 ##Developer
 
 As developer, you can access to our full project documentation [WIKI](https://github.com/netbeast-co/docs/wiki)
 
 You can also join the **Netbeast community** [Netbeast](http://bit.ly/1FfOLZS)
-
-#### Get Started!
-Aplicación con código.
 
 #### Wiki
 
