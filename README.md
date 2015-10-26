@@ -110,36 +110,25 @@ Go our wiki site [WIKI](https://github.com/netbeast-co/docs/wiki) where we publi
 * staff@netbeast.co
 
 ## Netbeast Roadmap
-- [x] Raspberry Pi lightweight distro
- - [x] <a href="http://bit.ly/1dSz4NS">Raspberry Pi B, B+</a>
- - [x] <a href="http://bit.ly/1H3Sucm">Raspberry Pi 2</a>
- - [x] node.js apps
- - [x] python apps
-- [x] [Real time dashboard in node.js](http://bit.ly/1IAsFUm)
- - [x] cross-platform notification system
- - [x] Install from tar.gz
- - [x] Install from any git service
- - [ ] Launch apps on start
- - [ ] Launch apps by indepent users
-- [ ] Resources API
- - [x] actions
- - [ ] events
- - [x] node.js wrapper
-- [x] <a href="http://bit.ly/1AZ3uDk">Command line tool</a>: `npm install -g router`
- - [x] Scaffold apps
- - [x] Package apps
- - [x] Find routers in local network using nmap
- - [x] Install apps to router from command line: `router install home.router`
- - [x] Publish apps to market: `router publish` – *In development*
-- [x] <a href="http://bit.ly/1IUwHpC">Beta of the marketplace</a>
-  - [x] Publish from GitHub
-  - [x] Publish from tar.gz
-  - [ ] Open to all developers
-  - [ ] Monetization system
-  - [ ] Copyright protection
-  - [x] Cloud services
-- [ ] Go native in mobile devices
-- [ ] Whatever awesome things you like to be in! Join our community or fork any of our current projects! 
+- Beta (November 9th)
+ - [x] Philips Hue Support
+ - [x] Wemo Lights Support
+ - [x] Wemo Plug Support
+ - [ ] Lifx Support
+ - [ ] Lockitron Support
+ - [ ] Raspberry Pi 2 OS
+ - [ ] API Release
+ - [ ] Dashboard Re-Desing 
+- Beta 2 (November 23rd)
+ - [ ] Cloud Service (thethings.io)
+ - [ ] Raspberry Pi B Support
+ - [ ] Raspberry Pi B+ Support
+ - [ ] Tunneling
+ - [ ] ...
+ - [ ] ...
+ 
+- To be continued...
+ 
 
 <br/>
 <img src="https://github.com/netbeast-co/router/blob/master/img/open-source.png?raw=true" height="140px" width="auto"/><img src="https://github.com/netbeast-co/router/blob/master/img/open-hw.png?raw=true" height="140px" width="auto"/>
