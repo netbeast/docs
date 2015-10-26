@@ -4,7 +4,7 @@
 
 If you want to know more about the project, join the community! Visit [Netbeast](http://bit.ly/1FfOLZS)
 
-Also, go to **Downloads** and **Developer** secction and put your dev skills to test!
+Also, go to **Downloads** and **Developer** secctions and put your dev skills to test!
 
 ## Downloads
 
