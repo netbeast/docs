@@ -1,24 +1,48 @@
 ![Netbeast](https://github.com/netbeast-co/router/blob/master/img/full-logo.png?raw=true)
 
-**Netbeast router** is an open source project to update your home router into a full capable gateway for IoT. 
-You can download now our Raspberry Pi Distributions and put your dev skills to test.
+**Netbeast** is an operative system that allows you to control different smart devices under a common control system favouring the communication between them regardless of their brand, the technology they use or how they work. 
 
-Or you can join the community! Visit http://bit.ly/1FfOLZS
+If you want to know more about the project, join the community! Visit [Netbeast](http://bit.ly/1FfOLZS)
 
-## Download the netbeast os
-#### <a href="http://bit.ly/1dSz4NS">Raspberry Pi B, B+ Distro</a>
-#### <a href="http://bit.ly/1H3Sucm">Raspberry Pi 2 Distro</a>
+Also, go to Downloads [LINK]  and Developer [LINK] secction and put your dev skills to test!
 
-## Get Started!
+## Downloads
+
+In order to start developing applications or just trying our system, we propose:
+
+#### Raspberry Pi Distributions. 
+Under Development
+
+#### Dashboard
+You can install our Netbeast dashboard in your pc, and try how it looks. 
+
+```
+npm install netbeast
+```
+
+##Developer
+
+As developer, you can access to our full project documentation [LINK WIKI]
+
+You can also join the Netbeast community [Netbeast](http://bit.ly/1FfOLZS)
+
+#### Get Started!
 * <a href="https://github.com/netbeast-co/router/wiki/Build-your-own-router">What is a netbeast? Build your own with Raspberry Pi!</a>
 * <a href="https://github.com/netbeast-co/router/wiki/Install-your-own-app-into-router">Develop and install your 1st app into netbeast router</a>
 * <a href="https://github.com/netbeast-co/router/wiki/Python-apps-in-router">Python apps in the netbeast</a>
 * <a href="https://github.com/netbeast-co/router/wiki/How-to-set-a-logo-for-your-application">Set a logo for your applications</a>
 
-## Report an issue or ask us
-<img src="https://github.com/netbeast-co/router/blob/master/img/contribute-cap.png?raw=true" />
+#### Wiki
 
-## router project roadmap
+Go our wiki site [LINK WIKI] where we publish all new features about the project.
+
+## Report an issue or ask us
+
+* [Gitter](http://bit.ly/1dQmFKt)
+* [Issues Project](https://github.com/netbeast-co/docs/issues)
+* staff@netbeast.co
+
+## Netbeast Roadmap
 - [x] Raspberry Pi lightweight distro
  - [x] <a href="http://bit.ly/1dSz4NS">Raspberry Pi B, B+</a>
  - [x] <a href="http://bit.ly/1H3Sucm">Raspberry Pi 2</a>
@@ -54,9 +78,6 @@ http://netbeast.co
 
 ### <a href="https://github.com/netbeast-co/router/wiki/Resources-to-program-IoT">Resources to program IoT</a>
 Non exhaustive list to be a maker in python, javascript and node and platform suggestions as Arduino, Beagle Board, HummingBoard or Galileo.
-
-### Chat with us
-We are at gitter: http://bit.ly/1dQmFKt
 
 <br/>
 <img src="https://github.com/netbeast-co/router/blob/master/img/open-source.png?raw=true" height="140px" width="auto"/><img src="https://github.com/netbeast-co/router/blob/master/img/open-hw.png?raw=true" height="140px" width="auto"/>
