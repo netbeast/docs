@@ -2,9 +2,9 @@
 
 **Netbeast** is an operative system that allows you to control different smart devices under a common control system favouring the communication between them regardless of their brand, the technology they use or how they work. 
 
-If you want to know more about the project, join the community! Visit [Netbeast](http://bit.ly/1FfOLZS)
+Join de community if you want to know more about the project! Visit [Netbeast](http://bit.ly/1FfOLZS)
 
-Also, go to **Downloads** and **Developer** secctions and put your dev skills to test!
+Also, go to **Downloads** and **Developer** sections and put your developments skills to test!
 
 ## Downloads
 
