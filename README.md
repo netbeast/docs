@@ -14,7 +14,7 @@ In order to start developing applications or just trying our system, we propose:
 Under Development
 
 #### Dashboard
-You can install our Netbeast dashboard in your pc, and try how it looks. 
+You can install our **Netbeast dashboard** in your pc, and try how it looks. 
 
 ```
 npm install netbeast
@@ -24,7 +24,7 @@ npm install netbeast
 
 As developer, you can access to our full project documentation [WIKI](https://github.com/netbeast-co/docs/wiki)
 
-You can also join the Netbeast community [Netbeast](http://bit.ly/1FfOLZS)
+You can also join the **Netbeast community** [Netbeast](http://bit.ly/1FfOLZS)
 
 #### Get Started!
 Aplicación con código.
