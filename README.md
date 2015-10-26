@@ -27,14 +27,11 @@ As developer, you can access to our full project documentation [WIKI](https://gi
 You can also join the Netbeast community [Netbeast](http://bit.ly/1FfOLZS)
 
 #### Get Started!
-* <a href="https://github.com/netbeast-co/router/wiki/Build-your-own-router">What is a netbeast? Build your own with Raspberry Pi!</a>
-* <a href="https://github.com/netbeast-co/router/wiki/Install-your-own-app-into-router">Develop and install your 1st app into netbeast router</a>
-* <a href="https://github.com/netbeast-co/router/wiki/Python-apps-in-router">Python apps in the netbeast</a>
-* <a href="https://github.com/netbeast-co/router/wiki/How-to-set-a-logo-for-your-application">Set a logo for your applications</a>
+Aplicación con código.
 
 #### Wiki
 
-Go our wiki site [LINK WIKI] where we publish all new features about the project.
+Go our wiki site [WIKI](https://github.com/netbeast-co/docs/wiki) where we publish all new features about the project.
 
 ## Report an issue or ask us
 
@@ -73,11 +70,6 @@ Go our wiki site [LINK WIKI] where we publish all new features about the project
   - [x] Cloud services
 - [ ] Go native in mobile devices
 - [ ] Whatever awesome things you like to be in! Join our community or fork any of our current projects! 
-
-http://netbeast.co
-
-### <a href="https://github.com/netbeast-co/router/wiki/Resources-to-program-IoT">Resources to program IoT</a>
-Non exhaustive list to be a maker in python, javascript and node and platform suggestions as Arduino, Beagle Board, HummingBoard or Galileo.
 
 <br/>
 <img src="https://github.com/netbeast-co/router/blob/master/img/open-source.png?raw=true" height="140px" width="auto"/><img src="https://github.com/netbeast-co/router/blob/master/img/open-hw.png?raw=true" height="140px" width="auto"/>
