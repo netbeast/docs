@@ -22,7 +22,7 @@ npm install netbeast
 
 ##Developer
 
-As developer, you can access to our full project documentation [LINK WIKI]
+As developer, you can access to our full project documentation [WIKI](https://github.com/netbeast-co/docs/wiki)
 
 You can also join the Netbeast community [Netbeast](http://bit.ly/1FfOLZS)
 
