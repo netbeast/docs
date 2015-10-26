@@ -12,9 +12,9 @@ In order to start developing applications or just trying our system, we propose:
 
 ### Raspberry Pi Distributions. 
 
-This is an Operative system based on Linux Distribution for RPI. You can install, this operative system to your raspberry pi and you will have our **Netbeast Dashboard** running on your RPI ready to control all your smart home devices. If you want to know more about this project, go here
+This is an Operative system based on Linux Distribution for RPI. You can install this operative system to your raspberry pi and you will have our **Netbeast Dashboard** running on your RPI ready to control all your smart home devices. If you want to know how to get it or you want to know more about this project, go here:
 
-[WIKI RPI2]
+[RPI STARTED GUIDE]
 
 Under Development
 
@@ -88,7 +88,7 @@ Open your browser and type:
 ```
 localhost:3000
 ```
-And finally just, drag and drop the folder application to the dashboard like this:
+And finally just, drag and drop the folder "app.tar.gz" to the dashboard like this:
 
 [IMAGEN]
 
@@ -99,7 +99,7 @@ Then, you will have installed your app succesfully. Now run it going to this,
 And you will see our "Netbeast Hello World" APP.
 
 
-#### Wiki
+## Wiki
 
 Go our wiki site [WIKI](https://github.com/netbeast-co/docs/wiki) where we publish all new features about the project.
 
