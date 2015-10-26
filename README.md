@@ -10,10 +10,15 @@ Also, go to **Downloads** and **Developer** secctions and put your dev skills to
 
 In order to start developing applications or just trying our system, we propose:
 
-#### Raspberry Pi Distributions. 
+### Raspberry Pi Distributions. 
+
+This is an Operative system based on Linux Distribution for RPI. You can install, this operative system to your raspberry pi and you will have our **Netbeast Dashboard** running on your RPI ready to control all your smart home devices. If you want to know more about this project, go here
+
+[WIKI RPI2]
+
 Under Development
 
-#### Dashboard
+### Dashboard
 
 **Prerequisites**
 
@@ -48,6 +53,8 @@ localhost:3000
 
 And you will see the **Netbeast Dashboard** running on your pc. 
 
+[IMAGEN]
+
 If you want to see how to install an example application, go to our [WIKI](https://github.com/netbeast-co/docs/wiki) or just go to **Develope**r secction
 
 ##Developer
@@ -55,6 +62,42 @@ If you want to see how to install an example application, go to our [WIKI](https
 As developer, you can access to our full project documentation [WIKI](https://github.com/netbeast-co/docs/wiki)
 
 You can also join the **Netbeast community** [Netbeast](http://bit.ly/1FfOLZS)
+
+###Install an Example application
+
+If you haven't installed the **Netbeast Dashboard** yet, go to **Install Netbeast Dashboard** secction and go for it. 
+
+In other case, we will show you how to install an application and run it in the dashboard
+
+- First one, download an example application.
+You can do this running on a terminal
+
+```
+npm install -g netbeast
+netbeast new app
+netbeast package app
+```
+
+A new folder named "app" and a folder named "app.tar.gz" will appear. 
+
+Now run the dashboard on the terminal
+```
+nb-dashboard
+```
+Open your browser and type:
+```
+localhost:3000
+```
+And finally just, drag and drop the folder application to the dashboard like this:
+
+[IMAGEN]
+
+Then, you will have installed your app succesfully. Now run it going to this, 
+
+[IMAGEN]
+
+And you will see our "Netbeast Hello World" APP.
+
 
 #### Wiki
 
