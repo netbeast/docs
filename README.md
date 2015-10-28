@@ -21,12 +21,12 @@ This is an Operative system based on Linux Distribution for RPI. You can install
 Under Development
 
 ### Dashboard
----Define---
+
+This is a web panel from you can install, manage or publish IoT applications. For Linux + node.js
 
 If you want to know more about the Netbeast Dashboard, go to the [Dashboard Starting Guide](https://github.com/netbeast-co/docs/wiki/Dashboard-Starting-Guide)
 
-
-[UNDER DEVELOPMENT]
+Or go to our github repository for that project [Dashboard Project](https://github.com/netbeast-co/dashboard)
 
 ##Developer
 
