@@ -39,6 +39,8 @@ You can also join the **Netbeast community** [Netbeast](http://bit.ly/1FfOLZS)
 
 Go our wiki site [WIKI](https://github.com/netbeast-co/docs/wiki) where we publish all new features about the project.
 
+See [Documents Guidelines](https://github.com/netbeast-co/docs/wiki/Document-Guidelines) and take a look which topics we talk about in the WIKI site
+
 ## Report an issue or ask us
 
 * [Gitter](http://bit.ly/1dQmFKt)
