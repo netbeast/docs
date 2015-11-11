@@ -17,17 +17,19 @@ In order to start developing applications or just trying our system, we propose:
 
 This is an Operative system based on Linux Distribution for RPI. You can install this operative system to your raspberry pi and you will have our **Netbeast Dashboard** running on your RPI ready to control all your smart home devices. If you want to know how to get it or you want to know more about this project, go here:
 
-[**RPI Starting Guide**](https://github.com/netbeast/docs/wiki/NB-OS-Starting-Guide)
-
 [**DOWNLOAD THE NEW NB-OS**](https://sourceforge.net/projects/netbeast/files/latest/download)
+
+[**RPI Starting Guide**](https://github.com/netbeast/docs/wiki/NB-OS-Starting-Guide)
 
 ### Dashboard
 
 This is a web panel from you can install, manage or publish IoT applications. For Linux + node.js
 
-If you want to know more about the Netbeast Dashboard, go to the [**Dashboard Starting Guide**](https://github.com/netbeast-co/docs/wiki/Dashboard-Starting-Guide)
+If you want to know more about the Netbeast Dashboard, go to here:
 
-Or go to our github repository for that project [Dashboard Project](https://github.com/netbeast-co/dashboard)
+ [**Dashboard Starting Guide**](https://github.com/netbeast-co/docs/wiki/Dashboard-Starting-Guide)
+
+ [**Dashboard Project**](https://github.com/netbeast-co/dashboard)
 
 ##Developer
 
