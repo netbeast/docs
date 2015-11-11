@@ -2,6 +2,7 @@
 
 **Netbeast** is an operative system that allows you to control different smart devices under a common control system favouring the communication between them regardless of their brand, the technology they use or how they work. 
 
+
 Join de community if you want to know more about the project! Visit [Netbeast](http://bit.ly/1FfOLZS)
 
 Also, go to **Downloads** and **Developer** sections and put your developments skills to test!
@@ -16,15 +17,15 @@ In order to start developing applications or just trying our system, we propose:
 
 This is an Operative system based on Linux Distribution for RPI. You can install this operative system to your raspberry pi and you will have our **Netbeast Dashboard** running on your RPI ready to control all your smart home devices. If you want to know how to get it or you want to know more about this project, go here:
 
-[RPI STARTED GUIDE]
+[**RPI Starting Guide**](https://github.com/netbeast/docs/wiki/NB-OS-Starting-Guide)
 
-Under Development
+[**DOWNLOAD THE NEW NB-OS**](https://sourceforge.net/projects/netbeast/files/latest/download)
 
 ### Dashboard
 
 This is a web panel from you can install, manage or publish IoT applications. For Linux + node.js
 
-If you want to know more about the Netbeast Dashboard, go to the [Dashboard Starting Guide](https://github.com/netbeast-co/docs/wiki/Dashboard-Starting-Guide)
+If you want to know more about the Netbeast Dashboard, go to the [**Dashboard Starting Guide**](https://github.com/netbeast-co/docs/wiki/Dashboard-Starting-Guide)
 
 Or go to our github repository for that project [Dashboard Project](https://github.com/netbeast-co/dashboard)
 
@@ -48,15 +49,18 @@ See [Documents Guidelines](https://github.com/netbeast-co/docs/wiki/Document-Gui
 * staff@netbeast.co
 
 ## Netbeast Roadmap
-- Beta (November 9th)
+- Beta (November 11th)
  - [x] Philips Hue Support
  - [x] Wemo Lights Support
  - [x] Wemo Plug Support
- - [ ] Lifx Support
- - [ ] Lockitron Support
- - [ ] Raspberry Pi 2 OS
- - [ ] API Release
- - [ ] Dashboard Re-Desing 
+ - [x] Lifx Support
+ - [x] Lockitron Support
+ - [x] Raspberry Pi 2 OS
+ - [x] API Release
+ - [x] Dashboard Re-Desing
+ 
+[**Download it Here**](https://sourceforge.net/projects/netbeast/files/latest/download)
+
 - Beta 2 (November 23rd)
  - [ ] Cloud Service (thethings.io)
  - [ ] Raspberry Pi B Support
@@ -70,11 +74,3 @@ See [Documents Guidelines](https://github.com/netbeast-co/docs/wiki/Document-Gui
 
 <br/>
 <img src="https://github.com/netbeast-co/router/blob/master/img/open-source.png?raw=true" height="140px" width="auto"/><img src="https://github.com/netbeast-co/router/blob/master/img/open-hw.png?raw=true" height="140px" width="auto"/>
-
-## Contact
-* Visit our site [https://netbeast.co](https://netbeast.co)
-* Mail us: staff [at] netbeast.co
-* Report a bug or enter discussion at [issues](https://github.com/netbeast-co/docs/issues)
-* Other resources: [Dashboard](https://github.com/netbeast-co/dashboard), Netbeast [API](https://github.com/netbeast-co/API)
-
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/netbeast-co/xway?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
