@@ -7,7 +7,7 @@
    * [Install Dashboard](get-started/install-dashboard.md)
    * [Install your own app](get-started/install_your_own_app_md.md)
    * [Publish your app](get-started/publish_your_app.md)
-* Guides and resources
+* [Guides and resources](guides_and_resources.md)
    * Install OS on Raspberry Pi
    * Discover your Netbeast
    * Install your app remotely
