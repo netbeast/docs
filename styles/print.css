@@ -1,1 +1,5 @@
 /* CSS for print */
+
+body, html {
+    font-family: 'Bebas Neue';
+}
