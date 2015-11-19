@@ -10,7 +10,7 @@
 * [Guides and resources](guides_and_resources.md)
    * [Install OS on Raspberry Pi](install_os_on_raspberry_pi.md)
    * [Discover your Netbeast](discover_your_netbeast.md)
-* Advanced
+* [Advanced](advanced.md)
    * Push notifications
    * Create a Resource
    * Use a Resource
