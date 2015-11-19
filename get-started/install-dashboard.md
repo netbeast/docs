@@ -7,14 +7,14 @@ npm install -g nb-dashboard
 
 ### Run
 ```bash
-sudo nb-dashboard --port 80
+sudo nb-dashboard
 ```
 
 ### Directly from repo
 ```bash
 git clone https://github.com/netbeast/dashboard/
 cd dashboard
-npm i # by default, dependencies are ignored, so mut be installed
+npm i # by default, dependencies are ignored, so must be installed
 ./index.js --port 8000
 ```
 
