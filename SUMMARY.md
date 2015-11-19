@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Get Started](get-started/index.md)
    * [Install Node.js](get-started/install-nodejs.md)
-   * Write your first app
+   * [Write your first app](get-started/write-your-first-app.md)
    * Install Dashboard
    * Install your own app
    * Publish your app
