@@ -10,7 +10,6 @@
 * [Guides and resources](guides_and_resources.md)
    * [Install OS on Raspberry Pi](install_os_on_raspberry_pi.md)
    * [Discover your Netbeast](discover_your_netbeast.md)
-   * Install your app remotely
 * Advanced
    * Push notifications
    * Create a Resource
