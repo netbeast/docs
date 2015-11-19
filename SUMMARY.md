@@ -4,7 +4,7 @@
 * [Get Started](get-started/index.md)
    * [Install Node.js](get-started/install-nodejs.md)
    * [Write your first app](get-started/write-your-first-app.md)
-   * Install Dashboard
+   * [Install Dashboard](get-started/install-dashboard.md)
    * Install your own app
    * Publish your app
 * Guides and resources
