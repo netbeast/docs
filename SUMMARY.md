@@ -8,7 +8,7 @@
    * [Install your own app](get-started/install_your_own_app_md.md)
    * [Publish your app](get-started/publish_your_app.md)
 * [Guides and resources](guides_and_resources.md)
-   * Install OS on Raspberry Pi
+   * [Install OS on Raspberry Pi](install_os_on_raspberry_pi.md)
    * Discover your Netbeast
    * Install your app remotely
 * Advanced
