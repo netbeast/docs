@@ -16,6 +16,6 @@
    * Use a Resource
    * Chain events
 * [API Reference](api_reference.md)
-   * Node.js wrapper
+   * [Node.js wrapper](nodejs_wrapper.md)
    * Resources implementation
 
