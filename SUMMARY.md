@@ -3,7 +3,6 @@
 * [Introduction](README.md)
 * [Get Started](get-started/index.md)
    * [Install Node.js](get-started/install-nodejs.md)
-   * [Install SDK](get-started/install-sdk.md)
    * Write your first app
    * Install Dashboard
    * Install your own app
