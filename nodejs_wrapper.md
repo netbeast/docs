@@ -94,20 +94,20 @@ In this example, we get information about all the lights placed at the kitchen.
 The delete method allow us to remove resources from the database. The args argument is json object with more properties of the device that should be deleted.
 
 ````javascript
-var nb = require(‘netbeast’)
+var nb = require('netbeast')
 
 var resources = nb.resources()
 
 // Remove all the lights
-resources(‘lights’).delete()
+resources('lights').delete()
 .then(function (data) {}
 .catch(function (error) {}
 
-// Remove all the belkin-wemo lights group by ‘colorful’
+// Remove all the belkin-wemo lights group by 'colorful'
 
-var args = { app: ‘belkin-wemo’}
+var args = { app: 'belkin-wemo'}
 
-resources(‘lights’).groupBy(‘colorful’).delete(args)
+resources('lights').groupBy('colorful').delete(args)
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -117,7 +117,7 @@ resources(‘lights’).groupBy(‘colorful’).delete(args)
 The deleteById method allows us to remove resources from the database. With the id argument we select a specific device from the db.
 
 ````javascript
-var nb = require(‘netbeast’)
+var nb = require('netbeast')
 
 var resources = nb.resources()
 
@@ -133,21 +133,21 @@ The topic is useless on this method.
 The get method allows us to obtain information about the current state of the devices. You can obtain all the data about the state or specify a concrete value.
 
 ````javascript
-var nb = require(‘netbeast’)
+var nb = require('netbeast')
 
 var resources = nb.resources()
 
 // Returns the state of all lights
-resources(‘lights’).get()
+resources('lights').get()
 .then(function (data) {}
 .catch(function (error) {}
 
 // Returns the brightness of all the lights
-var nb = require(‘netbeast’)
+var nb = require('netbeast')
 
 var resources = nb.resources()
 
-resources(‘lights’).get(‘bri’)
+resources('lights').get('bri')
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -157,7 +157,7 @@ resources(‘lights’).get(‘bri’)
 The getById method allows us to obtain information about the current state of the devices. You will receive all the information of the specified device.
 
 ````javascript
-var nb = require(‘netbeast’)
+var nb = require('netbeast')
 
 var resources = nb.resources()
 
@@ -173,11 +173,11 @@ The topic is useless on this method.
 This method allows us to select devices form a specific group. It can´t be used alone and should be follow by other method.
 
 ````javascript
-var nb = require(‘netbeast’)
+var nb = require('netbeast')
 
 var resources = nb.resources()
 
-resources(‘lights’).groupBy(‘roof’).set({on: 1})
+resources('lights').groupBy('roof').set({on: 1})
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -189,21 +189,21 @@ In this example, we switch all the lights of the group ‘roof’ on.
 The set method allows us to change the current state of the devices. You can modify different values at the same time.
 
 ````javascript
-var nb = require(‘netbeast’)
+var nb = require('netbeast''
 
 var resources = nb.resources()
 
 // Change the brightness of all lights
-resources(‘lights’).set({bri: 255})
+resources('lights').set({bri: 255})
 .then(function (data) {}
 .catch(function (error) {}
 
 //  Change the brightness and color of all the lights
-var nb = require(‘netbeast’)
+var nb = require('netbeast')
 
 var resources = nb.resources()
 
-resources(‘lights’).set({bri: 200, hue: 65000, sat: 255})
+resources('lights').set({bri: 200, hue: 65000, sat: 255})
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -213,7 +213,7 @@ resources(‘lights’).set({bri: 200, hue: 65000, sat: 255})
 The setById method allows us to change the current state of the given device. You can modify different values of the specified device.
 
 ````javascript
-var nb = require(‘netbeast’)
+var nb = require('netbeast')
 
 var resources = nb.resources()
 
