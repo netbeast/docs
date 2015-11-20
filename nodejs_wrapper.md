@@ -75,6 +75,7 @@ resources('lights').at('kitchen').get('bri')
 ####resources([topic]).at(location).METHOD####
 
 This method allows us to select a group of devices form a specific location. It can´t be used alone and should be follow by other method.
+
 ````javascript
 var nb = require('netbeast')
 
@@ -92,6 +93,7 @@ In this example, we obtain information about all the lights placed at the kitche
 
 The delete method allow us to remove resources from the database. The args argument is json object with more properties of the device that should be deleted.
 
+````javascript
 Var nb = require(‘netbeast’)
 
 Var resources = nb.resources()
@@ -114,11 +116,13 @@ resources(‘lights’).groupBy(‘colorful’).delete(args)
 }.catch(function (error) {
 …
 }
+````
 
 ###resources([topic]).deleteById(id)###
 
 The deleteById method allows us to remove resources from the database. With the id argument we select a specific device from the db.
 
+````javascript
 Var nb = require(‘netbeast’)
 
 Var resources = nb.resources()
@@ -129,6 +133,7 @@ resources().delete(1)
 }.catch(function (error) {
 …
 }
+````
 
 The topic is useless on this method.
 
@@ -160,6 +165,7 @@ resources(‘lights’).get(‘bri’)
 
 The getById method allows us to obtain information about the current state of the devices. You will receive all the information of the specified device.
 
+````javascript
 Var nb = require(‘netbeast’)
 
 Var resources = nb.resources()
@@ -170,6 +176,7 @@ resources().getById(1)
 }.catch(function (error) {
 …
 }
+````
 
 The topic is useless on this method.
 
@@ -177,6 +184,7 @@ The topic is useless on this method.
 
 This method allows us to select devices form a specific group. It can´t be used alone and should be follow by other method.
 
+````javascript
 Var nb = require(‘netbeast’)
 
 Var resources = nb.resources()
@@ -187,6 +195,7 @@ resources(‘lights’).groupBy(‘roof’).set({on: 1})
 }.catch(function (error) {
 …
 }
+````
 
 In this example, we switch all the lights of the group ‘roof’ on. 
 
@@ -194,6 +203,7 @@ In this example, we switch all the lights of the group ‘roof’ on.
 
 The set method allows us to change the current state of the devices. You can modify different values at the same time.
 
+````javascript
  Var nb = require(‘netbeast’)
 
 Var resources = nb.resources()
@@ -217,11 +227,13 @@ resources(‘lights’).set({bri: 200, hue: 65000, sat: 255})
 }.catch(function (error) {
 …
 }
+````
 
 ###resources([topic]). setById(id, args)###
 
 The setById method allows us to change the current state of the given device. You can modify different values of the specified device.
 
+````javascript
 Var nb = require(‘netbeast’)
 
 Var resources = nb.resources()
@@ -234,6 +246,7 @@ resources().setById(1, args)
 }.catch(function (error) {
 …
 }
+````
 
 The topic is useless on this method.
 
@@ -257,6 +270,7 @@ A given device could be part of different scenes.
 
 The addDevice method allows us to add a new device to the selected scene. You must pass the id of the device and it will save the current state of it on the db.
 
+````javascript
 Var nb = require(‘netbeast’)
 
 Var scene = nb.scene()
@@ -267,6 +281,7 @@ scene(‘watchfilm’).addDevice(2)
 }.catch(function (error) {
 …
 }
+````
 
 ###scene(sceneid).apply()###
 This method 
@@ -284,6 +299,7 @@ This object include useful methods for managing different aspects of the Smart d
 ###devices.group(name , devicesId)###
 This functión allows us to make group of devices. The argument name defines de group name. DevicesId will be an array of ids of the devices that should be grouped.
 
+````javascript
 Var nb = require(‘netbeast’)
 
 Var devices = nb.devices()
@@ -296,9 +312,11 @@ devices().group(‘roof’, args)
 }.catch(function (error) {
 …
 }
+````
 
 ###devices.discover([brand-name])###
 
+````javascript
 This function allows us to activate the discovery process. With the brand-name parameter you can specify a concrete app (like belkin-wemo, philips-hue), if you don´t include this argument, the discovery will be apply to all available brands.
 
 Var nb = require(‘netbeast’)
@@ -312,6 +330,7 @@ devices().discovery(‘belkin-wemo’)
 }.catch(function (error) {
 …
 }
+````
 
 
 
