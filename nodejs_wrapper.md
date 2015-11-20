@@ -87,35 +87,29 @@ resources('lights').at('bedroom').get()
 ````
 
 
-In this example, we obtain information about all the lights placed at the kitchen. 
+In this example, we get information about all the lights placed at the kitchen. 
 
 ###resources([topic]).delete([args])###
 
 The delete method allow us to remove resources from the database. The args argument is json object with more properties of the device that should be deleted.
 
 ````javascript
-Var nb = require(‘netbeast’)
+var nb = require(‘netbeast’)
 
-Var resources = nb.resources()
+var resources = nb.resources()
 
 // Remove all the lights
 resources(‘lights’).delete()
-.then(function (data) {
-…
-}.catch(function (error) {
-…
-}
+.then(function (data) {}
+.catch(function (error) {}
 
 // Remove all the belkin-wemo lights group by ‘colorful’
 
 var args = { app: ‘belkin-wemo’}
 
 resources(‘lights’).groupBy(‘colorful’).delete(args)
-.then(function (data) {
-…
-}.catch(function (error) {
-…
-}
+.then(function (data) {}
+.catch(function (error) {}
 ````
 
 ###resources([topic]).deleteById(id)###
@@ -123,16 +117,13 @@ resources(‘lights’).groupBy(‘colorful’).delete(args)
 The deleteById method allows us to remove resources from the database. With the id argument we select a specific device from the db.
 
 ````javascript
-Var nb = require(‘netbeast’)
+var nb = require(‘netbeast’)
 
-Var resources = nb.resources()
+var resources = nb.resources()
 
 resources().delete(1)
-.then(function (data) {
-…
-}.catch(function (error) {
-…
-}
+.then(function (data) {}
+.catch(function (error) {}
 ````
 
 The topic is useless on this method.
@@ -166,16 +157,13 @@ resources(‘lights’).get(‘bri’)
 The getById method allows us to obtain information about the current state of the devices. You will receive all the information of the specified device.
 
 ````javascript
-Var nb = require(‘netbeast’)
+var nb = require(‘netbeast’)
 
-Var resources = nb.resources()
+var resources = nb.resources()
 
 resources().getById(1)
-.then(function (data) {
-…
-}.catch(function (error) {
-…
-}
+.then(function (data) {}
+.catch(function (error) {}
 ````
 
 The topic is useless on this method.
@@ -185,16 +173,13 @@ The topic is useless on this method.
 This method allows us to select devices form a specific group. It can´t be used alone and should be follow by other method.
 
 ````javascript
-Var nb = require(‘netbeast’)
+var nb = require(‘netbeast’)
 
-Var resources = nb.resources()
+var resources = nb.resources()
 
 resources(‘lights’).groupBy(‘roof’).set({on: 1})
-.then(function (data) {
-…
-}.catch(function (error) {
-…
-}
+.then(function (data) {}
+.catch(function (error) {}
 ````
 
 In this example, we switch all the lights of the group ‘roof’ on. 
@@ -204,29 +189,23 @@ In this example, we switch all the lights of the group ‘roof’ on.
 The set method allows us to change the current state of the devices. You can modify different values at the same time.
 
 ````javascript
- Var nb = require(‘netbeast’)
+var nb = require(‘netbeast’)
 
-Var resources = nb.resources()
+var resources = nb.resources()
 
 // Change the brightness of all lights
 resources(‘lights’).set({bri: 255})
-.then(function (data) {
-…
-}.catch(function (error) {
-…
-}
+.then(function (data) {}
+.catch(function (error) {}
 
 //  Change the brightness and color of all the lights
-Var nb = require(‘netbeast’)
+var nb = require(‘netbeast’)
 
-Var resources = nb.resources()
+var resources = nb.resources()
 
 resources(‘lights’).set({bri: 200, hue: 65000, sat: 255})
-.then(function (data) {
-…
-}.catch(function (error) {
-…
-}
+.then(function (data) {}
+.catch(function (error) {}
 ````
 
 ###resources([topic]). setById(id, args)###
@@ -234,25 +213,22 @@ resources(‘lights’).set({bri: 200, hue: 65000, sat: 255})
 The setById method allows us to change the current state of the given device. You can modify different values of the specified device.
 
 ````javascript
-Var nb = require(‘netbeast’)
+var nb = require(‘netbeast’)
 
-Var resources = nb.resources()
+var resources = nb.resources()
 
-Var args = { on: 1, bri: 50 }
+var args = { on: 1, bri: 50 }
 
 resources().setById(1, args)
-.then(function (data) {
-…
-}.catch(function (error) {
-…
-}
+.then(function (data) {}
+.catch(function (error) {}
 ````
 
 The topic is useless on this method.
 
 #Scenes#
 
-A Scene is a snapshot of the current state of a group of devices. It allows you to save your favourites configuration to be accessed easily. The scene’s database its composed by the following fields:
+A Scene is a snapshot of the current state of a group of devices. It allows you to save your favorites configuration to be accessed easily. The scenes database its composed by the following fields:
 
 Property	Description	Values	Default
 id	Identifies the resource in the db	Integer (automatic)	-
@@ -271,16 +247,13 @@ A given device could be part of different scenes.
 The addDevice method allows us to add a new device to the selected scene. You must pass the id of the device and it will save the current state of it on the db.
 
 ````javascript
-Var nb = require(‘netbeast’)
+var nb = require('netbeast')
 
-Var scene = nb.scene()
+var scene = nb.scene()
 
-scene(‘watchfilm’).addDevice(2)
-.then(function (data) {
-…
-}.catch(function (error) {
-…
-}
+scene('watchfilm').addDevice(2)
+.then(function (data) {}
+.catch(function (error) {}
 ````
 
 ###scene(sceneid).apply()###
@@ -300,36 +273,30 @@ This object include useful methods for managing different aspects of the Smart d
 This functión allows us to make group of devices. The argument name defines de group name. DevicesId will be an array of ids of the devices that should be grouped.
 
 ````javascript
-Var nb = require(‘netbeast’)
+var nb = require('netbeast')
 
-Var devices = nb.devices()
+var devices = nb.devices()
 
 Var args = [1,3, 7 }
 
-devices().group(‘roof’, args)
-.then(function (data) {
-…
-}.catch(function (error) {
-…
-}
+devices().group('roof', args)
+.then(function (data) {}
+.catch(function (error) {}
 ````
 
 ###devices.discover([brand-name])###
 
-````javascript
 This function allows us to activate the discovery process. With the brand-name parameter you can specify a concrete app (like belkin-wemo, philips-hue), if you don´t include this argument, the discovery will be apply to all available brands.
 
-Var nb = require(‘netbeast’)
+````javascript
+var nb = require('netbeast')
 
-Var devices = nb.devices()
+var devices = nb.devices()
 
 
-devices().discovery(‘belkin-wemo’)
-.then(function (data) {
-…
-}.catch(function (error) {
-…
-}
+devices().discovery('belkin-wemo')
+.then(function (data) {}
+.catch(function (error) {}
 ````
 
 
