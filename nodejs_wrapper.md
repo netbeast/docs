@@ -189,7 +189,7 @@ In this example, we switch all the lights of the group ‘roof’ on.
 The set method allows us to change the current state of the devices. You can modify different values at the same time.
 
 ````javascript
-var nb = require('netbeast''
+var nb = require('netbeast')
 
 var resources = nb.resources()
 
@@ -230,15 +230,15 @@ The topic is useless on this method.
 
 A Scene is a snapshot of the current state of a group of devices. It allows you to save your favorites configuration to be accessed easily. The scenes database its composed by the following fields:
 
-Property	Description	Values	Default
-id	Identifies the resource in the db	Integer (automatic)	-
-sceneid	Indicate the name of the scene	String
-	-
-location	Location of the scene in the house	String (up to developer)	none
-on	 Indicate if the device is on or off	boolean	-
-bri	Stores the brightness value	integer	-
-hue	Stores the hue value	integer	-
-sat	Stores the saturation value	integer	-
+Property | Description | Values | Default
+---------|-------------|--------|--------
+id | Identifies the resource in the db | Integer (automatic) | -
+sceneid | show the name of the scene | String | -
+location | Location of the scene in the house | String (up to developer) | none
+on | show if the device is on or off | Boolean	| -
+bri	| Stores the brightness value | integer |	-
+hue	| Stores the hue value | integer | -
+sat	| Stores the saturation value | integer | -
 
 A given device could be part of different scenes.
 
