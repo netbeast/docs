@@ -46,6 +46,12 @@ var devices = require('netbeast/devices')
 resources('lights').get()
 ````
 
+#Arguments#
+
+#Errors#
+
+#Methods#
+
 ##Resources##
 
 A resource contain information about every smart device connected through the dashboard. It has the following fields:
