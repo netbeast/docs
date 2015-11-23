@@ -39,9 +39,9 @@ var nb = require('netbeast')
 nb.resources('lights').get()
 
 //  Option 2
-var resources = require('netbeast/resources')
-var scene = require('netbeast/scene')
-var devices = require('netbeast/devices')
+var resources = require('netbeast/lib/resources')
+var scene = require('netbeast/lib/scene')
+var devices = require('netbeast/lib/devices')
 
 resources('lights').get()
 ````
@@ -85,9 +85,7 @@ This method allows us to select a group of devices form a specific location. It 
 ````javascript
 var nb = require('netbeast')
 
-var resources = nb.resources()
-
-resources('lights').at('bedroom').get()
+nb.resources('lights').at('bedroom').get()
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -102,10 +100,8 @@ The delete method allow us to remove resources from the database. The args argum
 ````javascript
 var nb = require('netbeast')
 
-var resources = nb.resources()
-
 // Remove all the lights
-resources('lights').delete()
+nb.resources('lights').delete()
 .then(function (data) {}
 .catch(function (error) {}
 
@@ -113,7 +109,7 @@ resources('lights').delete()
 
 var args = { app: 'belkin-wemo'}
 
-resources('lights').groupBy('colorful').delete(args)
+nb.resources('lights').groupBy('colorful').delete(args)
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -125,9 +121,7 @@ The deleteById method allows us to remove resources from the database. With the 
 ````javascript
 var nb = require('netbeast')
 
-var resources = nb.resources()
-
-resources().delete(1)
+nb.resources().delete(1)
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -141,19 +135,15 @@ The get method allows us to obtain information about the current state of the de
 ````javascript
 var nb = require('netbeast')
 
-var resources = nb.resources()
-
 // Returns the state of all lights
-resources('lights').get()
+nb.resources('lights').get()
 .then(function (data) {}
 .catch(function (error) {}
 
 // Returns the brightness of all the lights
 var nb = require('netbeast')
 
-var resources = nb.resources()
-
-resources('lights').get('bri')
+nb.resources('lights').get('bri')
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -165,9 +155,7 @@ The getById method allows us to obtain information about the current state of th
 ````javascript
 var nb = require('netbeast')
 
-var resources = nb.resources()
-
-resources().getById(1)
+nb.resources().getById(1)
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -181,9 +169,7 @@ This method allows us to select devices form a specific group. It can´t be used
 ````javascript
 var nb = require('netbeast')
 
-var resources = nb.resources()
-
-resources('lights').groupBy('roof').set({on: 1})
+nb.resources('lights').groupBy('roof').set({on: 1})
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -197,19 +183,15 @@ The set method allows us to change the current state of the devices. You can mod
 ````javascript
 var nb = require('netbeast')
 
-var resources = nb.resources()
-
 // Change the brightness of all lights
-resources('lights').set({bri: 255})
+nb.resources('lights').set({bri: 255})
 .then(function (data) {}
 .catch(function (error) {}
 
 //  Change the brightness and color of all the lights
 var nb = require('netbeast')
 
-var resources = nb.resources()
-
-resources('lights').set({bri: 200, hue: 65000, sat: 255})
+nb.resources('lights').set({bri: 200, hue: 65000, sat: 255})
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -221,11 +203,9 @@ The setById method allows us to change the current state of the given device. Yo
 ````javascript
 var nb = require('netbeast')
 
-var resources = nb.resources()
-
 var args = { on: 1, bri: 50 }
 
-resources().setById(1, args)
+nb.resources().setById(1, args)
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -257,9 +237,7 @@ The addDevice method allows us to add a new device to the selected scene. You mu
 ````javascript
 var nb = require('netbeast')
 
-var scene = nb.scene()
-
-scene('watchfilm').addDevice(2)
+nb.scene('watchfilm').addDevice(2)
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -271,9 +249,7 @@ This method apply the configuration of the given scene.
 ````javascript
 var nb = require('netbeast')
 
-var scene = nb.scene()
-
-scene('watchfilm').apply()
+nb.scene('watchfilm').apply()
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -285,11 +261,9 @@ This method is used to create a new scene by passing an array of device ids. It 
 ````javascript
 var nb = require('netbeast')
 
-var scene = nb.scene()
-
 var devices = [1, 2, 6, 9]
 
-scene('watchfilm').create(devices)
+nb.scene('watchfilm').create(devices)
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -300,8 +274,6 @@ With this method you can create a new scene with a predefined state. *state* is 
 
 ````javascript
 var nb = require('netbeast')
-
-var scene = nb.scene()
 
 var newscene = [ { 
     id: 1,
@@ -315,7 +287,7 @@ var newscene = [ {
     bri: 254}]
 
 
-scene('watchfilm').createCustom(newscene)
+nb.scene('watchfilm').createCustom(newscene)
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -327,9 +299,7 @@ With delete you can remove a given scene from the db
 ````javascript
 var nb = require('netbeast')
 
-var scene = nb.scene()
-
-scene('watchfilm').delete()
+nb.scene('watchfilm').delete()
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -341,9 +311,7 @@ Instead of removing the whole scene, you are able to quit one device from the sc
 ````javascript
 var nb = require('netbeast')
 
-var scene = nb.scene()
-
-scene('watchfilm').deleteDevice(6)
+nb.scene('watchfilm').deleteDevice(6)
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -356,9 +324,7 @@ This methods returns all the information about the scene.
 ````javascript
 var nb = require('netbeast')
 
-var scene = nb.scene()
-
-scene('watchfilm').get()
+nb.scene('watchfilm').get()
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -372,9 +338,7 @@ Arguments are not needed on this function.
 ````javascript
 var nb = require('netbeast')
 
-var scene = nb.scene()
-
-scene().getScene()
+nb.scene().getScene()
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -389,11 +353,9 @@ This functión allows us to make group of devices. The argument name defines de 
 ````javascript
 var nb = require('netbeast')
 
-var devices = nb.devices()
+var args = [1,3, 7 }
 
-Var args = [1,3, 7 }
-
-devices().group('roof', args)
+nb.devices().group('roof', args)
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -405,10 +367,7 @@ This function allows us to activate the discovery process. With the brand-name p
 ````javascript
 var nb = require('netbeast')
 
-var devices = nb.devices()
-
-
-devices().discovery('belkin-wemo')
+nb.devices().discovery('belkin-wemo')
 .then(function (data) {}
 .catch(function (error) {}
 ````
