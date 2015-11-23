@@ -343,10 +343,35 @@ scene('watchfilm').deleteDevice(6)
 ````
 
 
-###get###
+###scene(sceneid).get()###
 
+This methods returns all the information about the scene.
 
-###getScenes###
+````javascript
+var nb = require('netbeast')
+
+var scene = nb.scene()
+
+scene('watchfilm').get()
+.then(function (data) {}
+.catch(function (error) {}
+````
+get has no arguments.
+
+###scene().getScenes()###
+
+The getScenes method return the name of all the scenes registered on the db.
+Arguments are not needed on this function.
+
+````javascript
+var nb = require('netbeast')
+
+var scene = nb.scene()
+
+scene().getScene()
+.then(function (data) {}
+.catch(function (error) {}
+````
 
 
 #Devices#
