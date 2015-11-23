@@ -288,13 +288,59 @@ scene('watchfilm').create(devices)
 .catch(function (error) {}
 ````
 
-###createCustom###
+###scene(sceneid).createCustom(state)###
+
+With this method you can create a new scene with a predefined state. *state* is an object array that contains the object id and the state of each device.
+
+````javascript
+var nb = require('netbeast')
+
+var scene = nb.scene()
+
+var newscene = [ { 
+    id: 1,
+    on: 1,
+    bri: 254,
+    hue: 4753,
+    sat: 254 },
+    {
+    id: 8,
+    on: 1,
+    bri: 254}]
 
 
-###delete###
+scene('watchfilm').createCustom(newscene)
+.then(function (data) {}
+.catch(function (error) {}
+````
 
+###scene(sceneid).delete()###
 
-###deleteDevice###
+With delete you can remove a given scene from the db
+
+````javascript
+var nb = require('netbeast')
+
+var scene = nb.scene()
+
+scene('watchfilm').delete()
+.then(function (data) {}
+.catch(function (error) {}
+````
+
+###scene(sceneid).deleteDevice(id)###
+
+Instead of removing the whole scene, you are able to quit one device from the scene.
+
+````javascript
+var nb = require('netbeast')
+
+var scene = nb.scene()
+
+scene('watchfilm').deleteDevice(6)
+.then(function (data) {}
+.catch(function (error) {}
+````
 
 
 ###get###
