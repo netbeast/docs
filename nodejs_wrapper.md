@@ -236,11 +236,13 @@ id | Identifies the resource in the db | Integer (automatic) | -
 sceneid | show the name of the scene | String | -
 location | Location of the scene in the house | String (up to developer) | none
 on | show if the device is on or off | Boolean	| -
-bri	| Stores the brightness value | integer |	-
-hue	| Stores the hue value | integer | -
-sat	| Stores the saturation value | integer | -
+bri	| Stores the brightness value | Integer |	-
+hue	| Stores the hue value | Integer | -
+sat	| Stores the saturation value | Integer | -
 
 A given device could be part of different scenes.
+
+The parameters *hue* and *sat* are used to define the colors.
 
 ###scene(sceneid).addDevice(id)###
 
@@ -257,14 +259,49 @@ scene('watchfilm').addDevice(2)
 ````
 
 ###scene(sceneid).apply()###
-This method 
-###at###
-###create###
+
+This method apply the configuration of the given scene.
+
+````javascript
+var nb = require('netbeast')
+
+var scene = nb.scene()
+
+scene('watchfilm').apply()
+.then(function (data) {}
+.catch(function (error) {}
+````
+
+###scene(sceneid).create(ids)###
+
+This method is used to create a new scene by passing an array of device ids. It takes the current state of the given devices and store the scene in the db with the 'seceneid' name.
+
+````javascript
+var nb = require('netbeast')
+
+var scene = nb.scene()
+
+var devices = [1, 2, 6, 9]
+
+scene('watchfilm').create(devices)
+.then(function (data) {}
+.catch(function (error) {}
+````
+
 ###createCustom###
+
+
 ###delete###
+
+
 ###deleteDevice###
+
+
 ###get###
+
+
 ###getScenes###
+
 
 #Devices#
 This object include useful methods for managing different aspects of the Smart devices
