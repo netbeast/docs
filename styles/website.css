@@ -17,3 +17,7 @@ a:hover, a:active, a:focus {
 .book .book-summary ul.summary li.active>a {
     color: #CC0000 !important;
 }
+
+.book .book-body .page-wrapper .page-inner section.normal a {
+    color: #4183c4 !important;
+}
