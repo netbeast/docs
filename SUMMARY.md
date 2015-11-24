@@ -25,6 +25,7 @@
        * [Output](chapters/api_reference/output.md)
        * Devices
        * Resources
+       * Scenes
    * Resources implementation
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
