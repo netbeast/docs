@@ -1,6 +1,6 @@
-# Node.js wrapper
+#Node.js wrapper#
 
-#About this Docs#
+##About this Docs##
 
 The main goal of this documentation is to explain how the Netbeast API works. All the information that you need to start programming has been gathered here.
 
@@ -10,7 +10,7 @@ This API is quite new so it is continuously changing and growing. As it matures,
 *   2 - experimental
 *   1 - deprecated
 
-##Supported devides##
+###Supported devides###
 
 With this API you can control this devices
 
@@ -24,13 +24,13 @@ With this API you can control this devices
 -   [ ] Sonos
 -   [ ] Lifx
 
-##How to use it?##
+###How to use it?###
 
 First of all, you need to install the npm package.
 ````
 sudo npm install netbeast -g
 ````
-Once the package is in the node_modules folder, you can require it from the code. You are able to require all the methods or only some specific areas.
+ Once the package is in the node_modules folder, you can require it from the code. You are able to require all the methods or only some specific areas.
 
 ````javascript
 //  Option 1
@@ -46,9 +46,9 @@ var devices = require('netbeast/lib/devices')
 resources('lights').get()
 ````
 
-#Methods#
+##Methods##
 
-##Arguments##
+###Arguments###
 
 Each device can support specific parameters. 
 Bridge or Switch can be switched on or off. If you try to set an unsupported parameter to a switch (example, .set({bri: 255})) you will return a soft error. The process keep working but send you a warning.
@@ -69,7 +69,7 @@ nb.resources('lights').set({on: true, bri: 200, hue: 0, sat: 255})
  If you have white and color bulbs, the first ones are going to switch on and change the brightness. The color bulbs will also change their color to red and the execution continues without problems.
 
 
-##Output##
+###Output###
 
 All the methods act as a promise and they always return a json object like this:
 `````json
@@ -79,7 +79,7 @@ All the methods act as a promise and they always return a json object like this:
 }
 ````
 
-##Resources##
+###Resources###
 
 A resource contain information about every smart device connected through the dashboard. It has the following fields:
 
@@ -105,7 +105,7 @@ resources('switch').set({on: true})
 resources('lights').at('kitchen').get('bri')
 ````
 
-####resources([topic]).at(location).METHOD####
+#####resources([topic]).at(location).METHOD#####
 
 This method allows us to select a group of devices form a specific location. It can´t be used alone and should be follow by other method.
 
@@ -120,7 +120,7 @@ nb.resources('lights').at('bedroom').get()
 
 In this example, we get information about all the lights placed at the kitchen. 
 
-###resources([topic]).delete([args])###
+####resources([topic]).delete([args])####
 
 The delete method allow us to remove resources from the database. The args argument is json object with more properties of the device that should be deleted.
 
@@ -141,7 +141,7 @@ nb.resources('lights').groupBy('colorful').delete(args)
 .catch(function (error) {}
 ````
 
-###resources([topic]).deleteById(id)###
+####resources([topic]).deleteById(id)####
 
 The deleteById method allows us to remove resources from the database. With the id argument we select a specific device from the db.
 
@@ -155,7 +155,7 @@ nb.resources().delete(1)
 
 The topic is useless on this method.
 
-###resources([topic]).get([value])###
+####resources([topic]).get([value])####
 
 The get method allows us to obtain information about the current state of the devices. You can obtain all the data about the state or specify a concrete value.
 
@@ -176,7 +176,7 @@ nb.resources('lights').get('bri')
 ````
  You can only ask for one value.  nb.resources('lights').get('on', 'bri') is not allowed.
 
-###resources([topic]).getById(id)###
+####resources([topic]).getById(id)####
 
 The getById method allows us to get information about the current state of the devices. You will receive all the information of the specified device.
 
@@ -190,7 +190,7 @@ nb.resources().getById(1)
 
 The topic is useless on this method.
 
-###resources([topic]).groupBy(name).METHOD###
+####resources([topic]).groupBy(name).METHOD####
 
 This method allows us to select devices form a specific group. It can´t be used alone and should be follow by other method.
 
@@ -204,7 +204,7 @@ nb.resources('lights').groupBy('roof').set({on: 1})
 
 In this example, we switch all the lights of the group ‘roof’ on. 
 
-###resources([topic]).set(args)###
+####resources([topic]).set(args)####
 
 The set method allows us to change the current state of the devices. You can modify different values at the same time.
 
@@ -224,7 +224,7 @@ nb.resources('lights').set({bri: 200, hue: 65000, sat: 255})
 .catch(function (error) {}
 ````
 
-###resources([topic]). setById(id, args)###
+####resources([topic]). setById(id, args)####
 
 The setById method allows us to change the current state of the given device. You can modify different values of the specified device.
 
@@ -240,7 +240,7 @@ nb.resources().setById(1, args)
 
 The topic is useless on this method.
 
-#Scenes#
+###Scenes###
 
 A Scene is a snapshot of the current state of a group of devices. It allows you to save your favorites configuration to be accessed easily. The scenes database its composed by the following fields:
 
@@ -258,7 +258,7 @@ A given device could be part of different scenes.
 
 The parameters *hue* and *sat* are used to define the colors.
 
-###scene(sceneid).addDevice(id)###
+####scene(sceneid).addDevice(id)####
 
 The addDevice method allows us to add a new device to the selected scene. You must pass the id of the device and it will save the current state of it on the db.
 
@@ -270,7 +270,7 @@ nb.scene('watchfilm').addDevice(2)
 .catch(function (error) {}
 ````
 
-###scene(sceneid).apply()###
+####scene(sceneid).apply()####
 
 This method apply the configuration of the given scene.
 
@@ -282,7 +282,7 @@ nb.scene('watchfilm').apply()
 .catch(function (error) {}
 ````
 
-###scene(sceneid).create(ids)###
+####scene(sceneid).create(ids)####
 
 This method is used to create a new scene by passing an array of device ids. It takes the current state of the given devices and store the scene in the db with the 'seceneid' name.
 
@@ -296,7 +296,7 @@ nb.scene('watchfilm').create(devices)
 .catch(function (error) {}
 ````
 
-###scene(sceneid).createCustom(state)###
+####scene(sceneid).createCustom(state)####
 
 With this method you can create a new scene with a predefined state. *state* is an object array that contains the object id and the state of each device.
 
@@ -320,7 +320,7 @@ nb.scene('watchfilm').createCustom(newscene)
 .catch(function (error) {}
 ````
 
-###scene(sceneid).delete()###
+####scene(sceneid).delete()####
 
 With delete you can remove a given scene from the db
 
@@ -332,7 +332,7 @@ nb.scene('watchfilm').delete()
 .catch(function (error) {}
 ````
 
-###scene(sceneid).deleteDevice(id)###
+####scene(sceneid).deleteDevice(id)####
 
 Instead of removing the whole scene, you are able to quit one device from the scene.
 
@@ -345,7 +345,7 @@ nb.scene('watchfilm').deleteDevice(6)
 ````
 
 
-###scene(sceneid).get()###
+####scene(sceneid).get()####
 
 This methods returns all the information about the scene.
 
@@ -358,7 +358,7 @@ nb.scene('watchfilm').get()
 ````
 get has no arguments.
 
-###scene().getScenes()###
+####scene().getScenes()####
 
 The getScenes method return the name of all the scenes registered on the db.
 Arguments are not needed on this function.
@@ -372,10 +372,10 @@ nb.scene().getScene()
 ````
 
 
-#Devices#
+###Devices###
 This object include useful methods for managing different aspects of the Smart devices
 
-###devices.group(name , devicesId)###
+####devices.group(name , devicesId)####
 This functión allows us to make group of devices. The argument name defines de group name. DevicesId will be an array of ids of the devices that should be grouped.
 
 ````javascript
@@ -388,7 +388,7 @@ nb.devices().group('roof', args)
 .catch(function (error) {}
 ````
 
-###devices.discover([brand-name])###
+####devices.discover([brand-name])####
 
 This function allows us to activate the discovery process. With the brand-name parameter you can specify a concrete app (like belkin-wemo, philips-hue). If you don´t include this argument, the discovery will be apply to all available brands.
 
