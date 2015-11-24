@@ -22,17 +22,8 @@ Secondly joining all these technologies it could be relatively simple to scan th
 However in this scenario cloud services may be already needed, or logic performed on smartphones (which might not be home, and thus cloud is needed again). Also some hubs may offer extra compatibility services and new functionalities, so simply adding communication channels does not completely cover the needs of a very young domestic IoT. For this, we are proposing –and which is the locomotiv idea behind netBeast startup– to add computation capabilities to current routers so we can completely port hub functionalities and cloud dounterpart into a single device as applications. 
  
 ![Complex scenario](../img/complex.png) <br/>
-Figure 1: Smart Home without next-gen router
-
 ![Simple scenario](../img/simple.png) <br/>
+Figure 1: Smart Home without next-gen router
 Figure 2: with a next-generation router
 
 This way instead of buying a gateway for a set of devices we would have a flexible platform where, just by having an application, you can control a set of smart things. Data will be kept confidential –unless wanted– and carriers could dispose for a node in the customers’ home to offer extra functionalities and services.
-
-## Contact
-* Visit our site [https://netbeast.co](https://netbeast.co)
-* Mail us: staff [at] netbeast.co
-* Report a bug or enter discussion at [issues](https://github.com/netbeast-co/docs/issues)
-* Other resources: [Dashboard](https://github.com/netbeast-co/dashboard), Netbeast [API](https://github.com/netbeast-co/API)
-
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/netbeast-co/xway?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
