@@ -19,7 +19,7 @@
 * [API Reference](chapters/api_reference/index.md)
    * [Node.js wrapper](chapters/api_reference/nodejs_wrapper.md)
        * [About this doc](chapters/api_reference/about_this_doc.md)
-           * Supported devices
+           * [Supported devices](chapters/api_reference/supported_devices.md)
            * How to use it?
        * Supported devices
    * Resources implementation
