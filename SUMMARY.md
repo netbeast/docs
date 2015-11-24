@@ -19,6 +19,7 @@
 * [API Reference](chapters/api_reference/index.md)
    * [Node.js wrapper](chapters/api_reference/nodejs_wrapper.md)
        * About this doc
+           * Supported devices
        * Supported devices
    * Resources implementation
 * [Collaborate](chapters/collaborate/index.md)
