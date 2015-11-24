@@ -24,7 +24,7 @@
        * [Arguments](chapters/api_reference/Arguments.md)
        * [Output](chapters/api_reference/output.md)
        * [Devices](chapters/api_reference/devices.md)
-           * devices.group(name, devicesId)
+           * [devices.group(name, devicesId)](chapters/api_reference/devicesgroupname,_devicesid.md)
        * Resources
        * Scenes
    * Resources implementation
