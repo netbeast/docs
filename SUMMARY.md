@@ -21,7 +21,6 @@
        * [About this doc](chapters/api_reference/about_this_doc.md)
        * [Methods](chapters/api_reference/methods.md)
            * Devices
-       * Resources
        * Scenes
    * Resources implementation
 * [Collaborate](chapters/collaborate/index.md)
