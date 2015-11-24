@@ -19,7 +19,6 @@
 * [API Reference](chapters/api_reference/index.md)
    * [Node.js wrapper](chapters/api_reference/nodejs_wrapper.md)
        * [About this doc](chapters/api_reference/about_this_doc.md)
-       * [Arguments](chapters/api_reference/Arguments.md)
        * [Output](chapters/api_reference/output.md)
        * [Devices](chapters/api_reference/devices.md)
            * [devices.group(name, devicesId)](chapters/api_reference/devicesgroupname,_devicesid.md)
