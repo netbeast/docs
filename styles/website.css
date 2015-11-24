@@ -11,7 +11,7 @@ a {
 }
 
 a:hover, a:active, a:focus {
-    color: #CC0000;
+    color: #CC0000 !important;
 }
 
 .book .book-summary ul.summary li.active>a {
