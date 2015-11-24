@@ -62,10 +62,22 @@ Here is a list of supported arguments for each device.
     * hue   - 0-65535   (color bulbs)
     * sat   - 0-255     (color bulbs)
 
+A example of use:
+````javascript
+nb.resources('lights').set({on: true, bri: 200, hue: 0, sat: 255})
+````
+ If you have white and color bulbs, the first ones are going to switch on and change the brightness. The color bulbs will also change their color to red and the execution continues without problems.
+
 
 ##Output##
 
-##Errors##
+All the methods act as a promise and they always return a json object like this:
+`````json
+{
+    error:  
+    data:
+}
+````
 
 ##Resources##
 
@@ -166,7 +178,7 @@ nb.resources('lights').get('bri')
 
 ###resources([topic]).getById(id)###
 
-The getById method allows us to obtain information about the current state of the devices. You will receive all the information of the specified device.
+The getById method allows us to get information about the current state of the devices. You will receive all the information of the specified device.
 
 ````javascript
 var nb = require('netbeast')
@@ -378,7 +390,7 @@ nb.devices().group('roof', args)
 
 ###devices.discover([brand-name])###
 
-This function allows us to activate the discovery process. With the brand-name parameter you can specify a concrete app (like belkin-wemo, philips-hue), if you don´t include this argument, the discovery will be apply to all available brands.
+This function allows us to activate the discovery process. With the brand-name parameter you can specify a concrete app (like belkin-wemo, philips-hue). If you don´t include this argument, the discovery will be apply to all available brands.
 
 ````javascript
 var nb = require('netbeast')
@@ -387,7 +399,3 @@ nb.devices().discovery('belkin-wemo')
 .then(function (data) {}
 .catch(function (error) {}
 ````
-
-
-
-
