@@ -1,3 +1,7 @@
 /* CSS for website */
 
 @import 'https://raw.githubusercontent.com/netbeast/design/master/nb-bootstrap/css/nb-bootstrap.css';
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bebas Neue';
+}
