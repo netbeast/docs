@@ -25,6 +25,7 @@
        * [Output](chapters/api_reference/output.md)
        * [Devices](chapters/api_reference/devices.md)
            * [devices.group(name, devicesId)](chapters/api_reference/devicesgroupname,_devicesid.md)
+           * devices.discover([brand-name])
        * Resources
        * Scenes
    * Resources implementation
