@@ -19,12 +19,12 @@
 * [API Reference](chapters/api_reference/index.md)
    * [Node.js wrapper](chapters/api_reference/nodejs_wrapper.md)
        * [About this doc](chapters/api_reference/about_this_doc.md)
+       * [Methods](chapters/api_reference/methods.md)
        * [Devices](chapters/api_reference/devices.md)
            * [devices.group(name, devicesId)](chapters/api_reference/devicesgroupname,_devicesid.md)
            * [devices.discover([brand-name])](chapters/api_reference/devicesdiscover[brand-name].md)
        * Resources
        * Scenes
-       * [Methods](chapters/api_reference/methods.md)
    * Resources implementation
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
