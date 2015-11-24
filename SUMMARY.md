@@ -22,7 +22,7 @@
            * [Supported devices](chapters/api_reference/supported_devices.md)
            * [How to use it?](chapters/api_reference/how_to_use_it.md)
        * [Arguments](chapters/api_reference/Arguments.md)
-       * Output
+       * [Output](chapters/api_reference/output.md)
    * Resources implementation
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
