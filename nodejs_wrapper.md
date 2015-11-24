@@ -46,11 +46,13 @@ var devices = require('netbeast/lib/devices')
 resources('lights').get()
 ````
 
-#Arguments#
-
-#Errors#
-
 #Methods#
+
+##Arguments##
+
+##Output##
+
+##Errors##
 
 ##Resources##
 
@@ -147,6 +149,7 @@ nb.resources('lights').get('bri')
 .then(function (data) {}
 .catch(function (error) {}
 ````
+ You can only ask for one value.  nb.resources('lights').get('on', 'bri') is not allowed.
 
 ###resources([topic]).getById(id)###
 
