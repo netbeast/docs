@@ -22,7 +22,7 @@
        * [Methods](chapters/api_reference/methods.md)
            * [Devices](chapters/api_reference/devices.md)
            * [Resources](chapters/api_reference/resources.md)
-           * Scenes
+           * [Scenes](chapters/api_reference/scenes.md)
    * Resources implementation
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
