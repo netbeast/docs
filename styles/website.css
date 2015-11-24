@@ -6,6 +6,6 @@ h1, h2, h3, h4, h5 {
     font-family: 'Bebas Neue';
 }
 
-a:hover {
+a:hover, a:active, a:focus, a:visited {
     color: #CC0000;
 }
