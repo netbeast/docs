@@ -26,6 +26,7 @@
            * [devices.discover([brand-name])](chapters/api_reference/devicesdiscover[brand-name].md)
        * Resources
        * Scenes
+       * Methods
    * Resources implementation
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
