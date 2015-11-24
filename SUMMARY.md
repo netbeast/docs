@@ -23,6 +23,7 @@
            * [How to use it?](chapters/api_reference/how_to_use_it.md)
        * [Arguments](chapters/api_reference/Arguments.md)
        * [Output](chapters/api_reference/output.md)
+       * Devices
    * Resources implementation
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
