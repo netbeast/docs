@@ -20,7 +20,7 @@
    * [Node.js wrapper](chapters/api_reference/nodejs_wrapper.md)
        * [About this doc](chapters/api_reference/about_this_doc.md)
            * [Supported devices](chapters/api_reference/supported_devices.md)
-           * How to use it?
+           * [How to use it?](chapters/api_reference/how_to_use_it.md)
        * Supported devices
    * Resources implementation
 * [Collaborate](chapters/collaborate/index.md)
