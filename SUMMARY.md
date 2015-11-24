@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * Why Netbeast
 * [Get Started](get-started/index.md)
    * [Install Node.js](get-started/install-nodejs.md)
    * [Write your first app](get-started/write-your-first-app.md)
