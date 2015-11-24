@@ -1,22 +1,28 @@
 # Summary
 
 * [Introduction](README.md)
-   * [Why Netbeast](why_netbeast.md)
-* [Get Started](get-started/index.md)
-   * [Install Node.js](get-started/install-nodejs.md)
-   * [Write your first app](get-started/write-your-first-app.md)
-   * [Install Dashboard](get-started/install-dashboard.md)
-   * [Install your own app](get-started/install_your_own_app_md.md)
-   * [Publish your app](get-started/publish_your_app.md)
-* [Guides and resources](guides_and_resources.md)
-   * [Install OS on Raspberry Pi](install_os_on_raspberry_pi.md)
-   * [Discover your Netbeast](discover_your_netbeast.md)
-* [Advanced](advanced.md)
-   * Push notifications
-   * Create a Resource
-   * Use a Resource
-   * Chain events
-* [API Reference](api_reference.md)
-   * [Node.js wrapper](nodejs_wrapper.md)
-   * Resources implementation
-
+  * [Why Netbeast](chapters/introduction/why_netbeast.md)
+* [Get Started](chapters/get_started/index.md)
+  * [Install Node.js](chapters/get_started/install_nodejs.md)
+  * [Write your first app](chapters/get_started/write_your_first_app.md)
+  * [Install Dashboard](chapters/get_started/install_dashboard.md)
+  * [Install your own app](chapters/get_started/install_your_own_app_md.md)
+  * [Publish your app](chapters/get_started/publish_your_app.md)
+* [Guides and resources](chapters/guides_and_resources/index.md)
+  * [Install OS on Raspberry Pi](chapters/guides_and_resources/install_os_on_raspberry_pi.md)
+  * [Discover your Netbeast](chapters/guides_and_resources/discover_your_netbeast.md)
+* [Advanced](chapters/advanced/index.md)
+  * Push notifications
+  * Create a Resource
+  * Use a Resource
+  * Chain events
+* [API Reference](chapters/api_reference/index.md)
+  * [Node.js wrapper](chapters/api_reference/nodejs_wrapper.md)
+  * Resources implementation
+* [Collaborate](chapters/collaborate/index.md)
+  * Roadmap
+  * Report bugs
+  * Collaborate to the open source
+  * [Write new documentation](chapters/collaborate/write_new_documentation.md)
+  * [Publish your app](chapters/get_started/publish_your_app.md)
+  * Contact

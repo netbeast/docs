@@ -1,0 +1,18 @@
+This file contains a list of people who have made contributions to the xway
+project, Dashboard or SDK.
+
+Luis Pinto <luis@netbeast.co>
+	* Operative system building
+	* DNS, DHCP and routing configurations
+	* Default packaging, installation system
+Pablo Pizarro <pablo@netbeast.co>
+	* Notification service
+	* Application definition and development
+	* Unit tests
+Jesus Rivera <jesus@netbeast.co>
+	* Release of Dashboard
+	* Release of SDK
+Jon Senra  <jon@netbeast.co>
+	* SDK discovery command
+	* Packet reutilisation design
+	* Site mainteinance

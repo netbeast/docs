@@ -1,0 +1,23 @@
+/* CSS for website */
+
+@import 'https://raw.githubusercontent.com/netbeast/design/master/nb-bootstrap/css/nb-bootstrap.css';
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bebas Neue';
+}
+
+a {
+    font-weight: bold;
+}
+
+a:hover, a:active, a:focus {
+    color: #CC0000 !important;
+}
+
+.book .book-summary ul.summary li.active>a {
+    color: #CC0000 !important;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a {
+    color: #CC0000 !important;
+}
