@@ -22,6 +22,7 @@
        * [Methods](chapters/api_reference/methods.md)
            * Devices
            * Resources
+           * Scenes
    * Resources implementation
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
