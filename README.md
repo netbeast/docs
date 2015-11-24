@@ -61,18 +61,17 @@ See [Documents Guidelines](https://github.com/netbeast-co/docs/wiki/Document-Gui
  - [x] API Release
  - [x] Dashboard Re-Desing
  
-[**Download it Here**](https://sourceforge.net/projects/netbeast/files/latest/download)
-
-- Beta 2 (November 23rd)
- - [ ] Cloud Service (thethings.io)
- - [ ] Raspberry Pi B Support
- - [ ] Raspberry Pi B+ Support
- - [ ] Tunneling
- - [ ] ...
+- Beta 2 (November 25rd)
+ - [x] Cloud Service (thethings.io)
+ - [x] Bluetooth Smart Support
+ - [x] Sonos Support
+ - [x] Parrot Flower Power Support
+ - [ ] ChromeCast Support
  - [ ] ...
  
 - To be continued...
  
+[**Download NBOS**](https://sourceforge.net/projects/netbeast/files/latest/download)
 
 <br/>
 <img src="https://github.com/netbeast-co/router/blob/master/img/open-source.png?raw=true" height="140px" width="auto"/><img src="https://github.com/netbeast-co/router/blob/master/img/open-hw.png?raw=true" height="140px" width="auto"/>
