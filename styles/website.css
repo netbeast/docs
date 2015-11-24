@@ -16,6 +16,4 @@ a:hover, a:active, a:focus {
 
 .book .book-summary ul.summary li.active>a {
     color: #CC0000 !important;
-    background: 0 0;
-    text-decoration: none;
 }
