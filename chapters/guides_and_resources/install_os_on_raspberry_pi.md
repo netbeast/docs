@@ -8,7 +8,7 @@ In this guide we will introduce some basic concepts about the Netbeast Operative
 * [How to install it](#Install)
 * [First Boot](#Boot) 
 
-![](NB-OS_default.gif)
+![](https://www.gitbook.com/book/netbeast/docs/edit#/edit/master/img/NB-OS_default.gif)
 
 <a name="What">
 ## What is the Netbeast OS 
