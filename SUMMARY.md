@@ -29,5 +29,5 @@
    * Report bugs
    * Collaborate to the open source
    * [Write new documentation](chapters/collaborate/write_new_documentation.md)
-   * Contact
+   * [Contact](chapters/collaborate/contact.md)
 
