@@ -104,12 +104,14 @@ var server = app.listen(port, function () {
   	server.address().port)
 })
 ```
-If you rather like to using semicolons in JS go type them! But they are not   (necessary)[http://inimino.org/~inimino/blog/javascript_semicolons], [really](https://www.youtube.com/watch?v=gsfbh17Ax9I)!
 
-**It is mandatory for `main` to be and executable file.** So if you are writting your app from draft make sure it can be executed:
+> If you rather like to using semicolons in JS go type them! But they [are](https://github.com/feross/standard) [not](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding) [necessary](http://inimino.org/~inimino/blog/javascript_semicolons), [really](https://www.youtube.com/watch?v=gsfbh17Ax9I)!
+
+**It is mandatory for `main` to be and executable file.** So if you are writing your app from draft make sure it can be executed:
 ```
 chmod +x server.js
 ```
+As you can see in the code, the runnable must accept the port by parameter, so in the case of a webapp they can all be opened from the [Dashboard](https://github.com/netbeast/dashboard).
 
 Like for this document as well as for others you can suggest new features at [github issues](https://github.com/netbeast/dashboard/issues) or our gitter chat.
 
