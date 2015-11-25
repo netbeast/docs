@@ -14,3 +14,7 @@ beast publish app.tar.gz
 
 
 `[Update your app]` Before the final release of the Netbeast Marketplace, you should remove your app and upload it again.
+
+### Publish manually
+
+![Publish by drag and drop](../../img/publish-app.gif)
