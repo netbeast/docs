@@ -20,4 +20,4 @@ npm i # by default, dependencies are ignored, so must be installed
 
 We also prepared a <u>very lightweight Raspberry Pi distro with the dashboard already installed</u> is published every two weeks here http://bit.ly/1HjkWo2. Available for Rpi 1 and 2 versions.
 
-![](general_demo.gif)
+![](/img/general_demo.gif)
