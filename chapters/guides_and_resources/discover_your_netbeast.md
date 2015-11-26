@@ -18,3 +18,4 @@ beast scan
 Automatically, this command will show you what is the netbeast ip address on your router network and you can access through ssh for example.
 
 
+![Scan](../../img/netbeastScan.gif)
