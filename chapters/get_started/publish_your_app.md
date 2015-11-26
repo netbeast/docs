@@ -7,10 +7,20 @@ http://netbeast.co/#!/signup <br>
 ... or log in with github
 http://netbeast.co/#!/signup
 
-After that you can upload it manually following the instructions written on the site. Else you can do it directly from the command line:
+### Publish from the command line
+
+You can do that just by typing:
+
 ```
 beast publish app.tar.gz
 ```
 
+### Publish manually
 
-`[Update your app]` Before the final release of the Netbeast Marketplace, you should remove your app and upload it again.
+![Publish by drag and drop](../../img/publish-app.gif)
+
+### Update your app
+
+Before the final release of the Netbeast Marketplace, you should remove your app and upload it again.
+
+This is because the future upload and distribution mechanism will be based on git, rather than compressed packages. This will take long but the development experience will be much better.

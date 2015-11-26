@@ -26,6 +26,12 @@ beast pkg .
 
 Will output app.tar.gz
 
+**But you could do that also manually!** Using the UNIX compressing tool:
+```
+tar -zcvf app.tar.gz directory-name
+```
+Or a standard desktop compressor.
+
 #### Manual installation
 Drag and drop the above resulting file to the dashboard, or go to the 'install' section from the tool bar and follow the instructions.
 
