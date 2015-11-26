@@ -50,7 +50,7 @@
     <body>
         
         
-    <div class="book" data-level="1.2" data-chapter-title="Write your first app" data-filepath="chapters/get_started/write_your_first_app.md" data-basepath="../.." data-revision="Tue Nov 24 2015 16:00:57 GMT+0100 (CET)">
+    <div class="book" data-level="1.2" data-chapter-title="Write your first app" data-filepath="chapters/get_started/write_your_first_app.md" data-basepath="../.." data-revision="Thu Nov 26 2015 17:06:24 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -324,6 +324,93 @@
                     </a>
             
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="chapters/api_reference/about_this_doc.html">
+            
+                
+                    <a href="../../chapters/api_reference/about_this_doc.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.1.</b>
+                        
+                        About this doc
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="chapters/api_reference/methods.html">
+            
+                
+                    <a href="../../chapters/api_reference/methods.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.2.</b>
+                        
+                        Methods
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="chapters/api_reference/devices.html">
+            
+                
+                    <a href="../../chapters/api_reference/devices.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.2.1.</b>
+                        
+                        Devices
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="chapters/api_reference/resources.html">
+            
+                
+                    <a href="../../chapters/api_reference/resources.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.2.2.</b>
+                        
+                        Resources
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.3" data-path="chapters/api_reference/scenes.html">
+            
+                
+                    <a href="../../chapters/api_reference/scenes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.2.3.</b>
+                        
+                        Scenes
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="4.2" >
@@ -382,9 +469,17 @@
             
         </li>
     
-        <li class="chapter " data-level="5.5" >
+        <li class="chapter " data-level="5.5" data-path="chapters/collaborate/contact.html">
             
-            <span><b>5.5.</b> Contact</span>
+                
+                    <a href="../../chapters/collaborate/contact.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        Contact
+                    </a>
             
             
         </li>
@@ -428,6 +523,7 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="write-your-first-app">Write your first app</h1>
+<h3 id="eat-the-dessert-first">Eat the dessert first</h3>
 <p>First we will install the netbeast SDK. Open a terminal and type:</p>
 <pre><code>npm install -g netbeast-cli
 netbeast new myapp
@@ -435,6 +531,116 @@ netbeast new myapp
 <p>Run:</p>
 <pre><code>cd myapp; node index.js --port 3000
 </code></pre><p>To have it running on <a href="http://localhost:3000" target="_blank">http://localhost:3000</a></p>
+<p>Now you can open your favourite editor on such project and start developing.</p>
+<h3 id="lets-do-this-slowly">Let&apos;s do this slowly</h3>
+<p>Every Netbeast app is simply a npm package. For advanced developers you may write your app in python or compile and executable for Netbeast-ready platforms. But for the moment let us focus on the Javascript app itself.</p>
+<p>Let us create our first project from scratch. Open a terminal and type:</p>
+<pre><code>mkdir myapp
+cd myapp
+atom .
+</code></pre><p>Or simply create a new folder with such name and open it in your favourite editor. <a href="https://atom.io/" target="_blank">Atom</a> or <a href="http://www.sublimetext.com/" target="_blank">Sublime</a> are ours.</p>
+<p><strong>A basic Netbeast app looks like this:</strong></p>
+<pre><code>.
+&#x251C;&#x2500;&#x2500; index.html
+&#x251C;&#x2500;&#x2500; node_modules
+&#x2502;   &#x251C;&#x2500;&#x2500; express
+&#x2502;   &#x2514;&#x2500;&#x2500; minimist
+&#x251C;&#x2500;&#x2500; package.json
+&#x2514;&#x2500;&#x2500; server.js
+</code></pre><p>package.json is the information needed by npm to maintain a module into their repositories, analyze dependencies and establish some development workflow.</p>
+<p>Netbeast will make use of this file to reduce the overhead of configuration needed to get up and running. It will look for the <code>main</code>field in order to launch and executable. For this app:</p>
+<pre><code>{
+    &quot;name&quot;:&quot;myapp&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;description&quot;:&quot; A repo with code about how to make simple Netbeast apps.&quot;,
+    &quot;main&quot;: &quot;server.js&quot;,
+    &quot;dependencies&quot;: {
+        &quot;express&quot;: &quot;^4.12.3&quot;, 
+        &quot;minimist&quot;:&quot;^1.1.0&quot;
+    }, 
+    &quot;devDependencies&quot;:{},
+    &quot;scripts&quot;:{ 
+        &quot;test&quot;:&quot;node server.js --port 31416&quot;,
+        &quot;start&quot;: &quot;node server.js&quot;
+    },
+    &quot;repository&quot;: { 
+        &quot;type&quot;:&quot;git&quot;, 
+        &quot;url&quot;:&quot;https://github.com/netbeast-co/get-started&quot;
+    },
+    &quot;keywords&quot;: [ &quot;iot&quot;,&quot;netbeast&quot;,&quot;netbeast.co&quot;],
+    &quot;author&quot;: &quot;jesus@netbeast.co&quot;,
+    &quot;license&quot;: &quot;GPL 2&quot;,
+    &quot;bugs&quot;: {
+        &quot;url&quot;:&quot;https://github.com/netbeast-co/get-started/issues&quot;
+    },
+    &quot;homepage&quot;:&quot;https://github.com/netbeast-co/get-started&quot;
+}
+</code></pre><p><strong>Let&apos;s create your own one to be like this one.</strong> Open a terminal and type:</p>
+<pre><code>npm init    # And fill the gaps!
+</code></pre><p>Or open a file named <code>package.json</code> in your editor and copy-paste de code above</p>
+<p>We specified in the package that <code>server.js</code>is our main file. Let&apos;s write a simple HTTP server.</p>
+<pre><code>#!/usr/bin/env node
+
+/* Requires node.js libraries */
+var express = require(&apos;express&apos;)
+var app = express()
+
+// Netbeast apps must accept the port to launch a HTTP server.
+var argv = require(&apos;minimist&apos;)(process.argv.slice(2))
+port = argv.port || 31416
+
+if(isNaN(port)) {
+    console.log(&quot;Port \&quot;%s\&quot; is not a number.&quot;, port)
+    process.kill(1)
+}
+
+app.use(express.static(__dirname))
+
+var server = app.listen(port, function () {
+  console.log(&apos;Example app listening at http://%s:%s&apos;, 
+      server.address().address,
+      server.address().port)
+})
+</code></pre><p><em> If you rather like to using semicolons in JS go type them! But they <a href="https://github.com/feross/standard" target="_blank">are</a> <a href="http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding" target="_blank">not</a> <a href="http://inimino.org/~inimino/blog/javascript_semicolons" target="_blank">necessary</a>, <a href="https://www.youtube.com/watch?v=gsfbh17Ax9I" target="_blank">really</a>!</em></p>
+<p>See the <em>shebang</em>? (First line of the script <code>#!/usr/bin/env node</code>) It is used to tell the Netbeast which interpreter to use when launching and app. <strong>Use this line to indicate node.</strong></p>
+<p><strong>It is mandatory for <code>main</code> to be and executable file.</strong> So if you are writing your app from draft make sure it can be executed:</p>
+<pre><code>chmod +x server.js
+</code></pre><p>As you can see in the code, <strong>the runnable must accept the port by parameter</strong>, so in the case of a webapp they can all be opened from the <a href="https://github.com/netbeast/dashboard" target="_blank">Dashboard</a>.</p>
+<p>In order to do that we use <a href="https://www.npmjs.com/package/minimist" target="_blank">minimist</a>, but you can use whatever command parser you prefer. <a href="https://www.npmjs.com/package/commander" target="_blank">Commander</a> is another recommendation. But you can go hard and parse it in <a href="https://docs.nodejitsu.com/articles/command-line/how-to-parse-command-line-arguments" target="_blank">plain javascript</a>.</p>
+<pre><code>var argv = require(&apos;minimist&apos;)(process.argv.slice(2))
+port = argv.port || 31416
+</code></pre><p><a href="http://expressjs.com/" target="_blank">Express</a> is a http node lightweight+unopinated framework. Is really popular software that you may feel handy in the future.</p>
+<p><strong>You will need to install both packages</strong> for the app to work. It will populate the node_modules folder as you can see up in the folder tree. Run:</p>
+<pre><code>npm install express minimist
+</code></pre><p><strong>We are almost ready to roll!</strong>
+<code>index.html</code> is a simple user interface that welcomes you as the great developer you are!</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;xway | get-started&lt;/title&gt;
+&lt;/head&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+    body {
+        font-family: arial;
+    }
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;!-- index.html, an optional user interface :] --&gt;
+    &lt;h1&gt;
+        Hello Netbeast community! &lt;a style=&quot;color: red&quot;&gt;&amp;#9829;&lt;/a&gt;
+    &lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><em>A UI is not strictly needed. There are multiple ways to interact with the user in Netbeast ecosystem as notifications, touchscreens or native mobile apps (docs for these chapters are yet pending, you can request them in <a href="https://github.com/netbeast/dashboard/issues" target="_blank">github issues</a>).</em></p>
+<p><strong>Now you can launch it</strong>
+Try and debug it locally. Type:</p>
+<pre><code>./server.js --port 8000
+</code></pre><p>And if everything has been good you will be able to open a browser at <a href="http://localhost:8000" target="_blank">http://localhost:8000</a> and see:</p>
+<p><img src="../../img/hello_netbeast_community.png" alt="hello netbeast community"></p>
+<p><hr></p>
+<h4 id="report-a-bug-or-ask-for-an-improvement-or-a-feature">Report a bug or ask for an improvement or a feature</h4>
+<p>Like for this document as well as for others you can suggest new features at <a href="https://github.com/netbeast/dashboard/issues" target="_blank">github issues</a> or our gitter chat.</p>
+<p><img src="https://badges.gitter.im/Join%20Chat.svg" alt="gitter chat"></p>
 
                     
                     </section>

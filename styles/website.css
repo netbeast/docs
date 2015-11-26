@@ -1,6 +1,15 @@
 /* CSS for website */
 
-@import 'https://raw.githubusercontent.com/netbeast/design/master/nb-bootstrap/css/nb-bootstrap.css';
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Roboto'), url('../fonts/bebas/Roboto.ttf') format('ttf'); }
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bebas Neue'), url('../fonts/bebas/BebasNeue-Regular.otf') format('opentype'); }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Bebas Neue';
