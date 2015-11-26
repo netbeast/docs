@@ -51,7 +51,7 @@ See [Documents Guidelines](https://github.com/netbeast-co/docs/wiki/Document-Gui
 * staff@netbeast.co
 
 ## Netbeast Roadmap
-- Beta (November 11th)
+- Beta (November 11st)
  - [x] Philips Hue Support
  - [x] Wemo Lights Support
  - [x] Wemo Plug Support
@@ -61,13 +61,12 @@ See [Documents Guidelines](https://github.com/netbeast-co/docs/wiki/Document-Gui
  - [x] API Release
  - [x] Dashboard Re-Desing
  
-- Beta 2 (November 25rd)
+- Beta 2 (November 26th)
  - [x] Cloud Service (thethings.io)
  - [x] Bluetooth Smart Support
  - [x] Sonos Support
  - [x] Parrot Flower Power Support
- - [ ] ChromeCast Support
- - [ ] ...
+ - [x] ChromeCast Support
  
 - To be continued...
  
