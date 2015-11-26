@@ -8,7 +8,7 @@ For doing this, you should know what the IP address of your raspberry pi is on t
 
 * The install the netbeast package if you haven't done it yet.
 ```
-npm install netbeast
+npm install netbeast-cli -g
 ```
 * Once you have the npm package installed just run this command on your terminal
 ```
