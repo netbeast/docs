@@ -28,7 +28,7 @@ With this API you can control this devices
 
 First of all, you need to install the npm package.
 ````
-sudo npm install netbeast -g
+npm install netbeast
 ````
  Once the package is in the node_modules folder, you can require it from the code. You are able to require all the methods or only some specific areas.
 
