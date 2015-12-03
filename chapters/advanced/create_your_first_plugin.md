@@ -37,8 +37,8 @@ Now let's get started. Declare your app as a plugin. Append the following lines 
   }
 ```
 
-### The hardware
-We are going to mimic hardware connection by creating a really simple webapp. For the result below you must copy paste the following code for a new **index.html**:
+### The hardware: a hacked example
+We are going to **mimic hardware** connection by creating a really simple webapp. For the result below you must copy paste the following code for a new **index.html**:
 
 
 
