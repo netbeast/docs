@@ -13,7 +13,7 @@
    * [Discover your Netbeast](chapters/guides_and_resources/discover_your_netbeast.md)
 * [Advanced](chapters/advanced/index.md)
    * Push notifications
-   * Create your first plugin
+   * [Create your first plugin](chapters/advanced/create_your_first_plugin.md)
    * Use a Resource
    * Chain events
 * [API Reference](chapters/api_reference/index.md)
