@@ -17,7 +17,7 @@ resources('lights').get()
 ````
 *   Change the current state of devices, for example
 ````javascript
-resources('switch').set({on: true})
+resources('switch').set({power: true})
 ````
 *   Select a device through its group or location, for example
 ````javascript
