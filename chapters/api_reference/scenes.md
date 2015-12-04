@@ -5,12 +5,12 @@ A Scene is a snapshot of the current state of a group of devices. It allows you 
 Property | Description | Values | Default
 ---------|-------------|--------|--------
 id | Identifies the resource in the db | Integer (automatic) | -
-sceneid | show the name of the scene | String | -
+scene_id | show the name of the scene | String | -
 location | Location of the scene in the house | String (up to developer) | none
-on | show if the device is on or off | Boolean	| -
-bri	| Stores the brightness value | Integer |	-
+power | show if the device is on or off | String	| -
+brightness	| Stores the brightness value | Integer |	-
 hue	| Stores the hue value | Integer | -
-sat	| Stores the saturation value | Integer | -
+saturation	| Stores the saturation value | Integer | -
 
 A given device could be part of different scenes.
 
@@ -62,15 +62,17 @@ With this method you can create a new scene with a predefined state. *state* is 
 var nb = require('netbeast')
 
 var newscene = [ { 
-    id: 1,
-    on: 1,
-    bri: 254,
-    hue: 4753,
-    sat: 254 },
+        id: 1,
+        power: 'on',
+        brightness: 99,
+        hue: 200,
+        saturation: 80 
+    },
     {
-    id: 8,
-    on: 1,
-    bri: 254}]
+        id: 8,
+        power: 'on',
+        brightness: 254
+    }]
 
 
 nb.scene('watchfilm').createCustom(newscene)
