@@ -38,9 +38,9 @@ var nb = require('netbeast')
 nb.resources('lights').get()
 
 //  Option 2 – directly only of those functions needed
-var resources = require('netbeast/lib/resources')
-var scene = require('netbeast/lib/scene')
-var devices = require('netbeast/lib/devices')
+var resources = require('netbeast').resources
+var scene = require('netbeast').scene
+var devices = require('netbeast').devices
 
 resources('lights').get()
 ```
