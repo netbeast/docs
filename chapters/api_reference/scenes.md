@@ -14,7 +14,7 @@ saturation	| Stores the saturation value | Integer | -
 
 A given device could be part of different scenes.
 
-The parameters *hue* and *sat* are used to define the colors.
+The parameters *hue* and *saturation* are used to define the colors.
 
 ####scene(sceneid).addDevice(id)####
 
@@ -63,14 +63,14 @@ var nb = require('netbeast')
 
 var newscene = [ { 
         id: 1,
-        power: 'on',
+        power: true,
         brightness: 99,
         hue: 200,
         saturation: 80 
     },
     {
         id: 8,
-        power: 'on',
+        power: true,
         brightness: 254
     }]
 
