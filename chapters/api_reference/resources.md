@@ -21,7 +21,7 @@ resources('switch').set({power: true})
 ````
 *   Select a device through its group or location, for example
 ````javascript
-resources('lights').at('kitchen').get('bri')
+resources('lights').at('kitchen').get('brightness')
 ````
 
 ####resources([topic]).at(location).METHOD
