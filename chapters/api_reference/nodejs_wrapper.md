@@ -60,25 +60,19 @@ Here is a list of supported arguments for each device.
     * power    - true || false
     * brightness   - 0..100
     * hue   - 0..360   
-    * sat   - 0..100    
+    * saturation   - 0..100    
     * color: {r: 0, b: 0, g: 0} || CC00AA // Will be translated to hue and saturation
 
 A example of use:
 ````javascript
-nb.resources('lights').set({on: true, bri: 200, hue: 0, sat: 255})
+nb.resources('lights').set({power: true, brightness: 80, hue: 0, saturation: 100})
 ````
  If you have white and color bulbs, the first ones are going to switch on and change the brightness. The color bulbs will also change their color to red and the execution continues without problems.
 
 
 ###Output###
 
-All the methods act as a promise and they always return a json object like this:
-`````json
-{
-    error:  
-    data:
-}
-````
+All the methods act as a promise and they always return a Javascript object if successful or an error object else.
 
 ###Resources###
 
