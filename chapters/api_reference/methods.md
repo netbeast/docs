@@ -3,7 +3,7 @@
 ### Arguments
 
 Each device can support specific parameters. 
-Bridge or Switch can be switched on or off. If you try to set an unsupported parameter to a switch (for example the brightness, `beast('lights').set({bri: 100}))` you will return a soft error. The process keep working but send you a warning.
+Bridge or Switch can be switched on or off. If you try to set an unsupported parameter to a switch (for example the brightness, `beast('lights').set({brightness: 100}))` you will return a soft error. The process keep working but send you a warning.
 
 Here is a list of supported arguments for each device.
 *   switch & bridge
@@ -18,7 +18,7 @@ Here is a list of supported arguments for each device.
 A example of use:
 ````javascript
 var beast = require('netbeast')
-beast.resources('lights').set({on: true, bri: 80, hue: 0, sat: 100})
+beast.resources('lights').set({power: true, brightness: 80, hue: 0, saturation: 100})
 ````
  If you have white and color bulbs, the first ones are going to switch on and change the brightness. The color bulbs will also change their color to red and the execution continues without problems.
 
