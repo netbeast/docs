@@ -93,11 +93,11 @@ resources('lights').get()
 ````
 *   Change the current state of devices, for example
 ````javascript
-resources('switch').set({on: true})
+resources('switch').set({power: true})
 ````
 *   Select a device through its group or location, for example
 ````javascript
-resources('lights').at('kitchen').get('bri')
+resources('lights').at('kitchen').get('brightness')
 ````
 
 #####resources([topic]).at(location).METHOD#####
@@ -165,11 +165,11 @@ nb.resources('lights').get()
 // Returns the brightness of all the lights
 var nb = require('netbeast')
 
-nb.resources('lights').get('bri')
+nb.resources('lights').get('brightness')
 .then(function (data) {}
 .catch(function (error) {}
 ````
- You can only ask for one value.  nb.resources('lights').get('on', 'bri') is not allowed.
+ You can only ask for one value.  nb.resources('lights').get('power', 'brightness') is not allowed.
 
 ####resources([topic]).getById(id)####
 
@@ -192,7 +192,7 @@ This method allows us to select devices form a specific group. It can´t be used
 ````javascript
 var nb = require('netbeast')
 
-nb.resources('lights').groupBy('roof').set({on: 1})
+nb.resources('lights').groupBy('roof').set({power: true})
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -207,14 +207,14 @@ The set method allows us to change the current state of the devices. You can mod
 var nb = require('netbeast')
 
 // Change the brightness of all lights
-nb.resources('lights').set({bri: 255})
+nb.resources('lights').set({brightness: 100})
 .then(function (data) {}
 .catch(function (error) {}
 
 //  Change the brightness and color of all the lights
 var nb = require('netbeast')
 
-nb.resources('lights').set({bri: 200, hue: 65000, sat: 255})
+nb.resources('lights').set({brightness: 70, hue: 300, saturation: 100})
 .then(function (data) {}
 .catch(function (error) {}
 ````
@@ -226,7 +226,7 @@ The setById method allows us to change the current state of the given device. Yo
 ````javascript
 var nb = require('netbeast')
 
-var args = { on: 1, bri: 50 }
+var args = { power: true, brightness: 50 }
 
 nb.resources().setById(1, args)
 .then(function (data) {}
@@ -244,14 +244,14 @@ Property | Description | Values | Default
 id | Identifies the resource in the db | Integer (automatic) | -
 sceneid | show the name of the scene | String | -
 location | Location of the scene in the house | String (up to developer) | none
-on | show if the device is on or off | Boolean	| -
-bri	| Stores the brightness value | Integer |	-
+power | show if the device is on or off | Boolean	| -
+brightness	| Stores the brightness value | Integer |	-
 hue	| Stores the hue value | Integer | -
-sat	| Stores the saturation value | Integer | -
+saturation	| Stores the saturation value | Integer | -
 
 A given device could be part of different scenes.
 
-The parameters *hue* and *sat* are used to define the colors.
+The parameters *hue* and *saturation* are used to define the colors.
 
 ####scene(sceneid).addDevice(id)####
 
@@ -300,14 +300,14 @@ var nb = require('netbeast')
 
 var newscene = [ { 
     id: 1,
-    on: 1,
-    bri: 254,
-    hue: 4753,
-    sat: 254 },
+    power: true,
+    brightness: 90,
+    hue: 250,
+    saturation: 35 },
     {
     id: 8,
-    on: 1,
-    bri: 254}]
+    power: true,
+    brightness: 25}]
 
 
 nb.scene('watchfilm').createCustom(newscene)
@@ -371,7 +371,7 @@ nb.scene().getScene()
 This object include useful methods for managing different aspects of the Smart devices
 
 ####devices.group(name , devicesId)####
-This functión allows us to make group of devices. The argument name defines de group name. DevicesId will be an array of ids of the devices that should be grouped.
+This functión allows us to make group of devices. The argument name defines the group name. devicesId will be an array of ids of the devices that should be grouped.
 
 ````javascript
 var nb = require('netbeast')
