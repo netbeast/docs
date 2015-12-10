@@ -138,7 +138,7 @@ nb.resources('lights').set({brightness: 100})
 //  Change the brightness and color of all the lights
 var nb = require('netbeast')
 
-nb.resources('lights').set({bri: 80, hue: 350, sat: 100})
+nb.resources('lights').set({brightness: 80, hue: 350, saturation: 100})
 .then(function (data) {}
 .catch(function (error) {}
 ````
