@@ -150,7 +150,7 @@ The setById method allows us to change the current state of the given device. Yo
 ````javascript
 var nb = require('netbeast')
 
-var args = { power: 'on', brightness: 50 }
+var args = { power: true, brightness: 50 }
 
 nb.resources().setById(1, args)
 .then(function (data) {}
