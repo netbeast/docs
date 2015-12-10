@@ -89,11 +89,11 @@ nb.resources('lights').get()
 // Returns the brightness of all the lights
 var nb = require('netbeast')
 
-nb.resources('lights').get('bri')
+nb.resources('lights').get('brightness')
 .then(function (data) {}
 .catch(function (error) {}
 ````
- You can only ask for one value.  nb.resources('lights').get('on', 'bri') is not allowed.
+ You can only ask for one value.  nb.resources('lights').get('power', 'brightness') is not allowed.
 
 ### resources([topic]).getById(id)
 
@@ -116,7 +116,7 @@ This method allows us to select devices form a specific group. It can´t be used
 ````javascript
 var nb = require('netbeast')
 
-nb.resources('lights').groupBy('roof').set({power: 'on'})
+nb.resources('lights').groupBy('roof').set({power: true})
 .then(function (data) {}
 .catch(function (error) {}
 ````
