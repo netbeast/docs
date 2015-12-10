@@ -39,9 +39,9 @@ var nb = require('netbeast')
 nb.resources('lights').get()
 
 //  Option 2
-var resources = require('netbeast/lib/resources')
-var scene = require('netbeast/lib/scene')
-var devices = require('netbeast/lib/devices')
+var resources = require('netbeast').resources
+var scene = require('netbeast').scene
+var devices = require('netbeast').devices
 
 resources('lights').get()
 ````
@@ -51,16 +51,17 @@ resources('lights').get()
 ###Arguments###
 
 Each device can support specific parameters. 
-Bridge or Switch can be switched on or off. If you try to set an unsupported parameter to a switch (example, .set({bri: 255})) you will return a soft error. The process keep working but send you a warning.
+Bridge or Switch can be switched on or off. If you try to set an unsupported parameter to a switch (example, .set({brightness: 100})) you will return a soft error. The process keep working but send you a warning.
 
 Here is a list of supported arguments for each device.
 *   switch & bridge
-    * on - true/false
+    * power - true || false
 *   Bulbs
-    * on    - true/false
-    * bri   - 0-255
-    * hue   - 0-65535   (color bulbs)
-    * sat   - 0-255     (color bulbs)
+    * power    - true || false
+    * brightness   - 0..100
+    * hue   - 0..360   
+    * sat   - 0..100    
+    * color: {r: 0, b: 0, g: 0} || CC00AA // Will be translated to hue and saturation
 
 A example of use:
 ````javascript
