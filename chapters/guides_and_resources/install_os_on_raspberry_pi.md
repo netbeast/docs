@@ -29,7 +29,7 @@ The NB-OS has the [Netbeast Dashboard](http://docs.netbeast.co/chapters/get_star
 <a name="Release">
 ## Current Release and Features
 
-* 11 November 2015
+
 
 - [x] RPI2 Support: The First NB-OS release can be installed on your RPI2.
 
@@ -48,7 +48,7 @@ The NB-OS has the [Netbeast Dashboard](http://docs.netbeast.co/chapters/get_star
 <a name="Devices">
 ## Current Devices Supported
 
-* 11 November 2015
+* 14 January 2016
  - [Raspberry PI 2](raspberry pi 2 model b)
 
 <a name="Install">
@@ -164,6 +164,12 @@ If you are a developer maybe you want to access to the rpi through ssh for insta
  * Password: netbeast
 
 * Go to your terminal
+```
+ssh beast@home.netbeast
+password: netbeast
+```
+
+Also you can use the default access for raspbian
 ```
 ssh pi@home.netbeast
 password: raspberry
