@@ -68,6 +68,10 @@ See [Documents Guidelines](https://github.com/netbeast-co/docs/wiki/Document-Gui
  - [x] Parrot Flower Power Support
  - [x] ChromeCast Support
  
+- Beta 3 (December 24 th)
+ - [x] Fixed some issues
+ - [x] Improved user experience
+ 
 - To be continued...
  
 [**Download NBOS**](https://sourceforge.net/projects/netbeast/files/latest/download)
