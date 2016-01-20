@@ -15,8 +15,9 @@ Here is a list of supported arguments for each device.
     * saturation:   `0..100`
     * color:    `{r: 0, b: 0, g: 0} || CC00AA` // Will be translated to hue and saturation
 *   sound
-    * volume:       `0..100``
+    * volume:       `0..100`
     * status:       `play || pause || stop || mute || unmute || info`  
+    * track: 
 
 A example of use:
 ````javascript
