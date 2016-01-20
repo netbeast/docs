@@ -7,7 +7,7 @@ Property    |  Description  |   Values  |   Default
 id          | Identifies the resource in the db | Integer (automatic) | -
 app         | show the device brand | String (belkin-wemo, philips-hue) | -
 location    | Location of the devices in the house | String (up to developer) | none
-topic       | Define the device field of actuation | String (lights.bridge,switch) | -
+topic       | Define the device field of actuation | String (lights,sound,switch) | -
 group       | Resources can be grouped | String (up to developer) | none
 
 Resources has methods for:
