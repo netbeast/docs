@@ -8,7 +8,7 @@ Bridge or Switch can be switched on or off. If you try to set an unsupported par
 Here is a list of supported arguments for each device.
 *   switch & bridge
     * power `true || false`
-*   Bulbs
+*   lights
     * power:        `true || false`
     * brightness:   `0..100`
     * hue:          `0..360`
