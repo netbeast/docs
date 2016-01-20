@@ -17,7 +17,7 @@ Here is a list of supported arguments for each **topic**.
 *   sound
     * volume:       `0..100`
     * status:       `play || pause || stop || mute || unmute || info`  
-    * track: 
+    * track: `must be the url of the song`
 
 A example of use:
 ````javascript
