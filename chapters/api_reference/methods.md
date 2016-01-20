@@ -5,7 +5,7 @@
 Each device can support specific parameters. 
 Bridge or Switch can be switched on or off. If you try to set an unsupported parameter to a switch (for example the brightness, `beast('lights').set({brightness: 100}))` you will return a soft error. The process keep working but send you a warning.
 
-Here is a list of supported arguments for each device.
+Here is a list of supported arguments for each **topic**.
 *   switch & bridge
     * power `true || false`
 *   lights
