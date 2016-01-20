@@ -17,10 +17,10 @@ With this API you can control this devices
     -   [x] Switch
     -   [x] Insight
     -   [x] Bulbs
+-   [x] Lifx
+-   [x] Sonos
 -   [ ] Parrot Flower Power
 -   [ ] Chromecast
--   [ ] Sonos
--   [ ] Lifx
 -   ...
 
 ## How to use it?
