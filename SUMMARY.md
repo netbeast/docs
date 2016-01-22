@@ -17,7 +17,7 @@
    * Use a Resource
    * Chain events
 * [API Reference](chapters/api_reference/index.md)
-   * [Node.js wrapper](chapters/api_reference/nodejs_wrapper.md)
+   * [Building an app](chapters/api_reference/building_an_app.md)
        * [About this doc](chapters/api_reference/about_this_doc.md)
        * [Methods](chapters/api_reference/methods.md)
            * [Devices](chapters/api_reference/devices.md)
