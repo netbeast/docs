@@ -24,6 +24,7 @@
            * [Resources](chapters/api_reference/resources.md)
            * [Scenes](chapters/api_reference/scenes.md)
    * Resources implementation
+   * Creating new plugins
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
    * Report bugs
