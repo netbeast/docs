@@ -4,9 +4,9 @@ The main goal of this documentation is to explain how the Netbeast API works. Al
 
 This API is quite new so it is continuously changing and growing. As it matures, some parts are more reliable tan others. Some methods are very new and could be redesigned in the future. Others are so tested and stable. You will see a stability index through all the documentation. We have defined the stability index as follow:
 
-*   3 - reliable
-*   2 - experimental
-*   1 - deprecated
+*   2 - reliable
+*   1 - experimental
+*   0 - deprecated
 
 ## Supported devices
 
