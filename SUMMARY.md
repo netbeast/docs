@@ -23,8 +23,8 @@
            * [Devices](chapters/api_reference/devices.md)
            * [Resources](chapters/api_reference/resources.md)
            * [Scenes](chapters/api_reference/scenes.md)
-   * Resources implementation
    * Creating new plugins
+   * Resources implementation
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
    * Report bugs
