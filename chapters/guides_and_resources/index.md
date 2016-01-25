@@ -6,4 +6,6 @@ In this section we will explain **Netbeast** concepts related with the operative
 
 Here we will explain how to install the ** Netbeast ** operating system for the current hardware platform supported and how to access to the operative system and access to the dashboard for start connecting your smart devices.
 
-[** - Discover your Netbeast: **]()
+[** - Discover your Netbeast: **](https://www.gitbook.com/book/netbeast/docs/edit#/edit/master/chapters/guides_and_resources/discover_your_netbeast.md)
+
+Here we will explain how to identify your Netbeast device in a 
