@@ -8,4 +8,4 @@ Here we will explain how to install the ** Netbeast ** operating system for the 
 
 [** - Discover your Netbeast: **](https://www.gitbook.com/book/netbeast/docs/edit#/edit/master/chapters/guides_and_resources/discover_your_netbeast.md)
 
-Here we will explain how to identify your Netbeast device in a 
+Here we will explain how to identify your Netbeast device in a wifi Network, you will be allowed to know the Ip address, so you will be able to connect to it easily without looking on your router configuration menu. 
