@@ -1,26 +1,14 @@
 # Publish your app
 
-You can publish your app to http://netbeast.co the same way you did for installing it to the Netbeast Dashboard.
+If you want your app displayed on Netbeast dashboard _Explore_ section you must create a repo in github with **Netbeast app** or **Netbeast plugin** both in description and `README.md`.
 
-First you must have an account:
-http://netbeast.co/#!/signup <br>
-... or log in with github
-http://netbeast.co/#!/signup
+To find the apps we make use of GitHub search API. We see the same results that appear (JSON formatted) when you make a `GET` request to:
+> https://api.github.com/search/repositories?q=netbeast+language:javascript
 
-### Publish from the command line
+You'll know that your app will be shown if it appears there!
 
-You can do that just by typing:
+We make the _Featured apps_ section out of apps that people give a _star_.
 
-```
-beast publish app.tar.gz
-```
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 
-### Publish manually
-
-![Publish by drag and drop](../../img/publish-app.gif)
-
-### Update your app
-
-Before the final release of the Netbeast Marketplace, you should remove your app and upload it again.
-
-This is because the future upload and distribution mechanism will be based on git, rather than compressed packages. This will take long but the development experience will be much better.
+You can star our dashboard repo! :)
