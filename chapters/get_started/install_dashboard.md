@@ -2,23 +2,22 @@
 
 ### Through npm
 ``` bash
-npm install -g nb-dashboard
+npm install -g netbeast-cli
 ```
 Now you will be able to run it typing:
 
 ```bash
-sudo nb-dashboard
+beast start
 ```
 
-If you don't want to spawn it with sudo priviledges:
+Dashboard will be started on port 8000 unless you run something like:
 ```
-nb-dashboard --port 8000
+beast start --port 3000
 ```
 
-### Directly from repo
+### Cloning from **git** repo
 ```bash
-git clone https://github.com/netbeast/dashboard/
-cd dashboard
+git clone https://github.com/netbeast/dashboard/ && cd dashboard
 npm i # by default, dependencies are ignored, so must be installed
 ./index.js --port 8000
 ```
