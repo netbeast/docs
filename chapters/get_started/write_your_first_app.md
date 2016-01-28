@@ -1,24 +1,21 @@
 # Write your first app
-
-
-### Eat the dessert first
+## Eat the dessert first :cake:
 First we will install the netbeast SDK. Open a terminal and type:
 ```
 npm install -g netbeast-cli
 netbeast new myapp
 ```
 
-A new folder named "myapp" will contain some code scaffolded.
+A new folder named _myapp_ will contain some code scaffolded.
 
-Run:
+Run the following code:
 ```
-cd myapp; node index.js --port 3000
+cd myapp; node index.js --port 3000 # To have it running on http://localhost:3000
 ```
-To have it running on http://localhost:3000
 
-Now you can open your favourite editor on such project and start developing.
+And you are done! :fireworks:. Now you can open your favourite editor on such project and start developing.
 
-### Let's do this slowly
+## OK. Now let's do this slowly :coffee:
 Every Netbeast app is simply a npm package. For advanced developers you may write your app in python or compile and executable for Netbeast-ready platforms. But for the moment let us focus on the Javascript app itself.
 
 Let us create our first project from scratch. Open a terminal and type:
@@ -43,7 +40,7 @@ Or simply create a new folder with such name and open it in your favourite edito
 package.json is the information needed by npm to maintain a module into their repositories, analyze dependencies and establish some development workflow.
 
 Netbeast will make use of this file to reduce the overhead of configuration needed to get up and running. It will look for the `main`field in order to launch and executable. For this app:
-```
+```json
 {
     "name":"myapp",
     "version": "1.0.0",
@@ -80,7 +77,8 @@ npm init    # And fill the gaps!
 Or open a file named `package.json` in your editor and copy-paste de code above
 
 We specified in the package that `server.js`is our main file. Let's write a simple HTTP server.
-```
+
+```javascript
 #!/usr/bin/env node
 
 /* Requires node.js libraries */
@@ -131,7 +129,7 @@ npm install express minimist
 **We are almost ready to roll!**
 `index.html` is a simple user interface that welcomes you as the great developer you are!
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>

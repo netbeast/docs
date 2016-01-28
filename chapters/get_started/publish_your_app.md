@@ -7,8 +7,9 @@ To find the apps we make use of GitHub search API. We see the same results that 
 
 You'll know that your app will be shown if it appears there!
 
-We make the _Featured apps_ section out of apps that people give a _star_.
+We make the _Featured apps_ section out of apps that people give a _star_ :star:
 
 <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 
-You can star our dashboard repo! :)
+### With your support
+We will be able to launch a private repo system to keep your apps secured :lock:

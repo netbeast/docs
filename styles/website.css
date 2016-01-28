@@ -1,18 +1,33 @@
 /* CSS for website */
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Fira Sans';
   font-style: normal;
   font-weight: normal;
-  src: local('Roboto'), url('../fonts/bebas/Roboto.ttf') format('ttf'); }
+  src: local('Fira Sans'), url('/fonts/FiraSans-Regular.ttf') format('truetype'); 
+}
+
 @font-face {
-  font-family: 'Bebas Neue';
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Fira Sans'), url('/fonts/FiraSans-Italic.ttf') format('truetype'); 
+}
+
+
+@font-face {
+  font-family: 'Proxima Nova';
   font-style: normal;
   font-weight: normal;
-  src: local('Bebas Neue'), url('../fonts/bebas/BebasNeue-Regular.otf') format('opentype'); }
+  src: local('Proxima Nova'), url('/fonts/ProximaNova-Bold_2.otf') format('opentype');
+}
+
+a, p {
+  font-family: 'Fira Sans' !important;
+}
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Bebas Neue';
+  font-family: 'Proxima Nova' !important;
 }
 
 a {
@@ -20,13 +35,14 @@ a {
 }
 
 a:hover, a:active, a:focus {
-    color: #CC0000 !important;
+    color: rgb(0, 233, 207) !important;
 }
 
 .book .book-summary ul.summary li.active>a {
-    color: #CC0000 !important;
+    color: rgb(0, 233, 207) !important;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal a {
-    color: #CC0000 !important;
+    color: rgb(0, 233, 207) !important;
 }
+

@@ -1,6 +1,5 @@
 # Why netbeast
-
-# The problem
+## The problem
 Most of the things we operate with do not need to have computation capabilities, but to obbey orders that can be scheduled on a mobile phone or the cloud. However in order to communicate with those, you may need to manually configure a wireless conection, which may be complex. You expose your home or phone through third party’s vulnerabilities. Moreover you may need to have a data plan for a certain product for it to work, which dramatically increases its price.
 
 To achieve these communications schemas we can find available in the market certain gateways that offer zigbee, PLC or bluetooth connectivity when plugged to the router. Even though these middle-hardware may accomplish their function, they are mainly developed into close environments and are hardly compatible with other services and isolate their functions behind a certain technology.
