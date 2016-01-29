@@ -54,7 +54,7 @@
     <body>
         
         
-    <div class="book" data-level="3.2" data-chapter-title="Create your first plugin" data-filepath="chapters/advanced/create_your_first_plugin.md" data-basepath="../.." data-revision="Thu Jan 28 2016 22:07:42 GMT+0100 (CET)">
+    <div class="book" data-level="3.2" data-chapter-title="Create your first plugin" data-filepath="chapters/advanced/create_your_first_plugin.md" data-basepath="../.." data-revision="Fri Jan 29 2016 13:51:26 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -526,15 +526,17 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="create-your-first-plugin">Create your first plugin</h1>
+                        <h1 id="create-your-first-plugin-">Create your first plugin <img align="absmiddle" alt=":wrench:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/wrench.png" title=":wrench:"></h1>
+<p>A plugin is a Netbeast app that people to control hardware that has not yet been
+ported to the API or that has been invented by you, a maker.</p>
+<iframe src="http://netbeast.github.io/bulb-plugin/" frameBorder="0" width="100%" height="400px"></iframe>
+
+<h3 id="create-the-app-skeleton">Create the app skeleton:</h3>
 <p>Let&apos;s use the sdk to make things faster and try it live.
 Click <a href="../get_started/install_dashboard.html">here</a> if you have not installed it yet.</p>
-<p>[watch a preview]</p>
-<h3 id="create-the-app-skeleton">Create the app skeleton:</h3>
-<pre><code>beast new bulb-plugin
-cd bulb-plugin
+<pre><code>beast new bulb-plugin; cd bulb-plugin
 npm install
-</code></pre><p>Open the <strong>bulb-plugin</strong> folder with your favourite editor or IDE.
+</code></pre><p>Open the <strong>bulb-plugin</strong> folder with your favorite editor or IDE.
 You should have now a file structure like this:</p>
 <pre><code>.
 &#x251C;&#x2500;&#x2500; LICENSE
@@ -551,10 +553,224 @@ You should have now a file structure like this:</p>
 <pre><code>  &quot;netbeast&quot;: {
     &quot;type&quot;: &quot;plugin&quot;
   }
-</code></pre><h3 id="the-hardware-a-hacked-example">The hardware: a hacked example</h3>
+</code></pre><h2 id="the-hardware-a-hacked-example">The hardware: a hacked example</h2>
 <p>We are going to <strong>mimic hardware</strong> connection by creating a really simple webapp. For the result below you must copy paste the following code for a new <strong>index.html</strong>:</p>
+<h3 id="indexhtml">index.html</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Netbeast Bulb Plugin<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">&quot;stylesheet&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;bulb.css&quot;</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">&quot;screen&quot;</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">&quot;utf-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">&quot;stylesheet&quot;</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;style.css&quot;</span> <span class="hljs-attribute">media</span>=<span class="hljs-value">&quot;screen&quot;</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">&quot;utf-8&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;top-decoration&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;plugin front-end&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bulb-container small&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bulb light&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;bulb&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bulb top&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bulb middle-1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bulb middle-2&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bulb middle-3&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bulb bottom&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;base&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;screw-top&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;screw a&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;screw b&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;screw a&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;screw b&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;screw a&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;screw b&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;screw c&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;screw d&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;code-container&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">pre</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-red&quot;</span>&gt;</span>beast<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>(<span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-green&quot;</span>&gt;</span>&apos;lights&apos;<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>).<span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-blue&quot;</span>&gt;</span>set<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>({
+  <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-green&quot;</span>&gt;</span>color<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>: <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-green&quot;</span>&gt;</span>&quot;<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;color&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;color&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;color&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;00fea5&quot;</span>&gt;</span>&quot;<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>,
+  <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-green&quot;</span>&gt;</span>power<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>: <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;txt-green&quot;</span>&gt;</span>&quot;<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;power&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;power&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;power&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;on&quot;</span>&gt;</span>&quot;<span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+})<span class="hljs-tag">&lt;/<span class="hljs-title">pre</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;run-btn&quot;</span>&gt;</span>
+      RUN
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-comment">&lt;!-- wrapper --&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- declares bulb features and methods --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;bulb.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- real time comms library --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;socket.io&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- simulates hardware communication --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;hw-api.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</code></pre>
+<h3 id="bulbjs">bulb.js</h3>
+<p>This is what the physical hardware is exptected to do: behave like a bulb.
+So it is just a set of listeners and animations:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> color = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;color&apos;</span>)
+<span class="hljs-keyword">var</span> power = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;power&apos;</span>)
+<span class="hljs-keyword">var</span> bulb = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;bulb&apos;</span>)
+<span class="hljs-keyword">var</span> button = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;run-btn&apos;</span>)
+<span class="hljs-keyword">var</span> light = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;light&apos;</span>)
+
+button.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleBulbState</span> (<span class="hljs-params"></span>) </span>{
+  changeBulbParams({ color: color.value, power: power.value })
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setBulbParams</span> (<span class="hljs-params">params</span>) </span>{
+  <span class="hljs-keyword">if</span> (params.power === <span class="hljs-string">&apos;off&apos;</span>) {
+    params = { color: <span class="hljs-string">&apos;E7E7E7&apos;</span> }
+  }
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;set params&apos;</span>, params)
+
+  <span class="hljs-keyword">var</span> bulb_parts = [<span class="hljs-string">&apos;.bulb.middle-1&apos;</span>, <span class="hljs-string">&apos;.bulb.middle-2&apos;</span>, <span class="hljs-string">&apos;.bulb.middle-3&apos;</span>]
+
+  <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;.bulb.top&apos;</span>).style.boxShadow = <span class="hljs-string">&apos;0px 0px 98px #&apos;</span> + params.color
+
+  <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;.bulb.top&apos;</span>).style.backgroundColor = params.color
+  <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;.bulb.bottom&apos;</span>).style.backgroundColor = params.color
+  bulb_parts.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">className</span>) </span>{
+    <span class="hljs-built_in">document</span>.querySelector(className).style.borderTopColor = params.color
+  })
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeBulbParams</span> (<span class="hljs-params">params</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;change params&apos;</span>, params)
+  <span class="hljs-comment">/* Overwrite html fields if necessary */</span>
+  color.value = params.color || color.value
+  power.value = params.power || power.value
+  setBulbParams({color: color.value, power: power.value})
+}
+</code></pre>
+<h3 id="hwapijs">hw-api.js</h3>
+<p>This is the actual mimic of the hardware interface. It pretends to be a bulb controlled through websockets. Check it out:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> socket = io.connect({path: <span class="hljs-string">&apos;/i/bulb-plugin&apos;</span>})
+
+socket.on(<span class="hljs-string">&apos;connect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;ws:// bulb is online&apos;</span>)
+})
+
+socket.on(<span class="hljs-string">&apos;disconnect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;ws:// connection with bulb lost&apos;</span>)
+})
+
+socket.on(<span class="hljs-string">&apos;set&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">params</span>) </span>{
+  changeBulbParams(params)
+})
+
+socket.on(<span class="hljs-string">&apos;on&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">if</span> (bulbState === <span class="hljs-string">&apos;off&apos;</span>) {
+    bulb.onclick()
+  }
+})
+
+socket.on(<span class="hljs-string">&apos;off&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">if</span> (bulbState === <span class="hljs-string">&apos;on&apos;</span>) {
+    bulb.onclick()
+  }
+})
+
+socket.on(<span class="hljs-string">&apos;get&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  socket.emit(<span class="hljs-string">&apos;params&apos;</span>, {
+    power: bulbState,
+    brightness: brightness.value,
+    color: color.value
+  })
+})
+</code></pre>
 <h3 id="the-plugin-code">The plugin code</h3>
-<p>For your code to be available for the Netbeast API you must implement HTTP routes. We will implement one for the simplest case:</p>
+<p>For your code to be available for the Netbeast API you must implement HTTP routes.
+This we&apos;ll make your IoT plugin available for the rest of apps installed in the
+Netbeast and so for any other developer.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>)
+<span class="hljs-keyword">var</span> request = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;superagent&apos;</span>)
+
+<span class="hljs-keyword">var</span> router = express.Router()
+<span class="hljs-keyword">var</span> bulbParams <span class="hljs-comment">// aux nasty way to transmit changes</span>
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">io</span>) </span>{
+  io = io
+
+  io.on(<span class="hljs-string">&apos;connection&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;ws:// bulb has connected to plugin&apos;</span>)
+  })
+
+  io.on(<span class="hljs-string">&apos;disconnection&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;ws:// bulb has disconnected from plugin&apos;</span>)
+  })
+
+  io.on(<span class="hljs-string">&apos;connect_failure&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;ws:// connection failure&apos;</span>)
+    <span class="hljs-built_in">console</span>.log(err)
+  })
+
+  request.post(process.env.LOCAL_URL + <span class="hljs-string">&apos;/api/resources&apos;</span>)
+  .send({ app: <span class="hljs-string">&apos;bulb-plugin&apos;</span>, topic: <span class="hljs-string">&apos;lights&apos;</span>, hook: <span class="hljs-string">&apos;/api&apos;</span> })
+  .end(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, resp</span>) </span>{
+    <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.log(err)
+    <span class="hljs-built_in">console</span>.log(resp.text)
+    <span class="hljs-built_in">console</span>.log(resp.body)
+  })
+
+  router.post(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Plugin translates uniform req.body to bulb params...&apos;</span>)
+    <span class="hljs-built_in">console</span>.log(req.body)
+    io.emit(<span class="hljs-string">&apos;set&apos;</span>, {
+      brightness: req.body.bri,
+      color: req.body.hue,
+    })
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;setting...&apos;</span>)
+    <span class="hljs-built_in">console</span>.log({
+      brightness: req.body.bri,
+      color: req.body.hue,
+    })
+    <span class="hljs-keyword">if</span> (req.body.on) io.emit(<span class="hljs-string">&apos;on&apos;</span>)
+    <span class="hljs-keyword">if</span> (req.body.off) io.emit(<span class="hljs-string">&apos;off&apos;</span>)
+    <span class="hljs-keyword">if</span> (req.body.power) io.emit(req.body.power)
+    res.status(<span class="hljs-number">204</span>).end()
+  })
+
+  router.get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    io.emit(<span class="hljs-string">&apos;get&apos;</span>)
+    <span class="hljs-keyword">var</span> timerReference = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">if</span> (bulbParams) {
+        res.json(bulbParams)
+      } <span class="hljs-keyword">else</span> {
+        res.status(<span class="hljs-number">200</span>).json({ error: <span class="hljs-string">&apos;No bulb available&apos;</span> })
+      }
+    }, <span class="hljs-number">3000</span>)
+  })
+
+  router.get(<span class="hljs-string">&apos;/on&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    io.emit(<span class="hljs-string">&apos;on&apos;</span>)
+    res.status(<span class="hljs-number">204</span>).end()
+  })
+
+  router.get(<span class="hljs-string">&apos;/off&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    io.emit(<span class="hljs-string">&apos;off&apos;</span>)
+    res.status(<span class="hljs-number">204</span>).end()
+  })
+
+  <span class="hljs-keyword">return</span> router
+}
+</code></pre>
+<p>This virtual IoT device implements a HTTP (non restful) api with the following methods <code>GET</code> (on, off, status) and <code>POST</code> color, power.</p>
+<p>But for all developers to reuse those methods through Netbeast API you must declare
+those hook them as available on <em>light</em> topic.</p>
+<h4 id="with-requirenetbeast">With <code>require(&apos;netbeast&apos;)</code></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> options = { hook: <span class="hljs-string">&apos;/api&apos;</span> } <span class="hljs-comment">// base route for your HTTP API &apos;/&apos; by default</span>
+netbeast(<span class="hljs-string">&apos;lights&apos;</span>).create(options).then(...)
+</code></pre>
+<h4 id="with-netbeast-router-http-restful-api">With Netbeast router HTTP RESTful API</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// As is present in the above plugin.js file</span>
+request.post(process.env.LOCAL_URL + <span class="hljs-string">&apos;/api/resources&apos;</span>)
+  .send({ app: <span class="hljs-string">&apos;bulb-plugin&apos;</span>, topic: <span class="hljs-string">&apos;lights&apos;</span>, hook: <span class="hljs-string">&apos;/api&apos;</span> })
+  .end(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, resp</span>) </span>{
+    <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.log(err)
+  })
+</code></pre>
 
                     
                     </section>
