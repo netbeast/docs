@@ -19,7 +19,7 @@
   font-family: 'Proxima Nova';
   font-style: normal;
   font-weight: normal;
-  src: local('Proxima Nova'), url('/fonts/ProximaNova-Bold_2.otf') format('opentype');
+  src: local('Proxima Nova'), url('..fonts/ProximaNova-Bold_2.otf') format('opentype');
 }
 
 a, p {
