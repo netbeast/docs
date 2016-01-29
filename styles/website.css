@@ -4,14 +4,14 @@
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: normal;
-  src: local('Fira Sans'), url('fonts/FiraSans-Regular.ttf') format('truetype'); 
+  src: local('Fira Sans'), url('..fonts/FiraSans-Regular.ttf') format('truetype'); 
 }
 
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
   font-weight: normal;
-  src: local('Fira Sans'), url('fonts/FiraSans-Italic.ttf') format('truetype'); 
+  src: local('Fira Sans'), url('..fonts/FiraSans-Italic.ttf') format('truetype'); 
 }
 
 
