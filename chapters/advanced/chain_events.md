@@ -18,7 +18,7 @@ There is a limited set of thresholds available in a list.
 var netbeast = require('netbeast')
 netbeast('presence').if(function (p) {
     // this function is evaluated everytime presence
-    // event happens – if we return true then is executed
+    // event happens – if we return true `then` function runs
     return p === 'on'
 }).then(function () {
     netbeast.success('Someone came!')
