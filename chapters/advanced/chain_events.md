@@ -13,6 +13,7 @@ netbeast('temperature').at('garden').when('x < 0')
 There is a limited set of thresholds available in a list.
 
 ### _If this then that_
+
 ```javascript
 var netbeast = require('netbeast')
 netbeast('presence').if(function (p) {
@@ -20,7 +21,7 @@ netbeast('presence').if(function (p) {
     // event happens – if we return true then is executed
     return p === 'on'
 }).then(function () {
-    netbeast.success(Someone came!')
+    netbeast.success('Someone came!')
 })
 ```
 
