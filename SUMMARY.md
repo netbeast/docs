@@ -12,7 +12,7 @@
    * [Install OS on Raspberry Pi](chapters/guides_and_resources/install_os_on_raspberry_pi.md)
    * [Discover your Netbeast](chapters/guides_and_resources/discover_your_netbeast.md)
 * [Advanced](chapters/advanced/index.md)
-   * Push notifications
+   * [Push notifications](chapters/advanced/push_notifications.md)
    * [Create your first plugin](chapters/advanced/create_your_first_plugin.md)
    * Use a Resource
    * Chain events
