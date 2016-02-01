@@ -16,6 +16,7 @@
    * [Create your first plugin](chapters/advanced/create_your_first_plugin.md)
    * Use a Resource
    * [Chain events](chapters/advanced/chain_events.md)
+   * Create streams
 * [API Reference](chapters/api_reference/index.md)
    * [Building an app](chapters/api_reference/buildingan_app_md.md)
        * [Methods](chapters/api_reference/methods.md)
