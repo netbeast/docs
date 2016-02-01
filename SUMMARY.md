@@ -14,7 +14,7 @@
 * [Advanced](chapters/advanced/index.md)
    * [Push notifications](chapters/advanced/push_notifications.md)
    * [Create your first plugin](chapters/advanced/create_your_first_plugin.md)
-   * Use a Resource
+   * [Use a Resource](chapters/advanced/use_a_resource.md)
    * [Chain events](chapters/advanced/chain_events.md)
    * [Create streams](chapters/advanced/create_streams.md)
 * [API Reference](chapters/api_reference/index.md)
