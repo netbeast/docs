@@ -17,6 +17,7 @@
    * [Use a Resource](chapters/advanced/use_a_resource.md)
    * [Chain events](chapters/advanced/chain_events.md)
    * [Create streams](chapters/advanced/create_streams.md)
+   * Environment variables
 * [API Reference](chapters/api_reference/index.md)
    * [Building an app](chapters/api_reference/buildingan_app_md.md)
        * [Methods](chapters/api_reference/methods.md)
