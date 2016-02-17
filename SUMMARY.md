@@ -12,10 +12,12 @@
    * [Install OS on Raspberry Pi](chapters/guides_and_resources/install_os_on_raspberry_pi.md)
    * [Discover your Netbeast](chapters/guides_and_resources/discover_your_netbeast.md)
 * [Advanced](chapters/advanced/index.md)
-   * Push notifications
+   * [Push notifications](chapters/advanced/push_notifications.md)
    * [Create your first plugin](chapters/advanced/create_your_first_plugin.md)
-   * Use a Resource
-   * Chain events
+   * [Use a Resource](chapters/advanced/use_a_resource.md)
+   * [Chain events](chapters/advanced/chain_events.md)
+   * [Create streams](chapters/advanced/create_streams.md)
+   * [Environment variables](chapters/advanced/environment_variables.md)
 * [API Reference](chapters/api_reference/index.md)
    * [Building an app](chapters/api_reference/buildingan_app_md.md)
        * [Methods](chapters/api_reference/methods.md)
