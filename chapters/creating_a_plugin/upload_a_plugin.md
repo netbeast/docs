@@ -9,7 +9,7 @@ You'll know that your app will be shown if it appears there!
 
 We make the _Featured apps_ section out of apps that people give a _star_ :star:
 
-<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=netbeast&repo=dashboard&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 
 ### With your support
 We will be able to launch a private repo system to keep your apps secured :lock:

@@ -46,7 +46,7 @@
     <link rel="next" href="../../chapters/devices_currently_supported/index.html" />
     
     
-    <link rel="prev" href="../../chapters/creating_a_plugin/index.html" />
+    <link rel="prev" href="../../chapters/creating_a_plugin/upload_a_plugin.html" />
     
 
         
@@ -54,7 +54,7 @@
     <body>
         
         
-    <div class="book" data-level="5" data-chapter-title="Publish Applications and Plugins" data-filepath="chapters/publish_applications_and_plugins/index.md" data-basepath="../.." data-revision="Tue Feb 16 2016 16:52:41 GMT+0100 (CET)">
+    <div class="book" data-level="5" data-chapter-title="Publish Applications and Plugins" data-filepath="chapters/publish_applications_and_plugins/index.md" data-basepath="../.." data-revision="Wed Feb 17 2016 12:26:15 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -156,23 +156,47 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" >
+        <li class="chapter " data-level="3.1" data-path="chapters/creating_an_application/write_your_first_app.html">
             
-            <span><b>3.1.</b> How to create an app</span>
+                
+                    <a href="../../chapters/creating_an_application/write_your_first_app.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Write your first app
+                    </a>
             
             
         </li>
     
-        <li class="chapter " data-level="3.2" >
+        <li class="chapter " data-level="3.2" data-path="chapters/creating_an_application/install_it_on_the_dashboard.html">
             
-            <span><b>3.2.</b> How to upload an app</span>
+                
+                    <a href="../../chapters/creating_an_application/install_it_on_the_dashboard.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Install it on the Dashboard
+                    </a>
             
             
         </li>
     
-        <li class="chapter " data-level="3.3" >
+        <li class="chapter " data-level="3.3" data-path="chapters/creating_an_application/publish_your_app.html">
             
-            <span><b>3.3.</b> Docs...(Change name, that&#39;s up to you Pablo)</span>
+                
+                    <a href="../../chapters/creating_an_application/publish_your_app.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Publish your app
+                    </a>
             
             
         </li>
@@ -198,23 +222,32 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1" >
+        <li class="chapter " data-level="4.1" data-path="chapters/creating_a_plugin/tutorial.html">
             
-            <span><b>4.1.</b> How to create a plugin</span>
+                
+                    <a href="../../chapters/creating_a_plugin/tutorial.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Tutorial
+                    </a>
             
             
         </li>
     
-        <li class="chapter " data-level="4.2" >
+        <li class="chapter " data-level="4.2" data-path="chapters/creating_a_plugin/upload_a_plugin.html">
             
-            <span><b>4.2.</b> How to upload a plugin</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" >
-            
-            <span><b>4.3.</b> Docs...(Change name, that&#39;s up to you Pablo)</span>
+                
+                    <a href="../../chapters/creating_a_plugin/upload_a_plugin.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Upload a plugin
+                    </a>
             
             
         </li>
@@ -308,14 +341,14 @@
     
         <li class="chapter " data-level="7.2" >
             
-            <span><b>7.2.</b> OS for Orange Pi</span>
+            <span><b>7.2.</b> OS for Orange Pi [Soon]</span>
             
             
         </li>
     
         <li class="chapter " data-level="7.3" >
             
-            <span><b>7.3.</b> Google Onhub</span>
+            <span><b>7.3.</b> Google Onhub [Soon]</span>
             
             
         </li>
@@ -403,7 +436,19 @@
                 
                     <section class="normal" id="section-">
                     
-                        
+                        <h1 id="publish-your-app">Publish your app</h1>
+<p>If you want your app displayed on Netbeast dashboard <em>Explore</em> section you must create a repo in github with <strong>Netbeast app</strong> or <strong>Netbeast plugin</strong> both in description and <code>README.md</code>.</p>
+<p>To find the apps we make use of GitHub search API. We see the same results that appear (JSON formatted) when you make a <code>GET</code> request to:</p>
+<blockquote>
+<p><a href="https://api.github.com/search/repositories?q=netbeast+language:javascript" target="_blank">https://api.github.com/search/repositories?q=netbeast+language:javascript</a></p>
+</blockquote>
+<p>You&apos;ll know that your app will be shown if it appears there!</p>
+<p>We make the <em>Featured apps</em> section out of apps that people give a <em>star</em> <img align="absmiddle" alt=":star:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/star.png" title=":star:"></p>
+<iframe src="https://ghbtns.com/github-btn.html?user=netbeast&amp;repo=dashboard&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+
+<h3 id="with-your-support">With your support</h3>
+<p>We will be able to launch a private repo system to keep your apps secured <img align="absmiddle" alt=":lock:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/lock.png" title=":lock:"></p>
+
                     
                     </section>
                 
@@ -413,7 +458,7 @@
         </div>
 
         
-        <a href="../../chapters/creating_a_plugin/index.html" class="navigation navigation-prev " aria-label="Previous page: Creating a Plugin"><i class="fa fa-angle-left"></i></a>
+        <a href="../../chapters/creating_a_plugin/upload_a_plugin.html" class="navigation navigation-prev " aria-label="Previous page: Upload a plugin"><i class="fa fa-angle-left"></i></a>
         
         
         <a href="../../chapters/devices_currently_supported/index.html" class="navigation navigation-next " aria-label="Next page: Devices Currently Supported"><i class="fa fa-angle-right"></i></a>

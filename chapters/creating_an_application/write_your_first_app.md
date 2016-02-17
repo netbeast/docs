@@ -47,16 +47,16 @@ Netbeast will make use of this file to reduce the overhead of configuration need
     "description":" A repo with code about how to make simple Netbeast apps.",
     "main": "server.js",
     "dependencies": {
-        "express": "^4.12.3", 
+        "express": "^4.12.3",
         "minimist":"^1.1.0"
-    }, 
+    },
     "devDependencies":{},
-    "scripts":{ 
+    "scripts":{
         "test":"node server.js --port 31416",
         "start": "node server.js"
     },
-    "repository": { 
-        "type":"git", 
+    "repository": {
+        "type":"git",
         "url":"https://github.com/netbeast-co/get-started"
     },
     "keywords": [ "iot","netbeast","netbeast.co"],
@@ -97,7 +97,7 @@ if(isNaN(port)) {
 app.use(express.static(__dirname))
 
 var server = app.listen(port, function () {
-  console.log('Example app listening at http://%s:%s', 
+  console.log('Example app listening at http://%s:%s',
   	server.address().address,
   	server.address().port)
 })
@@ -159,11 +159,3 @@ Try and debug it locally. Type:
 And if everything has been good you will be able to open a browser at http://localhost:8000 and see:
 
 ![hello netbeast community](../../img/hello_netbeast_community.png)
-
-
-<hr>
-#### Report a bug or ask for an improvement or a feature
-
-Like for this document as well as for others you can suggest new features at [github issues](https://github.com/netbeast/dashboard/issues) or our gitter chat.
-
-![gitter chat](https://badges.gitter.im/Join%20Chat.svg)

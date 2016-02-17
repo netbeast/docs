@@ -4,14 +4,14 @@
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: normal;
-  src: local('Fira Sans'), url('../fonts/FiraSans-Regular.ttf') format('truetype'); 
+  src: local('Fira Sans'), url('../fonts/FiraSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
   font-weight: normal;
-  src: local('Fira Sans'), url('../fonts/FiraSans-Italic.ttf') format('truetype'); 
+  src: local('Fira Sans'), url('../fonts/FiraSans-Italic.ttf') format('truetype');
 }
 
 
@@ -35,14 +35,13 @@ a {
 }
 
 a:hover, a:active, a:focus {
-    color: rgb(0, 233, 207) !important;
+    color: #f1264c !important;
 }
 
 .book .book-summary ul.summary li.active>a {
-    color: rgb(0, 233, 207) !important;
+    color: #f1264c !important;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal a {
-    color: rgb(0, 233, 207) !important;
+    color: #f1264c !important;
 }
-
