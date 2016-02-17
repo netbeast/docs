@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Discover your Netbeast | Netbeast Documentation</title>
+        <title>Write new documentation | Netbeast Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -43,10 +43,10 @@
         
     
     
-    <link rel="next" href="../../chapters/os_for_boards_&amp;_hacks/do_it_yourself.html" />
+    <link rel="next" href="../../chapters/collaborate/contact.html" />
     
     
-    <link rel="prev" href="../../chapters/os_for_boards_&amp;_hacks/os_for_raspberry_pi_2.html" />
+    <link rel="prev" href="../../chapters/collaborate/index.html" />
     
 
         
@@ -54,7 +54,7 @@
     <body>
         
         
-    <div class="book" data-level="7.1.1" data-chapter-title="Discover your Netbeast" data-filepath="chapters/os_for_boards_&amp;_hacks/discover_your_netbeast.md" data-basepath="../.." data-revision="Wed Feb 17 2016 12:49:31 GMT+0100 (CET)">
+    <div class="book" data-level="9.4" data-chapter-title="Write new documentation" data-filepath="chapters/collaborate/write_new_documentation.md" data-basepath="../.." data-revision="Wed Feb 17 2016 12:49:31 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -327,7 +327,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="7.1.1" data-path="chapters/os_for_boards_&amp;_hacks/discover_your_netbeast.html">
+        <li class="chapter " data-level="7.1.1" data-path="chapters/os_for_boards_&amp;_hacks/discover_your_netbeast.html">
             
                 
                     <a href="../../chapters/os_for_boards_&amp;_hacks/discover_your_netbeast.html">
@@ -433,7 +433,7 @@
             
         </li>
     
-        <li class="chapter " data-level="9.4" data-path="chapters/collaborate/write_new_documentation.html">
+        <li class="chapter active" data-level="9.4" data-path="chapters/collaborate/write_new_documentation.html">
             
                 
                     <a href="../../chapters/collaborate/write_new_documentation.html">
@@ -501,20 +501,36 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="discover-your-netbeast">Discover your Netbeast</h2>
-<p>If you connect your Netbeast to your router, maybe you don&apos;t want to disconnect from your router network to access to your Netbeast.</p>
-<p>For doing this, you should know what the IP address of your raspberry pi is on the router network.</p>
-<ul>
-<li><p>First open your favorite terminal. </p>
+                        <h1 id="write-new-documentation">Write new documentation</h1>
+<p>For documenting we using <a href="https://www.gitbook.com/" target="_blank">gitbook</a>. It employs markdown files with little wrapper structure
+to allow you to write well formatted content in a snap, keeping a git version control.</p>
+<ol>
+<li><p>Install gitbook client tool</p>
+<pre><code class="lang-bash">npm install -g gitbook-cli
+</code></pre>
 </li>
-<li><p>The install the netbeast package if you haven&apos;t done it yet.</p>
-<pre><code>npm install netbeast-cli -g
-</code></pre></li>
-<li>Once you have the npm package installed just run this command on your terminal<pre><code>beast scan
-</code></pre></li>
-</ul>
-<p>Automatically, this command will show you what is the netbeast ip address on your router network and you can access through ssh for example.</p>
-<p><img src="../../img/netbeastScan.gif" alt="Scan"></p>
+<li><p>Clone our docs repo:</p>
+<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> https://github.com/netbeast/docs.git
+</code></pre>
+</li>
+<li><p>Serve it locally</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> docs
+gitbook serve
+</code></pre>
+</li>
+<li><p>Open a new shell or open it with your favorite editor</p>
+<pre><code class="lang-bash">atom /path/to/docs
+</code></pre>
+</li>
+</ol>
+<h3 id="once-you-are-done">Once you are done</h3>
+<p>Push it to the main stream or make a pull request!</p>
+<pre><code class="lang-bash">git add -A
+git commit -m <span class="hljs-string">&quot;adds my chapter to the docs&quot;</span>
+git push origin master
+</code></pre>
+<h3 id="references">References</h3>
+<p><a href="https://github.com/GitbookIO/gitbook" target="_blank">Gitbook github</a></p>
 
                     
                     </section>
@@ -525,10 +541,10 @@
         </div>
 
         
-        <a href="../../chapters/os_for_boards_&amp;_hacks/os_for_raspberry_pi_2.html" class="navigation navigation-prev " aria-label="Previous page: OS for Raspberry Pi 2"><i class="fa fa-angle-left"></i></a>
+        <a href="../../chapters/collaborate/index.html" class="navigation navigation-prev " aria-label="Previous page: Collaborate"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../chapters/os_for_boards_&amp;_hacks/do_it_yourself.html" class="navigation navigation-next " aria-label="Next page: Have other board? DIY"><i class="fa fa-angle-right"></i></a>
+        <a href="../../chapters/collaborate/contact.html" class="navigation navigation-next " aria-label="Next page: Contact"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

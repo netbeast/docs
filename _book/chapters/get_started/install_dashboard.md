@@ -1,4 +1,4 @@
-# Install Dashboard
+# Install SDK
 
 ### Through npm
 ``` bash
@@ -24,7 +24,7 @@ npm i # by default, dependencies are ignored, so must be installed
 
 ### Set up your Netbeast
 
-Netbeast Dashboard is the main web UX for a next generation router. 
+Netbeast Dashboard is the main web UX for a next generation router.
 
 We prepared a <u>very lightweight</u> Raspberry Pi 2 distro with the dashboard already installed</u> to show how this future Netbeast is going to be. It is published every two weeks [here](http://bit.ly/1HjkWo2).
 

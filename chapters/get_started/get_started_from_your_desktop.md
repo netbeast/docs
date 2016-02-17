@@ -1,3 +1,24 @@
+# Install Node.js
+
+All platforms https://nodejs.org/en/download/
+
+```bash
+# Mac
+brew install node
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian or Raspberry, as root
+curl -sL https://deb.nodesource.com/setup_4.x | bash -
+apt-get install -y nodejs
+```
+
+### npm
+
+Once you install Nodejs, npm is included.
+
 # Install SDK
 
 ### Through npm
@@ -22,12 +43,6 @@ npm i # by default, dependencies are ignored, so must be installed
 ./index.js --port 8000
 ```
 
-### Set up your Netbeast
-
-Netbeast Dashboard is the main web UX for a next generation router.
-
-We prepared a <u>very lightweight</u> Raspberry Pi 2 distro with the dashboard already installed</u> to show how this future Netbeast is going to be. It is published every two weeks [here](http://bit.ly/1HjkWo2).
-
-The beta looks like this:
+And visiting http://localhost:8000...
 
 ![Demo Dashboard](../../img/general_demo.gif)
