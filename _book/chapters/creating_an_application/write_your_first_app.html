@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Get Started | Netbeast Documentation</title>
+        <title>Write your first app | Netbeast Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -43,10 +43,10 @@
         
     
     
-    <link rel="next" href="../../chapters/get_started/get_started_with_raspberry_pi_2.html" />
+    <link rel="next" href="../../chapters/creating_an_application/install_it_on_the_dashboard.html" />
     
     
-    <link rel="prev" href="../../index.html" />
+    <link rel="prev" href="../../chapters/creating_an_application/index.html" />
     
 
         
@@ -54,7 +54,7 @@
     <body>
         
         
-    <div class="book" data-level="1" data-chapter-title="Get Started" data-filepath="chapters/get_started/index.md" data-basepath="../.." data-revision="Wed Feb 17 2016 12:26:15 GMT+0100 (CET)">
+    <div class="book" data-level="3.1" data-chapter-title="Write your first app" data-filepath="chapters/creating_an_application/write_your_first_app.md" data-basepath="../.." data-revision="Wed Feb 17 2016 12:26:15 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -82,7 +82,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1" data-path="chapters/get_started/index.html">
+        <li class="chapter " data-level="1" data-path="chapters/get_started/index.html">
             
                 
                     <a href="../../chapters/get_started/index.html">
@@ -156,7 +156,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" data-path="chapters/creating_an_application/write_your_first_app.html">
+        <li class="chapter active" data-level="3.1" data-path="chapters/creating_an_application/write_your_first_app.html">
             
                 
                     <a href="../../chapters/creating_an_application/write_your_first_app.html">
@@ -436,16 +436,123 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="get-started-on-using-netbeast">Get Started on using Netbeast</h2>
-<p><strong>Get Started</strong> will guide you through the very begining steps in Netbeast.</p>
-<p>You can select one of these three options depending on where you want to start with Netbeast</p>
-<ul>
-<li>Want to try Netbeast on your RPI2? Get started <a href="">here</a>.</li>
-<li>Want to try Netbeast on your computer? Get started <a href="">here</a>.</li>
-<li>If you have basic knowledge on Netbeast. Get Start creating
-<a href="chapters/creating_an_application/index.md">applications</a> or
-<a href="chapters/creating_an_application/index.md">plugins</a></li>
-</ul>
+                        <h1 id="write-your-first-app">Write your first app</h1>
+<h2 id="eat-the-dessert-first-">Eat the dessert first <img align="absmiddle" alt=":cake:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/cake.png" title=":cake:"></h2>
+<p>First we will install the netbeast SDK. Open a terminal and type:</p>
+<pre><code>npm install -g netbeast-cli
+netbeast new myapp
+</code></pre><p>A new folder named <em>myapp</em> will contain some code scaffolded.</p>
+<p>Run the following code:</p>
+<pre><code>cd myapp; node index.js --port 3000 # To have it running on http://localhost:3000
+</code></pre><p>And you are done! <img align="absmiddle" alt=":fireworks:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/fireworks.png" title=":fireworks:">. Now you can open your favourite editor on such project and start developing.</p>
+<h2 id="ok-now-lets-do-this-slowly-">OK. Now let&apos;s do this slowly <img align="absmiddle" alt=":coffee:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/coffee.png" title=":coffee:"></h2>
+<p>Every Netbeast app is simply a npm package. For advanced developers you may write your app in python or compile and executable for Netbeast-ready platforms. But for the moment let us focus on the Javascript app itself.</p>
+<p>Let us create our first project from scratch. Open a terminal and type:</p>
+<pre><code>mkdir myapp
+cd myapp
+atom .
+</code></pre><p>Or simply create a new folder with such name and open it in your favourite editor. <a href="https://atom.io/" target="_blank">Atom</a> or <a href="http://www.sublimetext.com/" target="_blank">Sublime</a> are ours.</p>
+<p><strong>A basic Netbeast app looks like this:</strong></p>
+<pre><code>.
+&#x251C;&#x2500;&#x2500; index.html
+&#x251C;&#x2500;&#x2500; node_modules
+&#x2502;   &#x251C;&#x2500;&#x2500; express
+&#x2502;   &#x2514;&#x2500;&#x2500; minimist
+&#x251C;&#x2500;&#x2500; package.json
+&#x2514;&#x2500;&#x2500; server.js
+</code></pre><p>package.json is the information needed by npm to maintain a module into their repositories, analyze dependencies and establish some development workflow.</p>
+<p>Netbeast will make use of this file to reduce the overhead of configuration needed to get up and running. It will look for the <code>main</code>field in order to launch and executable. For this app:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;myapp&quot;</span>,
+    <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+    <span class="hljs-string">&quot;description&quot;</span>:<span class="hljs-string">&quot; A repo with code about how to make simple Netbeast apps.&quot;</span>,
+    <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;server.js&quot;</span>,
+    <span class="hljs-string">&quot;dependencies&quot;</span>: {
+        <span class="hljs-string">&quot;express&quot;</span>: <span class="hljs-string">&quot;^4.12.3&quot;</span>,
+        <span class="hljs-string">&quot;minimist&quot;</span>:<span class="hljs-string">&quot;^1.1.0&quot;</span>
+    },
+    <span class="hljs-string">&quot;devDependencies&quot;</span>:{},
+    <span class="hljs-string">&quot;scripts&quot;</span>:{
+        <span class="hljs-string">&quot;test&quot;</span>:<span class="hljs-string">&quot;node server.js --port 31416&quot;</span>,
+        <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;node server.js&quot;</span>
+    },
+    <span class="hljs-string">&quot;repository&quot;</span>: {
+        <span class="hljs-string">&quot;type&quot;</span>:<span class="hljs-string">&quot;git&quot;</span>,
+        <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://github.com/netbeast-co/get-started&quot;</span>
+    },
+    <span class="hljs-string">&quot;keywords&quot;</span>: [ <span class="hljs-string">&quot;iot&quot;</span>,<span class="hljs-string">&quot;netbeast&quot;</span>,<span class="hljs-string">&quot;netbeast.co&quot;</span>],
+    <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;jesus@netbeast.co&quot;</span>,
+    <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;GPL 2&quot;</span>,
+    <span class="hljs-string">&quot;bugs&quot;</span>: {
+        <span class="hljs-string">&quot;url&quot;</span>:<span class="hljs-string">&quot;https://github.com/netbeast-co/get-started/issues&quot;</span>
+    },
+    <span class="hljs-string">&quot;homepage&quot;</span>:<span class="hljs-string">&quot;https://github.com/netbeast-co/get-started&quot;</span>
+}
+</code></pre>
+<p><strong>Let&apos;s create your own one to be like this one.</strong> Open a terminal and type:</p>
+<pre><code>npm init    # And fill the gaps!
+</code></pre><p>Or open a file named <code>package.json</code> in your editor and copy-paste de code above</p>
+<p>We specified in the package that <code>server.js</code>is our main file. Let&apos;s write a simple HTTP server.</p>
+<pre><code class="lang-javascript">#!/usr/bin/env node
+
+/* Requires node.js libraries */
+var express = require(&apos;express&apos;)
+var app = express()
+
+// Netbeast apps must accept the port to launch a HTTP server.
+var argv = require(&apos;minimist&apos;)(process.argv.slice(2))
+port = argv.port || 31416
+
+if(isNaN(port)) {
+    console.log(&quot;Port \&quot;%s\&quot; is not a number.&quot;, port)
+    process.kill(1)
+}
+
+app.use(express.static(__dirname))
+
+var server = app.listen(port, function () {
+  console.log(&apos;Example app listening at http://%s:%s&apos;,
+      server.address().address,
+      server.address().port)
+})
+</code></pre>
+<p><em> If you rather like to using semicolons in JS go type them! But they <a href="https://github.com/feross/standard" target="_blank">are</a> <a href="http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding" target="_blank">not</a> <a href="http://inimino.org/~inimino/blog/javascript_semicolons" target="_blank">necessary</a>, <a href="https://www.youtube.com/watch?v=gsfbh17Ax9I" target="_blank">really</a>!</em></p>
+<p>See the <em>shebang</em>? (First line of the script <code>#!/usr/bin/env node</code>) It is used to tell the Netbeast which interpreter to use when launching and app. <strong>Use this line to indicate node.</strong></p>
+<p><strong>It is mandatory for <code>main</code> to be and executable file.</strong> So if you are writing your app from draft make sure it can be executed:</p>
+<pre><code>chmod +x server.js
+</code></pre><p>As you can see in the code, <strong>the runnable must accept the port by parameter</strong>, so in the case of a webapp they can all be opened from the <a href="https://github.com/netbeast/dashboard" target="_blank">Dashboard</a>.</p>
+<p>In order to do that we use <a href="https://www.npmjs.com/package/minimist" target="_blank">minimist</a>, but you can use whatever command parser you prefer. <a href="https://www.npmjs.com/package/commander" target="_blank">Commander</a> is another recommendation. But you can go hard and parse it in <a href="https://docs.nodejitsu.com/articles/command-line/how-to-parse-command-line-arguments" target="_blank">plain javascript</a>.</p>
+<pre><code>var argv = require(&apos;minimist&apos;)(process.argv.slice(2))
+port = argv.port || 31416
+</code></pre><p><a href="http://expressjs.com/" target="_blank">Express</a> is a http node lightweight+unopinated framework. Is really popular software that you may feel handy in the future.</p>
+<p><strong>You will need to install both packages</strong> for the app to work. It will populate the node_modules folder as you can see up in the folder tree. Run:</p>
+<pre><code>npm install express minimist
+</code></pre><p><strong>We are almost ready to roll!</strong>
+<code>index.html</code> is a simple user interface that welcomes you as the great developer you are!</p>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>xway | get-started<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">style</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/css&quot;</span>&gt;</span><span class="css">
+    <span class="hljs-tag">body</span> <span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> arial</span></span>;
+    }</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- index.html, an optional user interface :] --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>
+        Hello Netbeast community! <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;color: red&quot;</span>&gt;</span>&amp;#9829;<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<p><em>A UI is not strictly needed. There are multiple ways to interact with the user in Netbeast ecosystem as notifications, touchscreens or native mobile apps (docs for these chapters are yet pending, you can request them in <a href="https://github.com/netbeast/dashboard/issues" target="_blank">github issues</a>).</em></p>
+<p><strong>Now you can launch it</strong>
+Try and debug it locally. Type:</p>
+<pre><code>./server.js --port 8000
+</code></pre><p>And if everything has been good you will be able to open a browser at <a href="http://localhost:8000" target="_blank">http://localhost:8000</a> and see:</p>
+<p><img src="../../img/hello_netbeast_community.png" alt="hello netbeast community"></p>
 
                     
                     </section>
@@ -456,10 +563,10 @@
         </div>
 
         
-        <a href="../../index.html" class="navigation navigation-prev " aria-label="Previous page: What is Netbeast"><i class="fa fa-angle-left"></i></a>
+        <a href="../../chapters/creating_an_application/index.html" class="navigation navigation-prev " aria-label="Previous page: Creating an Application"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../chapters/get_started/get_started_with_raspberry_pi_2.html" class="navigation navigation-next " aria-label="Next page: Get Started with Raspberry Pi 2"><i class="fa fa-angle-right"></i></a>
+        <a href="../../chapters/creating_an_application/install_it_on_the_dashboard.html" class="navigation navigation-next " aria-label="Next page: Install it on the Dashboard"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

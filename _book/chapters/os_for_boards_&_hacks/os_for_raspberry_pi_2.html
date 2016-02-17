@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Get Started | Netbeast Documentation</title>
+        <title>OS for Raspberry Pi 2 | Netbeast Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -43,10 +43,10 @@
         
     
     
-    <link rel="next" href="../../chapters/get_started/get_started_with_raspberry_pi_2.html" />
+    <link rel="next" href="../../chapters/os_for_boards_&amp;_hacks/discover_your_netbeast.html" />
     
     
-    <link rel="prev" href="../../index.html" />
+    <link rel="prev" href="../../chapters/os_for_boards_&amp;_hacks/index.html" />
     
 
         
@@ -54,7 +54,7 @@
     <body>
         
         
-    <div class="book" data-level="1" data-chapter-title="Get Started" data-filepath="chapters/get_started/index.md" data-basepath="../.." data-revision="Wed Feb 17 2016 12:26:15 GMT+0100 (CET)">
+    <div class="book" data-level="7.1" data-chapter-title="OS for Raspberry Pi 2" data-filepath="chapters/os_for_boards_&amp;_hacks/os_for_raspberry_pi_2.md" data-basepath="../.." data-revision="Wed Feb 17 2016 12:26:15 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -82,7 +82,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1" data-path="chapters/get_started/index.html">
+        <li class="chapter " data-level="1" data-path="chapters/get_started/index.html">
             
                 
                     <a href="../../chapters/get_started/index.html">
@@ -303,7 +303,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="7.1" data-path="chapters/os_for_boards_&amp;_hacks/os_for_raspberry_pi_2.html">
+        <li class="chapter active" data-level="7.1" data-path="chapters/os_for_boards_&amp;_hacks/os_for_raspberry_pi_2.html">
             
                 
                     <a href="../../chapters/os_for_boards_&amp;_hacks/os_for_raspberry_pi_2.html">
@@ -436,16 +436,163 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h2 id="get-started-on-using-netbeast">Get Started on using Netbeast</h2>
-<p><strong>Get Started</strong> will guide you through the very begining steps in Netbeast.</p>
-<p>You can select one of these three options depending on where you want to start with Netbeast</p>
+                        <h2 id="netbeast-os-for-raspberry-pi-2">Netbeast OS for Raspberry Pi 2</h2>
+<p>In this guide we will introduce some basic concepts about the Netbeast Operative System (NB OS). </p>
 <ul>
-<li>Want to try Netbeast on your RPI2? Get started <a href="">here</a>.</li>
-<li>Want to try Netbeast on your computer? Get started <a href="">here</a>.</li>
-<li>If you have basic knowledge on Netbeast. Get Start creating
-<a href="chapters/creating_an_application/index.md">applications</a> or
-<a href="chapters/creating_an_application/index.md">plugins</a></li>
+<li><a href="#What">What is the Netbeast</a></li>
+<li><a href="#Release">Current Release and Features</a></li>
+<li><a href="#Install">How to install it</a></li>
+<li><a href="#Boot">First Boot</a> </li>
+<li><a href="#SSH">SSH Access</a></li>
+<li><a href="#Problems">Usual Problems</a></li>
 </ul>
+<p><img src="../../img/NB-OS_default.gif" alt="NB-OS"></p>
+<p><a name="What"></a></p>
+<h2 id="what-is-the-netbeast-os">What is the Netbeast OS</h2>
+<p>The Netbeast OS for Raspberry Pi 2 is an operative system based on Linux core. This Linux distribution is composed entirely of free and open-source software, which is under the GNU Public License.</p>
+<p>The first NetBeast OS is based on Raspbian Distribution which allow you to install it on your RPI2.</p>
+<p>The Netbeast OS has the Netbeast Dashboard included. This will allow you to control all the smart devices that you have at home. You won&apos;t need internet connection in order to manage your devices. You just need to install it, power it on and wait until &quot;Netbeast-$Animal&quot; network appears. Then connect all your smart devices to it and let&apos;s start controlling. </p>
+<p><a href="https://sourceforge.net/projects/netbeast/files/latest/download" target="_blank"><strong>DOWNLOAD IT NOW</strong></a>
+<a name="Release"></a></p>
+<p><a name="Release"></a></p>
+<h2 id="current-release-and-features">Current Release and Features</h2>
+<ul>
+<li><p>[x] RPI2 Support: The First NB-OS release can be installed on your RPI2.</p>
+</li>
+<li><p>[x] Auto-Resize: You don&apos;t need to worry about expanding the OS image, It will be done automatically.</p>
+</li>
+<li><p>[x] Dashboard Startup: The Netbeast Dashboard will star automatically on boot.</p>
+</li>
+<li><p>[x] Animal Network: On first boot, network will be named as a random animal.</p>
+</li>
+<li><p>[X] Netbeast Api included : This feature allows to control all your smart devices regardless of their brands.</p>
+</li>
+<li><p>[x] URL router access: You can access to NB-OS Dashboard typing <a href="http://home.netbeast" target="_blank">http://home.netbeast</a></p>
+</li>
+<li><p>[x] Deleted some useless Packages.</p>
+</li>
+</ul>
+<p><a name="Install"></a></p>
+<h2 id="how-to-install-it">How to install it</h2>
+<p><strong>Prerequisites</strong></p>
+<ul>
+<li>Raspberry Pi model B</li>
+<li>Micro SD, minimum 4GB, recommended 8GB.</li>
+<li>Wifi Dongle (Optional)</li>
+</ul>
+<p><strong>Saving the Netbeast OS in your SD Card</strong></p>
+<ul>
+<li><p><a href="https://sourceforge.net/projects/netbeast/files/latest/download" target="_blank"><strong>DOWNLOAD THE NETBEAST OPERATIVE SYSTEM</strong></a></p>
+</li>
+<li><p>Once you have downloaded the Netbeast OS, uncompress it, you will get &quot;NB.OS.img&quot;</p>
+</li>
+<li><p>Format your SD</p>
+</li>
+</ul>
+<p>You are free to use any tool you want. I usually use &quot;Disks&quot; for Linux and &quot;Disk Utility&quot; for Mac.</p>
+<ul>
+<li>Identify your SD</li>
+</ul>
+<p>LINUX: </p>
+<pre><code>sudo df -h
+#This command will list all your storage devices on your computer. 
+#Just look for your SD filesystem name. It should be something like 
+# /dev/mmcblk*
+</code></pre><p>MAC</p>
+<pre><code>diskutil list
+#Look for your SD identifier. It should be something like
+# &quot;/dev/disks1&quot;
+</code></pre><ul>
+<li>Umount your SD</li>
+</ul>
+<p>LINUX: </p>
+<pre><code>umount /dev/mmcblk*p*
+#This command will amount your sd. You need to do it if you want save an img on it.
+#You have to umount the partition that your sd has. Normally, when you do the previous step
+#your sd has one partition created.
+#Example: 
+# umount /dev/mmcblk0p1  #p1 is the partition number of my sd named mmcblk0
+</code></pre><p>MAC</p>
+<pre><code>diskutil umount /dev/disk3s1
+#This command will amount your sd. You need to do it if you want save an img on it.
+#You have to umount the partition that your sd has. Normally, when you do the previous step
+#your sd has one partition created.
+#Example:
+# diskutil umount /dev/disk3s1 #s1 is the partition number of my sd named disk3
+</code></pre><ul>
+<li>Save the NB-OS.Img</li>
+</ul>
+<p>LINUX </p>
+<pre><code>sudo dd if=route/to/NB-OS.img of=SDIdentifier
+#Example:
+#sudo dd if=NB-OS.img of=/dev/mmcblk0
+</code></pre><p>MAC</p>
+<pre><code>sudo dd bs=1m if=route/to/NB-OS.img of=rSDIdentifier
+#Example:
+#sudo dd bs=1m if=NB-OS.img of=/dev/rdisk2
+</code></pre><ul>
+<li>Once you have completed all the steps below successfully, you have the Netbeast OS installed on your SD. Now, go to the next section <a href="#Boot">First Boot</a> and you will know what happens the first time you boot the Netbeast OS. </li>
+</ul>
+<p><a name="Boot"></a></p>
+<h2 id="first-boot">First Boot</h2>
+<p>It is assumed that you have download the Netbeast OS and installed on your SD Card. If don&apos;t go to the previous section <a href="#Install">How to install it</a>.</p>
+<p>Once you have installed the Netbeast OS you are ready to put it on your RPI2 and power it on. </p>
+<p><strong>The boot process is as follow:</strong></p>
+<ul>
+<li><p>Filesystem is expanded depending on your SD size.</p>
+</li>
+<li><p>Network is named as &quot;Netbeast-Animal&quot; where animals is a random name between three hundred options. (If you <strong>don&apos;t have dongle wifi</strong>, go to Usual Problems Section <a href="#Problems">here</a>)</p>
+</li>
+</ul>
+<pre><code>By default, the network configuration is:
+
+Wifi Network Name: Netbeast-Animal
+
+Wifi Network Password:netbeast (We recommend change the password)
+</code></pre><ul>
+<li>Dashboard is started on boot. </li>
+</ul>
+<p>In order to start using the <strong>Netbeast Dashboard</strong> connect to the network that has been created like &quot;Netbeast-Animal.</p>
+<p><strong>Once you has been connected</strong> to the Netbeast network, go to your favourite browse and <strong>type on the nav bar home.netbeast</strong></p>
+<p> Then you will be able to see the dashboard and start installing amazing app for your smart home devices.</p>
+<p><a name="SSH"></a></p>
+<h2 id="ssh-access">SSH Access</h2>
+<p>If you are a developer maybe you want to access to the rpi through ssh for installing some dependences or some scripts that you do.</p>
+<p><strong>For accessing to the rpi through ssh:</strong></p>
+<ul>
+<li><p>Connect to the network that NB OS creates. </p>
+<ul>
+<li>SSID: Netbeast-Animal</li>
+<li>Password: netbeast</li>
+</ul>
+</li>
+<li><p>Go to your terminal</p>
+<pre><code>ssh beast@home.netbeast
+password: netbeast
+</code></pre></li>
+</ul>
+<p>Also you can use the default access for raspbian</p>
+<pre><code>ssh pi@home.netbeast
+password: raspberry
+</code></pre><ul>
+<li>Then you will be connected to your raspberry pi through ssh</li>
+</ul>
+<p><a name="Problems"></a></p>
+<h2 id="usual-problems">Usual Problems</h2>
+<ol>
+<li><p>I don&apos;t have a dongle wifi, how can I access to the Netbeast Dashboard?</p>
+<p> The dashboard is running on your Raspberry Pi anyway. However you have to find other way to access to it. You have to know the IP address that the router has given to the Raspberry Pi. You have two choices:</p>
+<ol>
+<li>Go to the router menu and look for the Raspberry Pi IP</li>
+<li>User the dicover tool by Netbeast <a href="discover_your_netbeast.html">here</a></li>
+<li>Once you know the IP, you can access to the Dashboard typying on the nav bar<pre><code> http://RPI_IP
+</code></pre></li>
+</ol>
+</li>
+</ol>
+<h2 id="references">References</h2>
+<p><a href="https://www.raspbian.org" target="_blank">Raspbian</a></p>
+<p><a href="https://www.gnu.org" target="_blank">GNU</a></p>
 
                     
                     </section>
@@ -456,10 +603,10 @@
         </div>
 
         
-        <a href="../../index.html" class="navigation navigation-prev " aria-label="Previous page: What is Netbeast"><i class="fa fa-angle-left"></i></a>
+        <a href="../../chapters/os_for_boards_&amp;_hacks/index.html" class="navigation navigation-prev " aria-label="Previous page: Os for Boards &amp; Hacks"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../chapters/get_started/get_started_with_raspberry_pi_2.html" class="navigation navigation-next " aria-label="Next page: Get Started with Raspberry Pi 2"><i class="fa fa-angle-right"></i></a>
+        <a href="../../chapters/os_for_boards_&amp;_hacks/discover_your_netbeast.html" class="navigation navigation-next " aria-label="Next page: Discover your Netbeast"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

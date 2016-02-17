@@ -1,80 +1,32 @@
 ![Netbeast](https://github.com/netbeast-co/router/blob/master/img/full-logo.png?raw=true)
 
-**Netbeast** is an operative system that allows you to control different smart devices under a common control system favouring the communication between them regardless of their brand, the technology they use or how they work. 
+##The Origin of Netbeast
+
+Nowadays there is a really big **problem** on IoT and specially at the Smart Home enviroment. There are a lot of **Smart Home solutions** which try to solve day to day problems. So, if you have smart home bulbs from Philips you don't need to wake up from your coach to turn it on, or if you are outsite home you can program and turn them on at an exactly time. 
+
+However, the problem comes up when you have more than one smart device which belongs to diferent brands, even the do the same things. For instance, if you have Philips bulbs at home and you also have Lifx bulbs, **they can't interact each other** because they have a **close enviroment** and they only talk to themselves. 
+
+So now, imagine that you don't have only smart bulbs, you also have smart speakers, smartTVs, smart plugs... that sould be a mess, they can use diferent technologies and they don't even know that there are other devices around because those **smart devices are not really smart**.They don't talk each other and you have to download an application and communicate with them one by one. 
+
+Also, if you want to develop applications, you have to learn how to program using their APIs and every of them are diferent. You have to spend a lot of time learning and creating applications because there is not a unique and simple way to do this.
 
 
-Join the community if you want to know more about the project! Visit [Netbeast](http://bit.ly/1FfOLZS)
+## How Netbeast Works
 
-Also, go to **Downloads** and **Developer** sections and put your developments skills to test!
+**Netbeast technology** tries to solve this huge problem, we **create a platform where all smart devices talk each other** regardless of their brand or technology they are using. So, all your bulbs can talk one another but also your bulbs can talk with your speakers and smartTV.
 
-If you want to know, why you have to choose Netbeast OS, go here [Why Netbeast?](https://github.com/netbeast-co/docs/wiki/Why-Netbeast)
+We create an **unique and simple way for developers** to create applications trough our API, so they only have to know one language and forget about the brand or technology they are programming for. Moreover, they can upload the applications that they create to the **first IoT marketplace** in the world and get revenue from them!
 
-## Downloads
+We believe in **Open Source** so, anyone in the world can have access to our code, improve them including new brands and technologies supported and also, fix some bugs.
 
-In order to start developing applications or just trying our system, we propose:
+For customers, we provide a friendly software focused on user experience. They can easily use our software, download an applications and start using their home as a really smart one.
 
-### Raspberry Pi Distributions. 
+**Netbeast is composed by:**
 
-This is an Operative system based on Linux Distribution for RPI. You can install this operative system to your raspberry pi and you will have our **Netbeast Dashboard** running on your RPI ready to control all your smart home devices. If you want to know how to get it or you want to know more about this project, go here:
+* **Dashboard**: platform where users can install applications, which has been downloaded from the market, and control smart products
 
-[**DOWNLOAD THE NEW NB-OS**](https://sourceforge.net/projects/netbeast/files/latest/download)
+* **API**: unique and simple interface used by developers to create **applications** and **plugins** that allows devices to communicate each other
 
-[**RPI Starting Guide**](https://github.com/netbeast/docs/wiki/NB-OS-Starting-Guide)
+* **OS**: operative system customized by Netbeast that users can download an install on diferent boards which are configured to easy plug & play.
 
-### Dashboard
-
-This is a web panel from you can install, manage or publish IoT applications. For Linux + node.js
-
-If you want to know more about the Netbeast Dashboard, go to here:
-
- [**Dashboard Starting Guide**](https://github.com/netbeast-co/docs/wiki/Dashboard-Starting-Guide)
-
- [**Dashboard Project**](https://github.com/netbeast-co/dashboard)
-
-##Developer
-
-As developer, you can access to our full project documentation [WIKI](https://github.com/netbeast-co/docs/wiki)
-
-You can also join the **Netbeast community** [Netbeast](http://bit.ly/1FfOLZS)
-
-
-## Wiki
-
-Go our wiki site [WIKI](https://github.com/netbeast-co/docs/wiki) where we publish all new features about the project.
-
-See [Documents Guidelines](https://github.com/netbeast-co/docs/wiki/Document-Guidelines) and take a look which topics we talk about in the WIKI site
-
-## Report an issue or ask us
-
-* [Gitter](http://bit.ly/1dQmFKt)
-* [Issues Project](https://github.com/netbeast-co/docs/issues)
-* staff@netbeast.co
-
-## Netbeast Roadmap
-- Beta (November 11st)
- - [x] Philips Hue Support
- - [x] Wemo Lights Support
- - [x] Wemo Plug Support
- - [x] Lifx Support
- - [x] Lockitron Support
- - [x] Raspberry Pi 2 OS
- - [x] API Release
- - [x] Dashboard Re-Desing
- 
-- Beta 2 (November 26th)
- - [x] Cloud Service (thethings.io)
- - [x] Bluetooth Smart Support
- - [x] Sonos Support
- - [x] Parrot Flower Power Support
- - [x] ChromeCast Support
- 
-- Beta 3 (December 24 th)
- - [x] Fixed some issues
- - [x] Improved user experience
- 
-- To be continued...
- 
-[**Download NBOS**](https://sourceforge.net/projects/netbeast/files/latest/download)
-
-<br/>
-<img src="https://github.com/netbeast-co/router/blob/master/img/open-source.png?raw=true" height="140px" width="auto"/><img src="https://github.com/netbeast-co/router/blob/master/img/open-hw.png?raw=true" height="140px" width="auto"/>
+If you want to **start being part** of this and help us to create the IoT of the future, [**Get Started**](chapters/get_started/index.md)
