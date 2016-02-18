@@ -21,6 +21,7 @@
    * [Google Onhub [Soon]]()
    * [Have other board? DIY](chapters/os_for_boards_&_hacks/do_it_yourself.md)
 * [API Reference](chapters/api_reference/index.md)
+  * [Dashboard RESTful](chapters/api_reference/dashboard_restful.md)
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
    * Report bugs
