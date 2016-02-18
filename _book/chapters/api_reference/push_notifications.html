@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Publish your app | Netbeast Documentation</title>
+        <title>Push Notifications to Dashboard | Netbeast Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -43,10 +43,10 @@
         
     
     
-    <link rel="next" href="../../chapters/creating_a_plugin/index.html" />
+    <link rel="next" href="../../chapters/api_reference/chain_events.html" />
     
     
-    <link rel="prev" href="../../chapters/creating_an_application/install_it_on_the_dashboard.html" />
+    <link rel="prev" href="../../chapters/api_reference/scenes.html" />
     
 
         
@@ -55,9 +55,9 @@
         
         
     <div class="book"
-        data-level="3.3"
-        data-chapter-title="Publish your app"
-        data-filepath="chapters/creating_an_application/publish_your_app.md"
+        data-level="8.4"
+        data-chapter-title="Push Notifications to Dashboard"
+        data-filepath="chapters/api_reference/push_notifications.md"
         data-basepath="../.."
         data-revision="Thu Feb 18 2016 18:20:22 GMT+0100 (CET)"
         data-innerlanguage="">
@@ -192,7 +192,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="chapters/creating_an_application/publish_your_app.html">
+        <li class="chapter " data-level="3.3" data-path="chapters/creating_an_application/publish_your_app.html">
             
                 
                     <a href="../../chapters/creating_an_application/publish_your_app.html">
@@ -440,7 +440,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8.4" data-path="chapters/api_reference/push_notifications.html">
+        <li class="chapter active" data-level="8.4" data-path="chapters/api_reference/push_notifications.html">
             
                 
                     <a href="../../chapters/api_reference/push_notifications.html">
@@ -530,18 +530,34 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="publish-your-app">Publish your app</h1>
-<p>If you want your app displayed on Netbeast dashboard <em>Explore</em> section you must create a repo in github with <strong>Netbeast app</strong> or <strong>Netbeast plugin</strong> both in description and <code>README.md</code>.</p>
-<p>To find the apps we make use of GitHub search API. We see the same results that appear (JSON formatted) when you make a <code>GET</code> request to:</p>
-<blockquote>
-<p><a href="https://api.github.com/search/repositories?q=netbeast+language:javascript" target="_blank">https://api.github.com/search/repositories?q=netbeast+language:javascript</a></p>
-</blockquote>
-<p>You&apos;ll know that your app will be shown if it appears there!</p>
-<p>We make the <em>Featured apps</em> section out of apps that people give a <em>star</em> <img align="absmiddle" alt=":star:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/star.png" title=":star:"></p>
-<iframe src="https://ghbtns.com/github-btn.html?user=netbeast&amp;repo=dashboard&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                        <h1 id="push-notifications-to-the-dashboard">Push notifications to the dashboard</h1>
+<p>Respond to an IoT event or a user action with a mobile or browser notification:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> netbeast = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;netbeast&apos;</span>)
 
-<h3 id="with-your-support">With your support</h3>
-<p>We will be able to launch a private repo system to keep your apps secured <img align="absmiddle" alt=":lock:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/lock.png" title=":lock:"></p>
+<span class="hljs-comment">//  netbeast().info(body, title)</span>
+
+netbeast().info(<span class="hljs-string">&apos;Something happened!&apos;</span>)
+netbeast().error(<span class="hljs-string">&apos;Something crashed!&apos;</span>)
+netbeast().warning(<span class="hljs-string">&apos;Something may crash next time!&apos;</span>)
+netbeast().success(<span class="hljs-string">&apos;Voi-la&apos;</span>)
+</code></pre>
+<h2 id="directly-through-mqtt">Directly through MQTT</h2>
+<p>Netbeast router uses MQTT for notifications and real time messaging. It is the preferred language for sensors and its exposed API is rather simple. If you are already using <a href="https://www.npmjs.com/package/mqtt" target="_blank">mqtt.js</a> you can send notifications without <a href="http://github.com/netbeast/api" target="_blank">Netbeast API module</a> easily.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> mqtt = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mqtt&apos;</span>)
+<span class="hljs-keyword">var</span> client = mqtt.connect(<span class="hljs-string">&apos;ws://10.0.0.1:80&apos;</span>) <span class="hljs-comment">// Netbeast IP:PORT in your subnet</span>
+<span class="hljs-keyword">const</span> msg = {title: <span class="hljs-string">&quot;my app&quot;</span>, body: <span class="hljs-string">&quot;An error has occurred&quot;</span>, emphasis: <span class="hljs-string">&quot;error&quot;</span>}
+client.publish(<span class="hljs-string">&apos;netbeast/push&apos;</span>, <span class="hljs-built_in">JSON</span>.stringify(msg))
+</code></pre>
+<p>A notification is a extensible JSON object carrying at least the field body. All options below:</p>
+<pre><code class="lang-javascript">{
+ body: <span class="hljs-string">&quot;The notification message content&quot;</span>,
+ title: <span class="hljs-string">&quot;By default, app name or `dashboard`, it is the heading of the toastr&quot;</span>,
+ icon: url, <span class="hljs-comment">// Not yet ready, but in the future will work with browser native and mobile native notifications</span>
+ emphasis: <span class="hljs-string">&quot;success|warning|error|info&quot;</span>,
+ timeout: <span class="hljs-string">&quot;3000&quot;</span> <span class="hljs-comment">// time in ms &#x2013; default is never</span>
+}
+</code></pre>
+<p>For a deeper view, take a look on notifications utility implemented on dashboard <a href="https://github.com/netbeast/dashboard/blob/master/src/helpers/broker.js" target="_blank">https://github.com/netbeast/dashboard/blob/master/src/helpers/broker.js</a></p>
 
                     
                     </section>
@@ -552,10 +568,10 @@
         </div>
 
         
-        <a href="../../chapters/creating_an_application/install_it_on_the_dashboard.html" class="navigation navigation-prev " aria-label="Previous page: Install it on the Dashboard"><i class="fa fa-angle-left"></i></a>
+        <a href="../../chapters/api_reference/scenes.html" class="navigation navigation-prev " aria-label="Previous page: Scenes"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../chapters/creating_a_plugin/index.html" class="navigation navigation-next " aria-label="Next page: Creating a Plugin"><i class="fa fa-angle-right"></i></a>
+        <a href="../../chapters/api_reference/chain_events.html" class="navigation navigation-next " aria-label="Next page: Events"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

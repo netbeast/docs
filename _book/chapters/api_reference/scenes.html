@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Publish your app | Netbeast Documentation</title>
+        <title>Scenes | Netbeast Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -43,10 +43,10 @@
         
     
     
-    <link rel="next" href="../../chapters/creating_a_plugin/index.html" />
+    <link rel="next" href="../../chapters/api_reference/push_notifications.html" />
     
     
-    <link rel="prev" href="../../chapters/creating_an_application/install_it_on_the_dashboard.html" />
+    <link rel="prev" href="../../chapters/api_reference/resources.html" />
     
 
         
@@ -55,9 +55,9 @@
         
         
     <div class="book"
-        data-level="3.3"
-        data-chapter-title="Publish your app"
-        data-filepath="chapters/creating_an_application/publish_your_app.md"
+        data-level="8.3"
+        data-chapter-title="Scenes"
+        data-filepath="chapters/api_reference/scenes.md"
         data-basepath="../.."
         data-revision="Thu Feb 18 2016 18:20:22 GMT+0100 (CET)"
         data-innerlanguage="">
@@ -192,7 +192,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="chapters/creating_an_application/publish_your_app.html">
+        <li class="chapter " data-level="3.3" data-path="chapters/creating_an_application/publish_your_app.html">
             
                 
                     <a href="../../chapters/creating_an_application/publish_your_app.html">
@@ -425,7 +425,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8.3" data-path="chapters/api_reference/scenes.html">
+        <li class="chapter active" data-level="8.3" data-path="chapters/api_reference/scenes.html">
             
                 
                     <a href="../../chapters/api_reference/scenes.html">
@@ -530,18 +530,98 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="publish-your-app">Publish your app</h1>
-<p>If you want your app displayed on Netbeast dashboard <em>Explore</em> section you must create a repo in github with <strong>Netbeast app</strong> or <strong>Netbeast plugin</strong> both in description and <code>README.md</code>.</p>
-<p>To find the apps we make use of GitHub search API. We see the same results that appear (JSON formatted) when you make a <code>GET</code> request to:</p>
-<blockquote>
-<p><a href="https://api.github.com/search/repositories?q=netbeast+language:javascript" target="_blank">https://api.github.com/search/repositories?q=netbeast+language:javascript</a></p>
-</blockquote>
-<p>You&apos;ll know that your app will be shown if it appears there!</p>
-<p>We make the <em>Featured apps</em> section out of apps that people give a <em>star</em> <img align="absmiddle" alt=":star:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/star.png" title=":star:"></p>
-<iframe src="https://ghbtns.com/github-btn.html?user=netbeast&amp;repo=dashboard&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                        <h1 id="scenes">Scenes</h1>
+<p>A Scene is a snapshot of the current state of a group of devices. It allows you to save your favorites configuration to be accessed easily.
+A given device could be part of different scenes.</p>
+<p>Index:</p>
+<ul>
+<li><a href="#addDeviceScene">.addDeviceScene()</a></li>
+<li><a href="#applyScene">.applyScene()</a></li>
+<li><a href="#createScene">.createScene()</a></li>
+<li><a href="#createCustomScene">.createCustomScene()</a></li>
+<li><a href="#deleteDeviceScene">.deleteDeviceScene()</a></li>
+<li><a href="#deleteScene">.deleteScene()</a></li>
+<li><a href="#getAllScenes">.getAllScenes()</a></li>
+<li><a href="#getScene">.getScene()</a></li>
+</ul>
+<p><a name="addDeviceScene"></a></p>
+<h4 id="netbeastsceneidadddevicesceneid">netbeast(<code>sceneid</code>).addDeviceScene(<code>id</code>)</h4>
+<p>The addDevice method allows us to add a new device to the selected scene. You must pass the id of the device and it will save the current state of it on the db.</p>
+<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;watchfilm&apos;</span>).addDeviceScene(<span class="hljs-number">2</span>)
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p><a name="applyScene"></a></p>
+<h4 id="netbeastsceneidapplyscene">netbeast(<code>sceneid</code>).applyScene()</h4>
+<p>This method apply the configuration of the given scene.</p>
+<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;watchfilm&apos;</span>).applyScene()
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p><a name="createScene"></a></p>
+<h4 id="netbeastsceneidcreatesceneids">netbeast(<code>sceneid</code>).createScene(<code>ids</code>)</h4>
+<p>This method is used to create a new scene by passing an array of device ids. It takes the current state of the given devices and store the scene in the db with the &apos;seceneid&apos; name.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> devices = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>]
 
-<h3 id="with-your-support">With your support</h3>
-<p>We will be able to launch a private repo system to keep your apps secured <img align="absmiddle" alt=":lock:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/lock.png" title=":lock:"></p>
+netbeast(<span class="hljs-string">&apos;watchfilm&apos;</span>).createScene(devices)
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p><a name="createCustomScene"></a></p>
+<h4 id="netbeastsceneidcreatecustomscenestate">netbeast(<code>sceneid</code>).createCustomScene(<code>state</code>)</h4>
+<p>With this method you can create a new scene with a predefined state. <em>state</em> is an object array that contains the object id and the state of each device.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> newscene = [ {
+        id: <span class="hljs-number">1</span>,
+        status: {
+          power: <span class="hljs-literal">true</span>,
+          brightness: <span class="hljs-number">99</span>,
+          hue: <span class="hljs-number">200</span>,
+          saturation: <span class="hljs-number">80</span>
+        }
+    },
+    {
+        id: <span class="hljs-number">8</span>,
+        status: {
+          volume: <span class="hljs-number">90</span>,
+          track: <span class="hljs-string">`url-track`</span>,
+        }
+    }]
+
+
+netbeast(<span class="hljs-string">&apos;watchfilm&apos;</span>).createCustomScene(newscene)
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p><a name="deleteDeviceScene"></a></p>
+<h4 id="netbeastsceneiddeletedevicesceneid">netbeast(<code>sceneid</code>).deleteDeviceScene(<code>id</code>)</h4>
+<p>Instead of removing the whole scene, you are able to quit one device from the scene.</p>
+<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;watchfilm&apos;</span>).deleteDeviceScene(<span class="hljs-number">6</span>)
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p><a name="deleteScene"></a></p>
+<h4 id="netbeastsceneiddeletescene">netbeast(<code>sceneid</code>).deleteScene()</h4>
+<p>With delete you can remove a given scene from the db</p>
+<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;watchfilm&apos;</span>).deleteScene()
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p><a name="getAllScenes"></a></p>
+<h4 id="netbeastgetallscenes">netbeast().getAllScenes()</h4>
+<p>The getScenes method return the name of all the scenes registered on the db.
+Arguments are not needed on this function.</p>
+<pre><code class="lang-javascript">netbeast().getAllScenes()
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p><a name="getScene"></a></p>
+<h4 id="netbeastsceneidgetscene">netbeast(<code>sceneid</code>).getScene()</h4>
+<p>This methods returns all the information about the scene.</p>
+<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;watchfilm&apos;</span>).getScene()
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p>getScene has no arguments.</p>
 
                     
                     </section>
@@ -552,10 +632,10 @@
         </div>
 
         
-        <a href="../../chapters/creating_an_application/install_it_on_the_dashboard.html" class="navigation navigation-prev " aria-label="Previous page: Install it on the Dashboard"><i class="fa fa-angle-left"></i></a>
+        <a href="../../chapters/api_reference/resources.html" class="navigation navigation-prev " aria-label="Previous page: Resources"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../chapters/creating_a_plugin/index.html" class="navigation navigation-next " aria-label="Next page: Creating a Plugin"><i class="fa fa-angle-right"></i></a>
+        <a href="../../chapters/api_reference/push_notifications.html" class="navigation navigation-next " aria-label="Next page: Push Notifications to Dashboard"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
