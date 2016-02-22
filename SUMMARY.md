@@ -21,7 +21,16 @@
    * [Google Onhub [Soon]]()
    * [Have other board? DIY](chapters/os_for_boards_&_hacks/do_it_yourself.md)
 * [API Reference](chapters/api_reference/index.md)
+<<<<<<< HEAD
+  * [Structure Overview](chapters/api_reference/structure.md)
+  * [Resources](chapters/api_reference/resources.md)
+  * [Scenes](chapters/api_reference/scenes.md)
+  * [Push Notifications to Dashboard](chapters/api_reference/push_notifications.md)
+  * [Events](chapters/api_reference/chain_events.md)
+  * [Streams [Soon]]()
+=======
   * [Dashboard RESTful](chapters/api_reference/dashboard_restful.md)
+>>>>>>> master
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
    * Report bugs
