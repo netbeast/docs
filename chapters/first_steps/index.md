@@ -23,9 +23,9 @@ new sampler pad! Just click onto its icon to launch it.
 
 <iframe src="http://jsdario.github.io/padjs/" frameBorder="0" width="100%" height="700px"></iframe>
 
-# Installing a plugin
+#Installing a plugin
 
-Plugin is an app that allows you to control a piece of hardware, take a look [here](/chapters/devices_currently_supported/index.md) to see how many devices are already supported.
+Plugin is an app that allows you to control a piece of hardware, take a look [here](../devices_currently_supported/index.md) to see how many devices are already supported.
 
 If you have one of those devices you can try to download its correspondant plugin.
 If you don't have any we have prepared a virtual one you can use to test it out
