@@ -1,24 +1,24 @@
-##Netbeast on your RPI2
+## Netbeast on your RPI2
 
 Be ready to start using Netbeast on your Raspberry Pi 2 :rocket:
 
-1. Download the Netbeast OS for RPI2 [Here](https://sourceforge.net/projects/netbeast/files/latest/download)
+1. Download the Netbeast OS for RPI2 [here](https://sourceforge.net/projects/netbeast/files/latest/download)
 
 2. Save the .img on the SD of your RPI as you do usually. You can find a guide [here]()
 
 3. Introduce the SD on the RPI
-	
+
 	3.1 If you have a wifi dongle, put in on the RPI2. Otherwise, go to 3.2 directly
 
 	3.2 Turn the RPI on and wait for 20 secs
 
-4. Connect to Netbeast 
-	
-	4.1 If you have a dongle wifi, the RPI will have created a Network named "Netbeast-$animal". Connect to the wifi Network with this credentials:
+4. Connect to Netbeast
 
-		- SSID: Netbeast-$Animal
+	4.1 If you have a dongle wifi, the RPI will have created a Network named "Netbeast-$animal". Connect to the WiFi Network with this credentials:
 
-		- Password: netbeast
+  > SSID: Netbeast-_animal_
+
+  > password: netbeast
 
 5. Access to the Netbeast Dashboard
 
@@ -36,5 +36,4 @@ Be ready to start using Netbeast on your Raspberry Pi 2 :rocket:
 
 7. Now you will be able to see the Netbeast Dashboard! Go to [First Steps](../first_steps/index.md) to keep learing about Netbeast
 
-	IMAGEN DEL DASHBOARD!!!
-	
+![Demo Dashboard](../../img/general_demo.gif)

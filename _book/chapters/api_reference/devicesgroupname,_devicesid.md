@@ -1,6 +1,6 @@
 # devices.group(name, devicesId)
 
-This functión allows us to make group of devices. The argument name defines de group name. DevicesId will be an array of ids of the devices that should be grouped.
+This function allows us to make group of devices. The argument name defines de group name. DevicesId will be an array of ids of the devices that should be grouped.
 
 ````javascript
 var nb = require('netbeast')

@@ -13,6 +13,7 @@ netbeast('temperature').on(function (message) {
     }
 })
 ```
+<<<<<<< HEAD
 
 This is basically an usual subscription to a mqtt channel. If you feel more comfortable
 using mqtt directly, it will looks something like that.
@@ -31,3 +32,5 @@ var client = mqtt.connect('ws://NETBEAST_IP:PORT')
     })
 
 ```
+=======
+>>>>>>> master

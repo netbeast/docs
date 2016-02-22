@@ -5,10 +5,10 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>First Steps | Netbeast Documentation</title>
+        <title>Dashboard RESTful | Netbeast Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.6.7">
+        <meta name="generator" content="GitBook 2.5.2">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -43,10 +43,10 @@
         
     
     
-    <link rel="next" href="../../chapters/creating_an_application/index.html" />
+    <link rel="next" href="../../chapters/collaborate/index.html" />
     
     
-    <link rel="prev" href="../../chapters/get_started/get_started_from_your_desktop.html" />
+    <link rel="prev" href="../../chapters/api_reference/index.html" />
     
 
         
@@ -54,17 +54,7 @@
     <body>
         
         
-<<<<<<< HEAD
-    <div class="book"
-        data-level="2"
-        data-chapter-title="First Steps"
-        data-filepath="chapters/first_steps/index.md"
-        data-basepath="../.."
-        data-revision="Thu Feb 18 2016 18:20:22 GMT+0100 (CET)"
-        data-innerlanguage="">
-=======
-    <div class="book" data-level="2" data-chapter-title="First Steps" data-filepath="chapters/first_steps/index.md" data-basepath="../.." data-revision="Thu Feb 18 2016 13:22:51 GMT+0100 (CET)">
->>>>>>> master
+    <div class="book" data-level="8.1" data-chapter-title="Dashboard RESTful" data-filepath="chapters/api_reference/dashboard_restful.md" data-basepath="../.." data-revision="Thu Feb 18 2016 13:22:51 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -143,7 +133,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2" data-path="chapters/first_steps/index.html">
+        <li class="chapter " data-level="2" data-path="chapters/first_steps/index.html">
             
                 
                     <a href="../../chapters/first_steps/index.html">
@@ -407,102 +397,21 @@
             <ul class="articles">
                 
     
-<<<<<<< HEAD
-        <li class="chapter " data-level="8.1" data-path="chapters/api_reference/structure.html">
-            
-                
-                    <a href="../../chapters/api_reference/structure.html">
-=======
-        <li class="chapter " data-level="8.1" data-path="chapters/api_reference/dashboard_restful.html">
+        <li class="chapter active" data-level="8.1" data-path="chapters/api_reference/dashboard_restful.html">
             
                 
                     <a href="../../chapters/api_reference/dashboard_restful.html">
->>>>>>> master
                 
                         <i class="fa fa-check"></i>
                         
                             <b>8.1.</b>
                         
-<<<<<<< HEAD
-                        Structure Overview
-=======
                         Dashboard RESTful
->>>>>>> master
                     </a>
             
             
         </li>
     
-<<<<<<< HEAD
-        <li class="chapter " data-level="8.2" data-path="chapters/api_reference/resources.html">
-            
-                
-                    <a href="../../chapters/api_reference/resources.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.2.</b>
-                        
-                        Resources
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.3" data-path="chapters/api_reference/scenes.html">
-            
-                
-                    <a href="../../chapters/api_reference/scenes.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.3.</b>
-                        
-                        Scenes
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.4" data-path="chapters/api_reference/push_notifications.html">
-            
-                
-                    <a href="../../chapters/api_reference/push_notifications.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.4.</b>
-                        
-                        Push Notifications to Dashboard
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.5" data-path="chapters/api_reference/chain_events.html">
-            
-                
-                    <a href="../../chapters/api_reference/chain_events.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.5.</b>
-                        
-                        Events
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.6" >
-            
-            <span><b>8.6.</b> Streams [Soon]</span>
-            
-            
-        </li>
-    
-=======
->>>>>>> master
 
             </ul>
             
@@ -613,30 +522,77 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="first-steps">First steps</h1>
-<p>The <strong>Dashboard</strong> is the place from where you can manage applications installed on
-your Netbeast. And any device running Dashboard can be found in the network as a
-Netbeast.</p>
-<p><img src="../../img/general_demo.gif" alt="Demo Dashboard"></p>
-<h1 id="installing-an-application">Installing an application</h1>
-<p><a name="installing-an-application"></a></p>
-<p>An app stands for the most common known web app, it can be everything from a web page
-to a complete HTML5 app with great UX.</p>
-<p>To illustrate this we have created a fun app and made it available as a Netbeast app.</p>
-<p>Go to your running dashboard <code>install -&gt; with Git</code> and use the following repo:</p>
-<p><a href="https://github.com/jsdario/padjs" target="_blank">https://github.com/jsdario/padjs</a></p>
-<p>After installation go back again to <code>apps</code> and you will be able to try out your brand
-new sampler pad! Just click onto its icon to launch it.</p>
-<iframe src="http://jsdario.github.io/padjs/" frameBorder="0" width="100%" height="700px"></iframe>
+                        <h1 id="dashboard-restful-api">Dashboard RESTful API</h1>
+<blockquote>
+<p>This document has to improve a lot, in the meanwhile, check how the frontend makes
+use of it.</p>
+</blockquote>
+<h3 id="publiccomponentsappsappjsx">public/components/apps/app.jsx</h3>
+<pre><code class="lang-javascript">launch () {
+    <span class="hljs-keyword">const</span> { name } = <span class="hljs-keyword">this</span>.props
 
-<h1 id="installing-a-plugin">Installing a plugin</h1>
-<p>Plugin is an app that allows you to control a piece of hardware, take a look <a href="chapters/devices_currently_supported/index.md">here</a> to see how many devices are already supported.</p>
-<p>If you have one of those devices you can try to download its correspondant plugin.
-If you don&apos;t have any we have prepared a virtual one you can use to test it out
-alltogether!</p>
-<p>Go back again to install and, this time, choose &quot;explore&quot;. There, all app are shown!
-Look for <strong>bulb-plugin</strong> and click &quot;install&quot; <em>et voil&#xE0;!</em></p>
-<p>You can use now your pad and see how your bulb changes its color.</p>
+    request.post(<span class="hljs-string">&apos;/api/activities/&apos;</span> + name).then(() =&gt; {
+      <span class="hljs-keyword">return</span> request.get(<span class="hljs-string">&apos;/i/&apos;</span> + name).promise()
+    }).then(() =&gt; {
+      <span class="hljs-keyword">this</span>.router.push(<span class="hljs-string">&apos;/i/&apos;</span> + name)
+    }).catch((err) =&gt; {
+      <span class="hljs-keyword">if</span> (err.status === <span class="hljs-number">404</span>) <span class="hljs-keyword">return</span> toastr.info(<span class="hljs-string">`<span class="hljs-subst">${name}</span> is running`</span>)
+      toastr.error(err.message)
+    })
+  }
+
+  install () {
+    <span class="hljs-keyword">const</span> url = <span class="hljs-keyword">this</span>.props.git_url
+
+    request.post(<span class="hljs-string">&apos;/api/apps&apos;</span>).send({ url }).then((res) =&gt; {
+      <span class="hljs-keyword">const</span> name = res.body.name
+      <span class="hljs-keyword">const</span> props = res.body.netbeast
+      <span class="hljs-keyword">const</span> type = props ? props.type : <span class="hljs-string">&apos;app&apos;</span>
+
+      toastr.success(<span class="hljs-string">`<span class="hljs-subst">${name}</span> has been installed!`</span>)
+
+      <span class="hljs-keyword">if</span> (type === <span class="hljs-string">&apos;plugin&apos;</span> || type === <span class="hljs-string">&apos;service&apos;</span> || props.bootOnLoad)
+        <span class="hljs-keyword">return</span> request.post(<span class="hljs-string">&apos;/api/activities/&apos;</span> + name).promise()
+    }).then((res) =&gt; { toastr.success(<span class="hljs-string">`<span class="hljs-subst">${res.body.name}</span> is running`</span>) })
+    .catch((fail, res) =&gt; toastr.error(res.text))
+  }
+
+  stop () {
+    <span class="hljs-keyword">const</span> { name } = <span class="hljs-keyword">this</span>.props
+    request.del(<span class="hljs-string">&apos;/api/activities/&apos;</span> + name).end((err, res) =&gt; {
+      <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> toastr.error(res.text)
+      <span class="hljs-keyword">this</span>.setState({ hidden: <span class="hljs-literal">true</span> })
+      toastr.info(name + <span class="hljs-string">&apos; has been stopped.&apos;</span>)
+    })
+  }
+
+  uninstall () {
+    <span class="hljs-keyword">const</span> { name } = <span class="hljs-keyword">this</span>.props
+    request.del(<span class="hljs-string">&apos;/api/apps/&apos;</span> + name).end((err, res) =&gt; {
+      <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> toastr.error(res.text)
+      <span class="hljs-keyword">this</span>.setState({ hidden: <span class="hljs-literal">true</span> })
+      toastr.info(name + <span class="hljs-string">&apos; has been removed.&apos;</span>)
+    })
+  }
+</code></pre>
+<h3 id="publiccomponentsappsdrawerjsx">public/components/apps/drawer.jsx</h3>
+<p><em><strong>query</strong> can be modules, apps, activities or plugins</em></p>
+<pre><code class="lang-javascript">loadApps (props, done) {
+  <span class="hljs-keyword">const</span> { route } = props
+  <span class="hljs-keyword">const</span> pathname = route.path ? route.path : <span class="hljs-string">&apos;apps&apos;</span>
+  <span class="hljs-keyword">const</span> query = pathname === <span class="hljs-string">&apos;uninstall&apos;</span> ? <span class="hljs-string">&apos;modules&apos;</span> : pathname
+
+  request.get(<span class="hljs-string">`/api/<span class="hljs-subst">${query}</span>/`</span>).end((err, res) =&gt; {
+    <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> toastr.error(err)
+
+    <span class="hljs-keyword">let</span> apps = [ ...res.body ] <span class="hljs-comment">// smart copy</span>
+    apps.forEach((app) =&gt; app.type = pathname)
+
+    Session.save(<span class="hljs-string">&apos;apps&apos;</span>, apps)
+    <span class="hljs-keyword">this</span>.setState({ apps: apps, pathname: pathname })
+  })
+}
+</code></pre>
 
                     
                     </section>
@@ -647,10 +603,10 @@ Look for <strong>bulb-plugin</strong> and click &quot;install&quot; <em>et voil&
         </div>
 
         
-        <a href="../../chapters/get_started/get_started_from_your_desktop.html" class="navigation navigation-prev " aria-label="Previous page: Get started from your desktop"><i class="fa fa-angle-left"></i></a>
+        <a href="../../chapters/api_reference/index.html" class="navigation navigation-prev " aria-label="Previous page: API Reference"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../chapters/creating_an_application/index.html" class="navigation navigation-next " aria-label="Next page: Creating an Application"><i class="fa fa-angle-right"></i></a>
+        <a href="../../chapters/collaborate/index.html" class="navigation navigation-next " aria-label="Next page: Collaborate"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
@@ -680,7 +636,7 @@ Look for <strong>bulb-plugin</strong> and click &quot;install&quot; <em>et voil&
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"advanced-emoji":{"myConfigKey":"test"},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    var config = {"advanced-emoji":{"myConfigKey":"test"},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
     gitbook.start(config);
 });
 </script>

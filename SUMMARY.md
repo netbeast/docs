@@ -1,9 +1,9 @@
 # Summary
 
 * [What is Netbeast](README.md)
-* [Get Started](chapters/get_started/index.md)
-   * [Get Started with Raspberry Pi 2](chapters/get_started/get_started_with_raspberry_pi_2.md)
-   * [Get Started with your Computer](chapters/get_started/get_started_with_your_computer.md)
+* [Get started](chapters/get_started/index.md)
+   * [Get started with Raspberry Pi 2](chapters/get_started/get_started_with_raspberry_pi_2.md)
+   * [Get started from your desktop](chapters/get_started/get_started_from_your_desktop.md)
 * [First Steps](chapters/first_steps/index.md)
 * [Creating an Application](chapters/creating_an_application/index.md)
    * [Write your first app](chapters/creating_an_application/write_your_first_app.md)
@@ -13,18 +13,27 @@
    * [Tutorial](chapters/creating_a_plugin/tutorial.md)
    * [Upload a plugin](chapters/creating_a_plugin/upload_a_plugin.md)
 * [Publish Applications and Plugins](chapters/publish_applications_and_plugins/index.md)
-* [Devices Currently Supported](chapters/devices_currently_supported/index.md)
-* [Os for Boards & Hacks](chapters/os_for_boards_&_hacks/index.md)
+* [Smart Devices Supported](chapters/devices_currently_supported/index.md)
+* [Netbeast OS & Hacks](chapters/os_for_boards_&_hacks/index.md)
    * [OS for Raspberry Pi 2](chapters/os_for_boards_&_hacks/os_for_raspberry_pi_2.md)
       * [Discover your Netbeast](chapters/os_for_boards_&_hacks/discover_your_netbeast.md)
    * [OS for Orange Pi [Soon]]()
    * [Google Onhub [Soon]]()
    * [Have other board? DIY](chapters/os_for_boards_&_hacks/do_it_yourself.md)
 * [API Reference](chapters/api_reference/index.md)
+<<<<<<< HEAD
   * [Structure Overview](chapters/api_reference/structure.md)
   * [Resources](chapters/api_reference/resources.md)
   * [Scenes](chapters/api_reference/scenes.md)
   * [Push Notifications to Dashboard](chapters/api_reference/push_notifications.md)
   * [Events](chapters/api_reference/chain_events.md)
   * [Streams [Soon]]()
+=======
+  * [Dashboard RESTful](chapters/api_reference/dashboard_restful.md)
+>>>>>>> master
 * [Collaborate](chapters/collaborate/index.md)
+   * Roadmap
+   * Report bugs
+   * Collaborate to the open source
+   * [Write new documentation](chapters/collaborate/write_new_documentation.md)
+   * [Contact](chapters/collaborate/contact.md)
