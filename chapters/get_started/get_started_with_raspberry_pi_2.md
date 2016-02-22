@@ -30,7 +30,7 @@ Be ready to start using Netbeast on your Raspberry Pi 2 :rocket:
 
 		http://IP_Assigned_by_your_router_to_the_RPI2
 
-	* You can use the Netbeast tool to do this, follow this [guide]()
+	* You can use the Netbeast tool to discover your IP on your network, follow this [guide]()
 
 6. [Subscribe](http://www.netbeast.co) to Netbeast to have access to the lastest updates
 
