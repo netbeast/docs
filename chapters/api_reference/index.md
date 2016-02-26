@@ -23,3 +23,18 @@ beast('video').get('status')
 ```
 
 Control your smart devices with Netbeast is as simple as that. Lets go deeper! :rocket:
+
+# IMPORTANT
+
+If you are using the Netbeast API out of our dashboard you will need to declare
+in which IP:PORT is the dashboard running.
+
+So, before requiring the npm module you should include a line like this:
+
+````javascript
+process.env.NETBEAST = '10.0.0.1:80'
+
+// or if it´s on the same machine
+
+process.env.NETBEAST = 'localhost:8000'
+````

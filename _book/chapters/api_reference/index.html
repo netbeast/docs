@@ -59,7 +59,7 @@
         data-chapter-title="API Reference"
         data-filepath="chapters/api_reference/index.md"
         data-basepath="../.."
-        data-revision="Mon Feb 22 2016 13:35:40 GMT+0100 (CET)"
+        data-revision="Fri Feb 26 2016 12:31:57 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -236,14 +236,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1" data-path="chapters/creating_a_plugin/tutorial.html">
+        <li class="chapter " data-level="4.1" data-path="chapters/creating_a_plugin/write_your_first_plugin.html">
+            
+                
+                    <a href="../../chapters/creating_a_plugin/write_your_first_plugin.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Write your first plugin
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="chapters/creating_a_plugin/tutorial.html">
             
                 
                     <a href="../../chapters/creating_a_plugin/tutorial.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.1.</b>
+                            <b>4.2.</b>
                         
                         Tutorial
                     </a>
@@ -251,14 +266,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="chapters/creating_a_plugin/upload_a_plugin.html">
+        <li class="chapter " data-level="4.3" data-path="chapters/creating_a_plugin/upload_a_plugin.html">
             
                 
                     <a href="../../chapters/creating_a_plugin/upload_a_plugin.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>4.2.</b>
+                            <b>4.3.</b>
                         
                         Upload a plugin
                     </a>
@@ -618,6 +633,16 @@ beast(<span class="hljs-string">&apos;music&apos;</span>).at(<span class="hljs-s
 beast(<span class="hljs-string">&apos;video&apos;</span>).get(<span class="hljs-string">&apos;status&apos;</span>)
 </code></pre>
 <p>Control your smart devices with Netbeast is as simple as that. Lets go deeper! <img align="absmiddle" alt=":rocket:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/rocket.png" title=":rocket:"></p>
+<h1 id="important">IMPORTANT</h1>
+<p>If you are using the Netbeast API out of our dashboard you will need to declare
+in which IP:PORT is the dashboard running.</p>
+<p>So, before requiring the npm module you should include a line like this:</p>
+<pre><code class="lang-javascript">process.env.NETBEAST = <span class="hljs-string">&apos;10.0.0.1:80&apos;</span>
+
+<span class="hljs-comment">// or if it&#xB4;s on the same machine</span>
+
+process.env.NETBEAST = <span class="hljs-string">&apos;localhost:8000&apos;</span>
+</code></pre>
 
                     
                     </section>
