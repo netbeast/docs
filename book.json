@@ -1,4 +1,11 @@
 {
 	"title" : "Netbeast Documentation",
-	"plugins" : ["advanced-emoji"]
+	"plugins" : ["advanced-emoji", "scripts"],
+	"pluginsConfig": {
+        "scripts": {
+            "files": [
+                "./analytics.js"
+            ]
+        }
+    }
 }
