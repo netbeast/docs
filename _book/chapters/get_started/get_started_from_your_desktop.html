@@ -54,7 +54,7 @@
     <body>
         
         
-    <div class="book" data-level="1.2" data-chapter-title="Get started from your desktop" data-filepath="chapters/get_started/get_started_from_your_desktop.md" data-basepath="../.." data-revision="Wed Mar 02 2016 17:09:59 GMT+0100 (CET)">
+    <div class="book" data-level="1.2" data-chapter-title="Get started from your desktop" data-filepath="chapters/get_started/get_started_from_your_desktop.md" data-basepath="../.." data-revision="Wed Mar 02 2016 17:35:00 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -611,37 +611,43 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="install-nodejs">Install Node.js</h1>
-<p>All platforms <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a></p>
-<pre><code class="lang-bash"><span class="hljs-comment"># Mac</span>
+                        <h1 id="1-install-nodejs">1. Install Node.js</h1>
+<p>Choose your package. Node.js is available for all platforms in <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a></p>
+<blockquote>
+<p>But, I want to do it through the command line:</p>
+</blockquote>
+<pre><code class="lang-bash"><span class="hljs-comment"># 1.b. Mac</span>
 brew install node
 
-<span class="hljs-comment"># Using Ubuntu</span>
+<span class="hljs-comment"># 1.c. Using Ubuntu</span>
 curl <span class="hljs-operator">-s</span>L https://deb.nodesource.com/setup_4.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-<span class="hljs-comment"># Using Debian or Raspberry, as root</span>
+<span class="hljs-comment"># 1.c* Using Debian or Raspberry, as root</span>
 curl <span class="hljs-operator">-s</span>L https://deb.nodesource.com/setup_4.x | bash -
 apt-get install -y nodejs
 </code></pre>
-<h3 id="npm">npm</h3>
-<p>Once you install Nodejs, npm is included.</p>
-<h1 id="install-sdk">Install SDK</h1>
+<h3 id="install-npm">Install npm</h3>
+<p>Once you install Nodejs, npm is included. <img align="absmiddle" alt=":white_check_mark:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/white_check_mark.png" title=":white_check_mark:"></p>
+<h1 id="2-install-netbeast-sdk">2. Install Netbeast SDK</h1>
 <h3 id="through-npm">Through npm</h3>
 <pre><code class="lang-bash">npm install -g netbeast-cli
 </code></pre>
-<p>Now you will be able to run it typing:</p>
-<pre><code class="lang-bash">beast start
+<p>After it finishes you will be able to run it typing:</p>
+<pre><code class="lang-bash">netbeast start
 </code></pre>
 <p>Dashboard will be started on port 8000 unless you run something like:</p>
-<pre><code>beast start --port 3000
-</code></pre><h3 id="cloning-from-git-repo">Cloning from <strong>git</strong> repo</h3>
+<pre><code>netbeast start --port 3000
+</code></pre><p>Run with <em>help</em> to get all options:</p>
+<pre><code>netbeast --help
+</code></pre><h3 id="2b-cloning-from-git-repo">2.b. Cloning from <strong>git</strong> repo</h3>
 <pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> https://github.com/netbeast/dashboard/ &amp;&amp; <span class="hljs-built_in">cd</span> dashboard
 npm i <span class="hljs-comment"># by default, dependencies are ignored, so must be installed</span>
 ./index.js --port <span class="hljs-number">8000</span>
 </code></pre>
-<p>And visiting <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>...</p>
-<p><img src="../../img/general_demo.gif" alt="Demo Dashboard"></p>
+<h1 id="done-">Done! <img align="absmiddle" alt=":fireworks:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/fireworks.png" title=":fireworks:"></h1>
+<p>Now you can visit <a href="http://localhost:8000" target="_blank">http://localhost:8000</a> and continue making your <a href="../first_steps/index.html">first steps...</a></p>
+<p><img src="../../img/dashboard-demo.gif" alt="Demo Dashboard"></p>
 
                     
                     </section>
