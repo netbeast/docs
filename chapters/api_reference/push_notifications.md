@@ -1,13 +1,16 @@
-# Push notifications to the user
+# Push notifications to the dashboard
 
 Respond to an IoT event or a user action with a mobile or browser notification:
- 
+
 ```javascript
 var netbeast = require('netbeast')
-netbeast.info('Something happened!')
-netbeast.error('Something crashed!')
-netbeast.warning('Something may crash next time!')
-netbeast.success('Voi-la')
+
+//  netbeast().info(body, title)
+
+netbeast().info('Something happened!')
+netbeast().error('Something crashed!')
+netbeast().warning('Something may crash next time!')
+netbeast().success('Voi-la')
 ```
 
 ## Directly through MQTT
@@ -15,7 +18,7 @@ Netbeast router uses MQTT for notifications and real time messaging. It is the p
 
 ```javascript
 var mqtt = require('mqtt')
-var client = mqtt.connect('10.0.0.1') // Netbeast IP in your subnet
+var client = mqtt.connect('ws://10.0.0.1:80') // Netbeast IP:PORT in your subnet
 const msg = {title: "my app", body: "An error has occurred", emphasis: "error"}
 client.publish('netbeast/push', JSON.stringify(msg))
 ```

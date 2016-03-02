@@ -4,7 +4,7 @@ Be ready to start using Netbeast on your Raspberry Pi 2 :rocket:
 
 1. Download the Netbeast OS for RPI2 [here](https://sourceforge.net/projects/netbeast/files/latest/download)
 
-2. Save the .img on the SD of your RPI as you do usually. You can find a guide [here]()
+2. Save the .img on the SD of your RPI as you do usually. You can find a guide [here](../os_for_boards_&_hacks/os_for_raspberry_pi_2.md#Install)
 
 3. Introduce the SD on the RPI
 
@@ -30,7 +30,7 @@ Be ready to start using Netbeast on your Raspberry Pi 2 :rocket:
 
 		http://IP_Assigned_by_your_router_to_the_RPI2
 
-	* You can use the Netbeast tool to do this, follow this [guide]()
+	* You can use the Netbeast tool to discover your IP on your network, follow this [guide](../os_for_boards_&_hacks/discover_your_netbeast.md)
 
 6. [Subscribe](http://www.netbeast.co) to Netbeast to have access to the lastest updates
 

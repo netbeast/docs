@@ -10,6 +10,7 @@
    * [Install it on the Dashboard](chapters/creating_an_application/install_it_on_the_dashboard.md)
    * [Publish your app](chapters/creating_an_application/publish_your_app.md)
 * [Creating a Plugin](chapters/creating_a_plugin/index.md)
+   * [Write your first plugin](chapters/creating_a_plugin/write_your_first_plugin.md)
    * [Tutorial](chapters/creating_a_plugin/tutorial.md)
    * [Upload a plugin](chapters/creating_a_plugin/upload_a_plugin.md)
 * [Publish Applications and Plugins](chapters/publish_applications_and_plugins/index.md)
@@ -21,7 +22,13 @@
    * [Google Onhub [Soon]]()
    * [Have other board? DIY](chapters/os_for_boards_&_hacks/do_it_yourself.md)
 * [API Reference](chapters/api_reference/index.md)
-  * [Dashboard RESTful](chapters/api_reference/dashboard_restful.md)
+  * [Structure Overview](chapters/api_reference/structure.md)
+  * [Resources](chapters/api_reference/resources.md)
+  * [Scenes](chapters/api_reference/scenes.md)
+  * [Push Notifications to Dashboard](chapters/api_reference/push_notifications.md)
+  * [Events](chapters/api_reference/chain_events.md)
+  * [Streams [Soon]]()
+  * [Dashboard RESTful]()
 * [Collaborate](chapters/collaborate/index.md)
    * Roadmap
    * Report bugs
