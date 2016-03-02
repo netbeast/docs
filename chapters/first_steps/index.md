@@ -4,7 +4,7 @@ The **Dashboard** is the place from where you can manage applications installed 
 your Netbeast. And any device running Dashboard can be found in the network as a
 Netbeast.
 
-![Demo Dashboard](../../img/general_demo.gif)
+![Demo Dashboard](../../img/dashboard-demo.gif)
 
 # Installing an application
 <a name="installing-an-application"></a>
@@ -21,7 +21,7 @@ https://github.com/jsdario/padjs
 After installation go back again to `apps` and you will be able to try out your brand
 new sampler pad! Just click onto its icon to launch it.
 
-<iframe src="http://jsdario.github.io/padjs/" frameBorder="0" width="100%" height="700px"></iframe>
+![Padjs](../../img/padjs.gif)
 
 #Installing a plugin
 
@@ -31,7 +31,19 @@ If you have one of those devices you can try to download its correspondant plugi
 If you don't have any we have prepared a virtual one you can use to test it out
 alltogether!
 
-Go back again to install and, this time, choose "explore". There, all app are shown!
-Look for **bulb-plugin** and click "install" _et voilà!_
+Go back again to the dashboard. This time, choose "explore". There, all available apps and plugins are shown here.
 
-You can use now your pad and see how your bulb changes its color.
+Let's install a 'light' plugin. If you have smart bulbs from wemo, philips hue, lifx or any other kind, you can try to find it among the apps listed. Install it! Make sure your bulb is online and usable.
+
+If you do not have any smart bulbs home you can test it with a virtual bulb. Look for **bulb-plugin** and click `install`
+
+Now if you open **bulb-plugin** and the app we previously installed we can see how playing the pad changes the bulb color.
+
+![Bulb and padjs](../../img/bulb-padjs.gif)
+
+If you have real bulbs or a sound device online (as _sonos_) you will see how it reproduces the sound.
+
+>But, things could go wrong.
+
+In that case click the link "_number_ of devices installed" –watch the first gif on this doc page– and take a look on the map. Look for your devices to check they are up and running. :white_check_mark:
+
