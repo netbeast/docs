@@ -1,6 +1,6 @@
-# Publish your app
+# Publish your app & plugins
 
-If you want your app displayed on Netbeast dashboard _Explore_ section you must create a repo in github with **Netbeast app** or **Netbeast plugin** both in description and `README.md`.
+If you want your app or plugin displayed on Netbeast dashboard _Explore_ section you must create a repo in github with **Netbeast app** or **Netbeast plugin** both in description and `README.md`.
 
 To find the apps we make use of GitHub search API. We see the same results that appear (JSON formatted) when you make a `GET` request to:
 > https://api.github.com/search/repositories?q=netbeast+language:javascript

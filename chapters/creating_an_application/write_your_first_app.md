@@ -1,4 +1,3 @@
-# Write your first app
 ## Eat the dessert first :cake:
 First we will install the netbeast SDK. Open a terminal and type:
 ```

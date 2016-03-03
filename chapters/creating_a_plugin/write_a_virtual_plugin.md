@@ -1,4 +1,4 @@
-# Create your first plugin :wrench:
+# Write a virtual plugin :wrench:
 
 A plugin is a Netbeast app that people to control hardware that has not yet been
 ported to the API or that has been invented by you, a maker.

@@ -1,6 +1,8 @@
-## Netbeast on your RPI2
+# Netbeast on your RPI2
 
 Be ready to start using Netbeast on your Raspberry Pi 2 :rocket:
+
+### 1. Installing NBOS on your RPI
 
 1. Download the Netbeast OS for RPI2 [here](https://sourceforge.net/projects/netbeast/files/latest/download)
 
@@ -11,6 +13,8 @@ Be ready to start using Netbeast on your Raspberry Pi 2 :rocket:
 	3.1 If you have a wifi dongle, put in on the RPI2. Otherwise, go to 3.2 directly
 
 	3.2 Turn the RPI on and wait for 20 secs
+
+### 2. Access to the dashboard
 
 4. Connect to Netbeast
 
@@ -32,8 +36,8 @@ Be ready to start using Netbeast on your Raspberry Pi 2 :rocket:
 
 	* You can use the Netbeast tool to discover your IP on your network, follow this [guide](../os_for_boards_&_hacks/discover_your_netbeast.md)
 
-6. [Subscribe](http://www.netbeast.co) to Netbeast to have access to the lastest updates
+### 3. [Subscribe](http://www.netbeast.co) to Netbeast to have access to the lastest updates
 
-7. Now you will be able to see the Netbeast Dashboard! Go to [First Steps](../first_steps/index.md) to keep learing about Netbeast
+### 4. Now you will be able to see the Netbeast Dashboard! Go to [First Steps](../first_steps/index.md) to keep learing about Netbeast
 
-![Demo Dashboard](../../img/general_demo.gif)
+![Demo Dashboard](../../img/dashboard-demo.gif)
