@@ -13,7 +13,7 @@ An app stands for the most common known web app, it can be everything from a web
 
 Go to your running dashboard `install -> with Git` and use the following repo:
 
-https://github.com/jsdario/padjs
+https://github.com/netbeast/padjs
 
 After installation go back again to `apps` and you will be able to try out your brand new sampler pad! Just click onto its icon `padjs` to launch it.
 
