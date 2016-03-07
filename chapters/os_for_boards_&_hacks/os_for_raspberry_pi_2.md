@@ -47,7 +47,7 @@ The Netbeast OS has the Netbeast Dashboard included. This will allow you to cont
 
 **Prerequisites**
 * Raspberry Pi model 2
-* Micro SD, minimum 4GB, recommended 8GB.
+* Micro SD, minimum 4GB, recommended 8GB
 * Wifi Dongle (Optional)
 
 
