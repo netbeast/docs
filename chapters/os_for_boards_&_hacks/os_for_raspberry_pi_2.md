@@ -46,7 +46,7 @@ The Netbeast OS has the Netbeast Dashboard included. This will allow you to cont
 ## How to install it
 
 **Prerequisites**
-* Raspberry Pi model B
+* Raspberry Pi model 2
 * Micro SD, minimum 4GB, recommended 8GB.
 * Wifi Dongle (Optional)
 
