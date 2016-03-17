@@ -4,4 +4,4 @@
 * Report a bug or enter discussion at [issues](https://github.com/netbeast-co/docs/issues)
 * Other resources: [Dashboard](https://github.com/netbeast/dashboard), [API](https://github.com/netbeast/api)
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/netbeast-co/xway?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[<img src="https://slack.com/img/slack_hash_128.v1442100037.png" height="24px" width="auto"/> Join us in Slack!](https://netbeastco.typeform.com/to/VGLexg)
