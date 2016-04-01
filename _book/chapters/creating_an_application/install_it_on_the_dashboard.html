@@ -54,7 +54,7 @@
     <body>
         
         
-    <div class="book" data-level="3.2" data-chapter-title="Install it on the Dashboard" data-filepath="chapters/creating_an_application/install_it_on_the_dashboard.md" data-basepath="../.." data-revision="Wed Mar 02 2016 17:35:00 GMT+0100 (CET)">
+    <div class="book" data-level="3.2" data-chapter-title="Install it on the Dashboard" data-filepath="chapters/creating_an_application/install_it_on_the_dashboard.md" data-basepath="../.." data-revision="Thu Mar 03 2016 14:05:13 GMT+0100 (CET)">
     
 
 <div class="book-summary">
@@ -113,16 +113,16 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="chapters/get_started/get_started_from_your_desktop.html">
+        <li class="chapter " data-level="1.2" data-path="chapters/get_started/get_started_from_your_laptop.html">
             
                 
-                    <a href="../../chapters/get_started/get_started_from_your_desktop.html">
+                    <a href="../../chapters/get_started/get_started_from_your_laptop.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>1.2.</b>
                         
-                        Get started from your desktop
+                        Get started from your Laptop
                     </a>
             
             
@@ -245,31 +245,46 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="chapters/creating_a_plugin/tutorial.html">
+        <li class="chapter " data-level="4.2" data-path="chapters/creating_a_plugin/write_a_virtual_plugin.html">
             
                 
-                    <a href="../../chapters/creating_a_plugin/tutorial.html">
+                    <a href="../../chapters/creating_a_plugin/write_a_virtual_plugin.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>4.2.</b>
                         
-                        Tutorial
+                        Write a virtual plugin
                     </a>
             
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="chapters/creating_a_plugin/upload_a_plugin.html">
+        <li class="chapter " data-level="4.3" data-path="chapters/creating_a_plugin/install_it_on_the_dashboard.html">
             
                 
-                    <a href="../../chapters/creating_a_plugin/upload_a_plugin.html">
+                    <a href="../../chapters/creating_a_plugin/install_it_on_the_dashboard.html">
                 
                         <i class="fa fa-check"></i>
                         
                             <b>4.3.</b>
                         
-                        Upload a plugin
+                        Install it on the Dashboard
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="chapters/creating_a_plugin/publish_your_plugin.html">
+            
+                
+                    <a href="../../chapters/creating_a_plugin/publish_your_plugin.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Publish your plugin
                     </a>
             
             
@@ -611,24 +626,36 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="install-your-own-app">Install your own app</h1>
-<p>If you have not created your app skeleton yet type:</p>
-<pre><code>netbeast new myapp
-</code></pre><p>Apps installed on Netbeast must have a main executable file, run:</p>
-<pre><code>cd myapp;
-chmod +x index.js;
-</code></pre><p>Check it has a <u>shebang</u>. After typing <code>cat index.js</code> the first line should look like:</p>
-<pre><code>#!/usr/bin/env node
-</code></pre><h4 id="package-your-app">Package your app</h4>
+                        <h1 id="install-an-application-on-the-dashboard">Install an application on the Dashboard</h1>
+<p>Once you have created your first app, you will be able to install it on the dashboard. </p>
+<p>You can do it in some different ways:</p>
+<h3 id="1-install-an-application-through-netbeast-market">1. Install an application through Netbeast Market</h3>
+<p>People can publish their apps &amp; plugins on github and they will be able to people directly on the dashboard. If you want to see more information about this, go <a href="publish_your_app.html">here</a></p>
+<p>Then, you only need to click on the &quot;explore&quot; icon and then look for that apps and plugins you want to install.</p>
+<p>Really easy <img align="absmiddle" alt=":smiley:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/smiley.png" title=":smiley:"></p>
+<p><img src="../../img/install_explore.gif" alt="Install through explore"></p>
+<h3 id="2-install-an-application-through-github">2. Install an application through github</h3>
+<ol>
+<li><p>Firstly you need to upload your application to a github repository.</p>
+</li>
+<li><p>Secondly, go to the &gt;Install secction on the dashboard and then click on the option &quot;with git&quot;. After that, you only need to copy your repository name there and click on &quot;install&quot;.</p>
+</li>
+<li><p>Finally you will have your app installed.</p>
+</li>
+</ol>
+<p><img src="../../img/github_app.gif" alt="Install through github"></p>
+<h3 id="3-install-an-application-through-drag--drop">3. Install an application through Drag &amp; Drop</h3>
+<p>First you need to package your folder application in a .tar.gz format</p>
+<h4 id="package-your-app">Package your app</h4>
 <pre><code>beast pkg .
 # alias for &quot;netbeast package&quot;
 </code></pre><p>Will output app.tar.gz</p>
 <p><strong>But you could do that also manually!</strong> Using the UNIX compressing tool:</p>
 <pre><code>tar -zcvf app.tar.gz directory-name
 </code></pre><p>Or a standard desktop compressor.</p>
-<h4 id="manual-installation">Manual installation</h4>
+<h4 id="drag--drop">Drag &amp; Drop</h4>
 <p>Drag and drop the above resulting file to the dashboard, or go to the &apos;install&apos; section from the tool bar and follow the instructions.</p>
-<h4 id="install-through-sdk">Install through SDK</h4>
+<h3 id="4-install-through-sdk">4. Install through SDK</h3>
 <pre><code>beast install app.tar.gz
 </code></pre><p>It will prompt to ask you which Netbeast to install in if there are a number of them running in the same network.</p>
 
@@ -653,7 +680,7 @@ chmod +x index.js;
 <script src="../../gitbook/app.js"></script>
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-scripts/1456933395935-analytics.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-scripts/1457004825896-analytics.js"></script>
     
 
     

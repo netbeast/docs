@@ -1,6 +1,6 @@
 # Netbeast plugins
 
-A Netbeast plugin is a kind of "application" that allow you to control device from a concrete brand through the [Netbeast API](../api_reference.index.md).
+A Netbeast plugin is a kind of "application" that allow you to control device from a concrete brand through the [Netbeast API](../api_reference/index.md).
 It's the sauce behind Netbeast API engine. With a plugin you can register a resource
 for others to use, like a new brand of smart bulbs to be controlled as another _light_ source.
 
@@ -13,3 +13,5 @@ Lets connect everything!
 :bulb:
 :camera:
 :alarm_clock:
+
+You can start here: [Write your first plugin](write_your_first_plugin.md)

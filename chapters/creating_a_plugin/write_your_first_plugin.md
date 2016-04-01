@@ -1,6 +1,10 @@
 # Write your first Plugin
 
-Creating a new plugin with netbeast is really easy cause its simple structure.
+In this section we are going to explain how to create a plugin for real products. However, you can still learn and try how to create plugins with Netbeast without any real product on this secction: [Write a virtual plugin](write_a_virtual_plugin.md)
+
+____________________________________________________________________________________________________________
+
+Creating a new plugin with Netbeast is really easy because its simple structure.
 With the help of `netbeast-cli` you only need to follow a few steps to have your plugin running.
 
 First we will install the netbeast SDK. Open a terminal and type:
