@@ -31,7 +31,7 @@
   * [Streams [Soon]]()
   * [Dashboard RESTful]()
 * [Collaborate](chapters/collaborate/index.md)
-   * Roadmap
+   * [Roadmap](chapters/collaborate/roadmap.md)
    * Report bugs
    * Collaborate to the open source
    * [Write new documentation](chapters/collaborate/write_new_documentation.md)
