@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Collaborate | Netbeast Documentation</title>
+        <title>Get started from your Laptop | Netbeast Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.5.2">
@@ -43,10 +43,10 @@
         
     
     
-    <link rel="next" href="../../chapters/collaborate/roadmap.html" />
+    <link rel="next" href="../../chapters/first_steps/index.html" />
     
     
-    <link rel="prev" href="../../chapters/api_reference/chain_events.html" />
+    <link rel="prev" href="../../chapters/get_started/get_started_with_raspberry_pi_2.html" />
     
 
         
@@ -54,7 +54,7 @@
     <body>
         
         
-    <div class="book" data-level="9" data-chapter-title="Collaborate" data-filepath="chapters/collaborate/index.md" data-basepath="../.." data-revision="Wed Apr 20 2016 11:24:25 GMT+0200 (CEST)">
+    <div class="book" data-level="1.2" data-chapter-title="Get started from your Laptop" data-filepath="chapters/get_started/get_started_from_your_laptop.md" data-basepath="../.." data-revision="Wed Apr 20 2016 11:24:25 GMT+0200 (CEST)">
     
 
 <div class="book-summary">
@@ -113,7 +113,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="chapters/get_started/get_started_from_your_laptop.html">
+        <li class="chapter active" data-level="1.2" data-path="chapters/get_started/get_started_from_your_laptop.html">
             
                 
                     <a href="../../chapters/get_started/get_started_from_your_laptop.html">
@@ -521,7 +521,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="9" data-path="chapters/collaborate/index.html">
+        <li class="chapter " data-level="9" data-path="chapters/collaborate/index.html">
             
                 
                     <a href="../../chapters/collaborate/index.html">
@@ -634,15 +634,47 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="collaborate">Collaborate</h1>
-<p>Do you find the project interesting? Help us  grow the community or to fulfill our Roadmap.</p>
-<ol>
-<li>You can join our <a href="https://netbeastco.typeform.com/to/VGLexg" target="_blank">slack community</a> ask questions about your projects or how can you help.</li>
-<li>You can fork any of our repos, <a href="https://github.com/netbeast" target="_blank">available on Github</a>. Specially our <a href="https://github.com/netbeast/dashboard" target="_blank">Dashboard</a> or our <a href="https://github.com/netbeast/api" target="_blank">http api client</a>.</li>
-<li>Then modify it, commit it, branch it and <a href="https://github.com/netbeast/dashboard/compare?expand=1" target="_blank">create a pull request</a>.</li>
-</ol>
-<p><br>
-Looking forward having your hardware integrated but you do not how? Please, <a href="https://netbeastco.typeform.com/to/Oyal7x" target="_blank">reach us</a>!</p>
+                        <h1 id="netbeast-on-your-laptop">Netbeast on your Laptop</h1>
+<p>Be ready to start using Netbeast on your Laptop <img align="absmiddle" alt=":rocket:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/rocket.png" title=":rocket:"></p>
+<h3 id="1-install-nodejs">1. Install Node.js</h3>
+<p>Choose your package. Node.js is available for all platforms in <a href="https://nodejs.org/en/download/" target="_blank">https://nodejs.org/en/download/</a></p>
+<blockquote>
+<p>But, I want to do it through the command line:</p>
+</blockquote>
+<pre><code class="lang-bash"><span class="hljs-number">1</span>.b. Mac
+brew install node
+
+<span class="hljs-number">1</span>.c. Using Ubuntu
+curl <span class="hljs-operator">-s</span>L https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+<span class="hljs-number">1</span>.d Using Debian or Raspberry, as root
+curl <span class="hljs-operator">-s</span>L https://deb.nodesource.com/setup_4.x | bash -
+apt-get install -y nodejs
+</code></pre>
+<h3 id="2-install-npm">2. Install npm</h3>
+<p>Once you install Nodejs, npm is included. <img align="absmiddle" alt=":white_check_mark:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/white_check_mark.png" title=":white_check_mark:"></p>
+<h3 id="3-install-netbeast-sdk">3. Install Netbeast SDK</h3>
+<h4 id="3a-through-npm">3.a. Through npm</h4>
+<pre><code class="lang-bash">npm install -g netbeast-cli
+</code></pre>
+<p>After it finishes you will be able to run it typing:</p>
+<pre><code class="lang-bash">netbeast start
+</code></pre>
+<p>Dashboard will be started on port 8000 unless you run something like:</p>
+<pre><code>netbeast start --port 3000
+</code></pre><p>Run with <em>help</em> to get all options:</p>
+<pre><code>netbeast --help
+</code></pre><h4 id="3b-cloning-from-git-repo">3.b Cloning from <strong>git</strong> repo</h4>
+<pre><code class="lang-bash">git <span class="hljs-built_in">clone</span> https://github.com/netbeast/dashboard/ &amp;&amp; <span class="hljs-built_in">cd</span> dashboard
+npm i <span class="hljs-comment"># by default, dependencies are ignored, so must be installed</span>
+./index.js --port <span class="hljs-number">8000</span>
+</code></pre>
+<h3 id="4-done-">4. Done! <img align="absmiddle" alt=":fireworks:" class="emoji" src="../../gitbook/plugins/gitbook-plugin-advanced-emoji/emojis/fireworks.png" title=":fireworks:"></h3>
+<p>Now you can visit <a href="http://localhost:8000" target="_blank">http://localhost:8000</a></p>
+<p><img src="../../img/dashboard-demo.gif" alt="Demo Dashboard"></p>
+<h3 id="5-subscribe-to-netbeast-to-have-access-to-the-lastest-updates">5. <a href="http://www.netbeast.co" target="_blank">Subscribe</a> to Netbeast to have access to the lastest updates</h3>
+<h3 id="6-go-to-first-steps-to-keep-learing-about-netbeast">6. Go to <a href="../first_steps/index.html">First Steps</a> to keep learing about Netbeast</h3>
 
                     
                     </section>
@@ -653,10 +685,10 @@ Looking forward having your hardware integrated but you do not how? Please, <a h
         </div>
 
         
-        <a href="../../chapters/api_reference/chain_events.html" class="navigation navigation-prev " aria-label="Previous page: Events"><i class="fa fa-angle-left"></i></a>
+        <a href="../../chapters/get_started/get_started_with_raspberry_pi_2.html" class="navigation navigation-prev " aria-label="Previous page: Get started with Raspberry Pi 2"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../chapters/collaborate/roadmap.html" class="navigation navigation-next " aria-label="Next page: Roadmap"><i class="fa fa-angle-right"></i></a>
+        <a href="../../chapters/first_steps/index.html" class="navigation navigation-next " aria-label="Next page: First Steps"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
