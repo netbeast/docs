@@ -44,6 +44,7 @@ li.chapter span {
   color: white !important;
   opacity: 1 !important;
   font-weight: bold !important;
+  cursor: default !important;
 }
 
 .book .book-summary ul.summary li.active>a {
