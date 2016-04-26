@@ -1,0 +1,12 @@
+# Smart devices supported
+
+|       Brands      |                        Supported & Tested                       |                                                                       Supported                                                                       |
+|:-----------------:|:---------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------:|
+|    **Philiphs Hue**   | Philips Hue Bridge, Philips Hue White, Philips Hue Color Ambiance | Phillips Hue Lightstripe, Phillips Hue Lightstripe Plus, Phillips Hue Go, Phillips Hue Iris, Phillips Hue Bloom, Phillips Hue Beyond, Phillips Hue Phoenixy |
+|     **Belkin Wemo**    | WeMo Bridge, WeMo Smart LED, Bulb WeMo Insight, Switch WeMo, Switch |                                                         WeMo Light Switch, WeMo OSRAM Lightify                                                         |
+|       **Sonos**       |                           Sonos Play:1                          |                                                               Sonos Play:3, Sonos Play:5                                                               |
+|        **Lifx**       |                            Color 1000                           |                                                        White 800, White 900 BR30, Color 1000 BR30                                                       |
+| **Google Chromecast** |                            Chromecast                           |                                                                           -                                                                           |
+|       **Parrot**      |                           Flower-Power                          |                                                                           -                                                                           |
+|      **Netamot**      |                             Welcome                             |                                                                           -                                                                           |
+|     **Lockitron**     |                               Bolt                              |                                                                           -                                                                           |

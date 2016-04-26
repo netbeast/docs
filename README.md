@@ -1,32 +1,71 @@
-![Netbeast](https://github.com/netbeast-co/router/blob/master/img/full-logo.png?raw=true)
+# About Netbeast
 
-##The Origin of Netbeast
+This documentation will show you all there is to know about Internet of Things development with Netbeast. For basic info on what Netbeast is about, please see [the main project website](https://netbeast.co).
 
-Nowadays there is a big **problem** on IoT and specially at the Smart Home environment. There are a lot of **Smart Home solutions** which try to solve day to day problems. So, if you have smart home bulbs from Philips you don't need to wake up from your coach to turn them on, or if you are outside home you can program and turn them on at an exactly time. 
+Anxious to start right away?
 
-However, the problem comes up when you have more than one smart device which belongs to different brands, even the do the same things. For instance, if you have Philips bulbs at home and you also have Lifx bulbs, **they can't interact with each other** because they have a **closed environment** and only talk to themselves. 
+[Get Started](http://docs.netbeast.co/chapters/get_started/get_started_from_your_laptop.md)
 
-So now, imagine that you don't have only smart bulbs, you also have smart speakers, smart TVs, smart plugs... that would be a mess, they can use different technologies and they don't even know that there are other devices around because those **smart devices are not really smart**.They don't talk each other and you have to download an application and communicate with them one by one. 
+## What is Netbeast?
 
-Also, if you want to develop applications, you have to learn how to program using their APIs and every of them are different. You have to spend a lot of time learning and creating applications because there is not a unique and simple way to do this.
+As our Github reads:
+
+Netbeast is an open source platform that allows to connect IoT devices regardless of anything.
+
+More specifically, Netbeast is:
+
+* A Toolbelt that let's you develop Internet of Things applications easier and faster.
+* A platform that hosts your applications and does the hard work of specifically talking to every device.
+
+Logically, it makes sense to combine the use of both to create and offer IoT applications to everyone. Let's have a peek at how it works.
 
 
-## How Netbeast Works
+## Hello world
 
-**Netbeast technology** tries to solve this huge problem, we **create a platform where all smart devices talk each other** regardless of their brand or technology they are using. So, all your bulbs can talk one another but also your bulbs can talk with your speakers and smart TV.
+Our "Hello World" IoT version is a small application that turns a light into any color we want.
 
-We create an **unique and simple way for developers** to create applications trough our API, so they only have to know one language and forget about the brand or technology they are programming for. Moreover, they can upload the applications that they create to the **first IoT marketplace** in the world and get revenue from them!
+```
+var beast = require('netbeast')
 
-We believe in **Open Source** so, anyone in the world can have access to our code, improve them including new brands and technologies supported and also, fix some bugs.
+    beast('lights').set({
+      color: "#9AD74C",
+      power: "on"
+    })
+```
+Here, the application is using:
 
-For customers, we provide a friendly software focused on user experience. They can easily use our software, download an applications and start using their home as a really smart one.
+[The Netbeast API](http://docs.netbeast.co/chapters/api_reference/index.html) to tell a light, any light, to turn on and with a lime green color. 
 
-**Netbeast is composed by:**
+[The Netbeast Dashboard](chapters/getting_started/dashboard.md) is running on the device where this application is running. This allow to translate messages from any kind of devices.
 
-* **Dashboard**: platform where users can install applications, which has been downloaded from the market, and control smart products
+And that's all there is to it. Using the same principle one can control any device (lights, sound systems, TVs, appliances...).
 
-* **API**: unique and simple interface used by developers to create **applications** and **plugins** that allows devices to communicate each other
 
-* **OS**: operative system customized by Netbeast that users can download an install on different boards which are configured to easy plug & play.
+## Apps & Plugins
 
-If you want to **start being part** of this and help us to create the IoT of the future, [**Get Started**](chapters/get_started/index.md)
+That's how you use the API to develop applications. The API itself uses [plugins](http://docs.netbeast.co/chapters/creating_a_plugin/write_your_first_plugin.md) to communicate specifically with each brand's devices. Plugins are modular and specific to a certain vendor API or protocol.
+
+
+## Dashboard
+
+The dashboard hosts and runs applications. It provides a user interface from which you can access and manage all your applications.
+
+
+![Demo Dashboard](/img/dashboard-demo.gif)
+
+
+## About these docs
+
+This documentation is broken down into four parts:
+* Getting started does an overview of all the tools available and walks you through the setup process on every available platform.
+* Developing teaches you all there is to know about creating applications and plugins for connected products.
+* API reference is the place to go to learn everything about the Netbeast API and its methods.
+* Contributing provides all the guidelines necessary to submit your code and help improve Netbeast.
+
+
+
+
+
+
+
+

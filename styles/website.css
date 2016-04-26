@@ -22,7 +22,7 @@
   src: local('Proxima Nova'), url('../fonts/ProximaNova-Bold_2.otf') format('opentype');
 }
 
-a, p {
+body {
   font-family: 'Fira Sans' !important;
 }
 
@@ -35,13 +35,34 @@ a {
 }
 
 a:hover, a:active, a:focus {
-    color: #f1264c !important;
+    color: rgb(0,191,195) !important;
+}
+
+
+li.chapter span {
+  background-color: rgb(0,191,195) !important;
+  color: white !important;
+  opacity: 1 !important;
+  font-weight: bold !important;
 }
 
 .book .book-summary ul.summary li.active>a {
-    color: #f1264c !important;
+    color: rgb(0,191,195) !important;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal a {
-    color: #f1264c !important;
+    color: rgb(0,191,195) !important;
+}
+
+.book .book-summary ul.summary li a, .book .book-summary ul.summary li span {
+    text-overflow: none;
+    white-space:normal;
+}
+
+.book .book-summary ul.summary li a b, .book .book-summary ul.summary li span b {
+   display: none;
+}
+
+.book-summary {
+  background-color: #FAFCFC;
 }
