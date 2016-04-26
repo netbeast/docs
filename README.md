@@ -4,7 +4,7 @@ This documentation will show you all there is to know about Internet of Things d
 
 Anxious to start right away?
 
-[Get Started](http://docs.netbeast.co/chapters/get_started/get_started_from_your_laptop.md)
+[Get Started](chapters/getting_started/installing_and_cloning.md)
 
 ## What is Netbeast?
 
