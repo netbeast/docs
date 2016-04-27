@@ -1,5 +1,5 @@
-# Summary
-       
+# Summary 
+* [Documentation]()       
 * [About Netbeast](README.md)
 * [Getting started]()   
    * [Installation](chapters/getting_started/installing_and_cloning.md)
@@ -21,9 +21,11 @@
    * [Push notifications](chapters/api_reference/push_notifications.md)
    * [Events](chapters/api_reference/chain_events.md)
    * [Streams [Soon]](chapters/api_reference/streams.md)
-* [Smart devices supported](chapters/supported_devices/README.md)
-* [Supported platforms](chapters/supported_platforms/README.md)
-* [Contributing](chapters/contributing/README.md)
-* [Write new documentation](chapters/write_new_documentation/README.md)
-* [License](chapters/license/README.md)
+* [Compatibilities]()   
+   * [Smart devices supported](chapters/supported_devices/README.md)
+   * [Supported platforms](chapters/supported_platforms/README.md)
+* [Contributing]()
+   * [How to contribute](chapters/contributing/README.md)
+   * [Write new documentation](chapters/write_new_documentation/README.md)
+   * [License](chapters/license/README.md)
 
