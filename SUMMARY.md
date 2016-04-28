@@ -23,7 +23,7 @@
    * [Streams [Soon]](chapters/api_reference/streams.md)
 * [Compatibilities]()   
    * [Smart devices supported](chapters/supported_devices/README.md)
-   * [Supported platforms](chapters/supported_platforms/README.md)
+   * [Currently running on](chapters/currently_running_on/README.md)
 * [Contributing]()
    * [How to contribute](chapters/contributing/README.md)
    * [Write new documentation](chapters/write_new_documentation/README.md)
