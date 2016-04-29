@@ -45,6 +45,7 @@ li.chapter span {
 
 .book {
   font-family: 'Fira Sans' !important;
+  font-style: normal;
 }
 
 .book .book-summary ul.summary li.active>a {
