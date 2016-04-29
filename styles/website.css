@@ -1,16 +1,16 @@
 /* CSS for website */
 
 @font-face {
-  font-family: 'Fira Sans';
+  font-family: 'Fira Sans' !important;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   src: local('Fira Sans'), url('../fonts/FiraSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Fira Sans';
   font-style: italic;
-  font-weight: normal;
+  font-weight: 300;
   src: local('Fira Sans'), url('../fonts/FiraSans-Italic.ttf') format('truetype');
 }
 
@@ -20,10 +20,6 @@
   font-style: normal;
   font-weight: normal;
   src: local('Proxima Nova'), url('../fonts/ProximaNova-Bold_2.otf') format('opentype');
-}
-
-body {
-  font-family: 'Fira Sans' !important;
 }
 
 h1, h2, h3, h4, h5 {
@@ -45,6 +41,10 @@ li.chapter span {
   opacity: 1 !important;
   font-weight: bold !important;
   cursor: default !important;
+}
+
+.book {
+  font-family: 'Fira Sans' !important;
 }
 
 .book .book-summary ul.summary li.active>a {
