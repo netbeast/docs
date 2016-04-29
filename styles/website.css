@@ -1,11 +1,6 @@
 /* CSS for website */
 
-@font-face {
-  font-family: 'Fira Sans' !important;
-  font-style: normal;
-  font-weight: 400;
-  src: local('Fira Sans'), url('../fonts/FiraSans-Regular.ttf') format('truetype');
-}
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300);
 
 @font-face {
   font-family: 'Proxima Nova';
@@ -36,8 +31,7 @@ li.chapter span {
 }
 
 .book {
-  font-family: 'Fira Sans' !important;
-  font-style: normal;
+  font-family: 'Fira Sans', sans-serif !important;
 }
 
 .book .book-summary ul.summary li.active>a {
