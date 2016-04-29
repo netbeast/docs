@@ -8,14 +8,6 @@
 }
 
 @font-face {
-  font-family: 'Fira Sans';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Fira Sans'), url('../fonts/FiraSans-Italic.ttf') format('truetype');
-}
-
-
-@font-face {
   font-family: 'Proxima Nova';
   font-style: normal;
   font-weight: normal;
