@@ -82,7 +82,7 @@ npm install
 Now you have all the npm packages installed, run it as follows:
 
 ```
-npm start
+npm run dev
 ```
 
 ##  You made it, huzzah!
