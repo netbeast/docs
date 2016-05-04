@@ -35,7 +35,7 @@ Please go [here](https://nodejs.org/en/download/package-manager/) to use another
 sudo npm install npm -g
 ```
 
-Test: ```Run npm -v```. The version should be higher than 2.1.8.
+Test: ```npm -v```. The version should be higher than 2.1.8.
 
 ## Install Netbeast
 
