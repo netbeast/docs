@@ -1,11 +1,11 @@
 # Debugging
- Netbeast Dashboard clones or downloads apps to a `.sandbox` folder relative to its root. Move apps there for them to be listed on *installed apps* or *installed plugins*.
+ Netbeast Dashboard clones or downloads apps to a `_apps` folder relative to its root. Move apps there for them to be listed on *installed apps* or *installed plugins*.
  
 ![Apps in .sandbox are shown on the dashboard](../../img/debugging-apps.png)
 *Node-red, Padjs and Light-control installed. The rest of apps are native to the Dashboard*
 
 ```
-mv yourapp <dashboard path>/.sandbox
+mv yourapp <dashboard path>/_apps
 ```
 
 If you installed the dashboard with `npm install -g netbeast-cli` they are often installed under `/usr/local/lib/node` or `/usr/local/lib/node_modules` in \*nix systems. In windows you can try `C:\Program Files (x86)\nodejs\node_modules`.
