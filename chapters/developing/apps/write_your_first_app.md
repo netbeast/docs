@@ -4,7 +4,7 @@ A Netbeast application allows you to control how devices interact each other. Wi
 
 In this section we are going to explain how to create apps to run on the Netbeast dashboard. Here you will see a basic example of applications and how it is made.
 
-____________________________________________________________________________________________________________
+___
 
 If you haven't done so, install the Netbeast Dashboard. Open a terminal and type:
 ```
