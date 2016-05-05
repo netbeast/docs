@@ -4,15 +4,12 @@ A Netbeast application allows you to control how devices interact each other. Wi
 
 In this section we are going to explain how to create apps to run on the Netbeast dashboard. Here you will see a basic example of applications and how it is made.
 
-___
-
-If you haven't done so, install the Netbeast Dashboard. Open a terminal and type:
-```
-npm install -g netbeast-cli
-```
 
 ## Fast mode – scaffolding
-Now you're good to go. Type `netbeast new myapp`. 
+Let's start.
+```
+netbeast new myapp
+``` 
 That will create a new folder named _myapp_ with the basic structure of a Netbeast application.
 
 Run the following code:
