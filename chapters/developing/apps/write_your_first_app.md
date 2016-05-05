@@ -6,18 +6,19 @@ In this section we are going to explain how to create apps to run on the Netbeas
 
 ____________________________________________________________________________________________________________
 
-If you haven't done so, install the netbeast Toolbelt. Open a terminal and type:
+If you haven't done so, install the Netbeast Dashboard. Open a terminal and type:
 ```
 npm install -g netbeast-cli
 ```
 
-## Fast mode - Creating apps with the Toolbelt
+## Fast mode – scaffolding
 Now you're good to go. Type `netbeast new myapp`. 
 That will create a new folder named _myapp_ with the basic structure of a Netbeast application.
 
 Run the following code:
 ```
 cd myapp
+npm install # by default, dependencies are not included
 node index.js --port 3000
 ```
 
