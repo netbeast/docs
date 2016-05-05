@@ -1,22 +1,22 @@
 # How to develop applications and plugins
 
-To speed up the development process, you can use the Toolbelt to bootstrap the development of both apps and plugins. The Toolbelt is a CLI (Command Line Interface) utility that allows to perform a variety of tasks.
+To launch and debug you need to have the Dashboard installed. Also it comes with a few set of actions to help you bootstrap your app and debug it.
 
 ## Installation
 
-If you previously installed Netbeast using npm, you already have the Toolbelt available. Otherwise, type the following to install it:
+If you previously installed Netbeast Dashboard using npm, you already have it available. Otherwise, type the following to install it:
 
 ```bash
   npm install -g netbeast-cli
 ```
 
-Bellow you can find a reference to the actions you can perform with the Toolbelt. If you are ready to start developing we can get started right away.
+Below you can find a reference to the actions you can perform with the Dashboard. If you are ready to start developing we can get started right away.
 
-## Toolbelt actions
+## Dashboard actions
 
 ### netbeast new
 
-`netbeast new|create [options] <app>` 
+`netbeast new|create [options] <app>`
 
 Creates a basic app or plugin structure.
 Options:
@@ -25,29 +25,12 @@ Options:
 
 ### netbeast start
 
-`netbeast start [options`
+`netbeast start [options]`
 
 Launches Netbeast. Options:
 
 * `-p, --port <number>` Port to start Netbeast in (http server).
 * `-sp, --secure_port <number>` Secure port to start Netbeast in (https server).
-
-### netbeast package
-
-`netbeast package|pkg [options] [app]`
-
-Compresses an app into a tar.gz file.
-Options:
-
-* `-o, --to <path>` Outputs to the specified path and filename.
-
-### netbeast unpackage
-
-`netbeast unpackage|unpkg [options] [app]`
-
-Uncompresses a tar.gz file app. Options:
-
-* `-o, --to <path>` Outputs to the specified path and filename.
 
 ### netbeast scan
 
@@ -89,7 +72,7 @@ Restarts an application running in Netbeast.
 
 `netbeast forget`
 
-Resets the Toolbelt's configuration.
+Resets the Dashboard's configuration.
 
 `netbeast -V, --version`
 
