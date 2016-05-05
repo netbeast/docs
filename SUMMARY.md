@@ -14,7 +14,7 @@
    * [Virtual plugins](chapters/developing/plugins/write_a_virtual_plugin.md)
    * [Installing your plugin](chapters/developing/plugins/install_it_on_the_dashboard.md)
    * [Publishing applications and plugins](chapters/developing/publish.md)
-   * [Debugging](debugging.md)
+   * [Debugging](chapters/developing/debugging.md)
 * API Reference
    * [Introduction](chapters/api_reference/index.md)
    * [Structure Overview](chapters/api_reference/structure.md)
