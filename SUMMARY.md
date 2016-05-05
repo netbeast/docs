@@ -9,7 +9,6 @@
 * Developing
    * [How to develop](chapters/developing/how_to_develop.md)
    * [Your first application](chapters/developing/apps/write_your_first_app.md)
-   * [Installing your app](chapters/developing/apps/install_it_on_the_dashboard.md)
    * [Your first plugin](chapters/developing/plugins/write_your_first_plugin.md)
    * [Virtual plugins](chapters/developing/plugins/write_a_virtual_plugin.md)
    * [Installing your plugin](chapters/developing/plugins/install_it_on_the_dashboard.md)
