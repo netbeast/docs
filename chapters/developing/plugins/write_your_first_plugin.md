@@ -1,22 +1,18 @@
 # Write your first Plugin
 
 A Netbeast plugin is a kind of "application" that allow you to control device from a concrete brand through the [Netbeast API](../../api_reference/index.md)
-It's the sauce behind Netbeast API engine. With a plugin you can register a resource
-for others to use, like a new brand of smart bulbs to be controlled as another _light_ source.
+It's the sauce behind Netbeast API engine. With a plugin you can register a resource for others to use, like a new brand of smart bulbs to be controlled as another _light_ source.
 
 If you want to control a device that it´s yet not supported by Netbeast. You can **create a plugin
 and make it available for all the community**.
 
-Lets connect everything!
+> Lets connect everything!
 
 In this section we are going to explain how to create a plugin for real products. However, you can still learn and try how to create plugins with Netbeast without any real product on this secction: [Write a virtual plugin](write_a_virtual_plugin.md)
 
-____________________________________________________________________________________________________________
+___
 
-Creating a new plugin with Netbeast is really easy because its simple structure.
-With the help of `netbeast-cli` you only need to follow a few steps to have your plugin running.
-
-First we will install the netbeast SDK. Open a terminal and type:
+## Plugin structure
 ```
 npm install -g netbeast-cli
 netbeast new myplugin --plugin
@@ -26,16 +22,13 @@ A new folder named _myplugin_ will contain some code scaffolded.
 
 **A basic Netbeast plugin looks like this:**
 ```
-.
-├── src
-│   ├── index.js
-│   ├── resources.js
-│   └── routes.js
-├── package.json
-├── index.js
+myplugin
+├── public
+|   └── settings.html
 ├── README.md
+├── index.js
+├── package.json
 └── test.js
-
 ```
 
 ##package.json
@@ -88,24 +81,24 @@ Netbeast will make use of this file to reduce the overhead of configuration need
 
 The field `bootOnLoad` allows the plugin to start on boot.
 
-**IMPORTANT**: don´t forget to fill `type`as plugin.
+**IMPORTANT**: don´t forget to fill `type` as *plugin*.
 
-## index.js & src/index.js
+## index.js
 
-This files implements a simple HTTP server. It´s already configured to work with
-Netbeast dashboard, so you won't need to modify it.
+This file implement already implements callbacks for the main actions that a plugin should implement: **discover**, **get**, **set**, and **settings**.
 
 **It is mandatory for `main` to be and executable file.** So make sure it can be executed:
 ```
 chmod +x index.js
 ```
-As you can see in the code, **the runnable must accept the port by parameter**, so they can all be opened from the [Dashboard](https://github.com/netbeast/dashboard).
+As you can see in the code, **the main file must accept the port by parameter**, so they can all be opened from the [Dashboard](https://github.com/netbeast/dashboard).
 
-## src/resources.js
+## discover
 
-We use this file to discover the devices.
-Once we find a device, we shuold:
-  1. Register the device in the database, by following the given structure
+We use this callback to know when the user or Dashboard is asking as to scan the network for new devices.
+
+After scanning, we should:
+  1. Register the device in the database.
   2. If the device is not available anymore, we should delete it from the database
 
 ```javascript
@@ -181,10 +174,9 @@ module.exports = function (callback) {
 
 ```
 
-Each device has different discovery methods. If you still having doubts or don't know
-how to proceed, **check the existing plugins** in our [GitHub](http://github.com/netbeast)
+Each device has different discovery methods. If you still having doubts or don't know how to proceed, **check the existing plugins** in our [GitHub](http://github.com/netbeast). Open an [issue](https://github.com/netbeast/dashboard/issues) or ask on our [forum](//forum.netbeast.co).
 
-## src/routes.js
+## GET, SET
 
 In this file you will receive the request from Netbeast API. And you should translate
 it to the proper methods. We have 3 routes.
@@ -272,6 +264,8 @@ router.post('/ledPanel/:id', function (req, res, next) {
 If you use `netbeast new myplugin --plugin` to create a plugin, you will find this
 info and much more inside. You can find more examples on our [GitHub](http://github.com/netbeast).
 
+## Settings
+An HTML is served with all default styles and some fields to make it easier to create forms and send info back to the plugin.
 
 ## test.js
 
