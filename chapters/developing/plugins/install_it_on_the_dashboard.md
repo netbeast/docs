@@ -14,7 +14,7 @@ Then, you only need to click on the "explore" icon and then look for that apps a
 Really easy
 
 
-![Install through explore](../../../img/install_explore.gif)
+![Installing through explore](../../../img/install_explore.gif)
 
 
 
