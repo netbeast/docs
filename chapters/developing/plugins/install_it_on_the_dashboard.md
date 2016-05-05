@@ -54,7 +54,7 @@ Drag and drop the above resulting file to the dashboard, or go to the 'install' 
 
 
 
-### 4. Install through SDK
+### 4. Install through Dashboard CLI
 ```
 beast install plugin.tar.gz
 ```
