@@ -15,4 +15,13 @@ If you installed the dashboard with `npm install -g netbeast-cli` they are often
 ```bash
 beast restart <your app name> # each time you need it
 ```
- 
+#### Compiling assets
+ We are frequently creating apps with React or other technologies that need  preprocessing. Copy it as well to the Dashboard, use `beast restart` when needed and simply run in parallel:
+```
+npm run build # or
+gulp # or
+grunt # or
+webpack
+```
+
+Or whatever your favorite tools are.
