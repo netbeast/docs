@@ -23,7 +23,8 @@ And you're done! You can now access your application under `http://localhost:300
 
 It's time to open your favorite editor and start developing.
 
-## Anatomy of a Netbeast application
+## Step by step
+### Anatomy of a Netbeast application
 
 Every Netbeast app is a npm package. To understand how apps work we will create an application from scratch and learn about all its components.
 
