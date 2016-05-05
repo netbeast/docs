@@ -165,7 +165,7 @@ mv your-app {DASHBOARD_PATH}/apps
 If you installed the dashboard with `npm install -g netbeast-cli` they are often installed under `/usr/local/lib/node` or `/usr/local/lib/node_modules` in \*nix systems. In windows you can try `C:\Program Files (x86)\nodejs\node_modules`.
 
 
-![Apps in .sandbox are shown on the dashboard](../../img/debugging-apps.png)
+![Your app is listed with the rest](../../../img/debugging-apps.png)
 *Node-red, Padjs and Light-control installed. The rest of apps are native to the Dashboard*
 
-Find your app and click over it to get it running!
+Find your app and click over it to get it running.
