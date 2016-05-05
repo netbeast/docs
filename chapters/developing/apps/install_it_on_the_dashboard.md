@@ -18,7 +18,7 @@ We previously installed the padjs app through this method.
 
 ## Installing through drag & drop
 
-First you need to package your folder application in a .tar.gz format, we **recommend** you to do that with the Toolbelt. 
+First you need to package your folder application in a .tar.gz format, we **recommend** you to do that with the Dashboard CLI. 
 
 Run on your apps' folder:
 
@@ -37,9 +37,9 @@ tar -zcvf app.tar.gz directory-name
 ```
 Or a standard desktop compressor.
 
-Finally, go to the `install` section in the dashboard and drag your packaged app onto the dragable area.
+Finally, go to the `install` section in the dashboard and drag your packaged app onto the draggable area.
 
-## Installing through the Toolbelt
+## Installing through the command line
 
 Assuming you've already packaged your app into a tar.gz file, run:
 ```
