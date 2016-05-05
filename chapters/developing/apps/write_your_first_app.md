@@ -77,7 +77,7 @@ Netbeast will make use of this file to reduce the overhead of configuration need
 
 **You can also create package.json using npm!** Open a terminal and type:
 ```
-npm init    # And fill the gaps!
+npm init    # fill the gaps
 ```
 
 ### The backend - server.js
@@ -108,7 +108,7 @@ var server = app.listen(port, function () {
 })
 ```
 
-See the **shebang**? (First line of the script `#!/usr/bin/env node`) It tells Netbeast which interpreter to use when launching an app. We use this line to set node.
+See the **shebang**? (It is the first line of the script `#!/usr/bin/env node`) It tells Netbeast which interpreter to use when launching an app. As a general rule, or when absent, the Dashboard will run a node process, but you could tweak this to create python apps, scripts or run native code.
 
 _main_ has to be an executable file. Make sure it has the appropriate permissions:
 ```
@@ -116,17 +116,17 @@ chmod +x server.js
 ```
 As you can see in the code, the server must accept the port by parameter, that's so that Netbeast can open the app.
 
-To achieve that we use [minimist](https://www.npmjs.com/package/minimist), but there are other command parsers available such as [Commander](https://www.npmjs.com/package/commander). Using minimist, you just need the following lines:
+To achieve that we use [minimist](https://www.npmjs.com/package/minimist), but there are other command parsers available such as [commander](https://www.npmjs.com/package/commander). Using minimist, you just need the following lines:
 ```
 var argv = require('minimist')(process.argv.slice(2))
 port = argv.port || 31416
 ```
 
-We mentioned express before. It's a http node.js lightweight framework.
+We mentioned [express](http://expressjs.com/) before. It's a http node.js lightweight framework.
 
 You will need both packages for the app to work. Installing them with npm will include them in the _node_modules_ folder. To do so, run:
 ```
-npm install express minimist
+npm install express minimist --save
 ```
 
 ### The frontend - index.html
@@ -152,15 +152,16 @@ The frontend to our web application will be a simple html file. Create a file ca
 </html>
 ```
 
-
-Strictly speaking, applications don't need a UI. You can use other ways to interact with the user such as push notifications.
+Strictly speaking, applications don't need a UI. You can use other ways to interact with the user such as push notifications. Plugins are a special kind of apps that may not have an interface.
 
 ## Wrap up - launching our application
 
-You now have all that you need. Let's get your app up and running:
-```
-./server.js --port 8000
-```
-You will be able to open a browser at http://localhost:8000 and see:
+Netbeast Dashboard clones or downloads apps to a *_apps* folder relative to its root. Move apps there for them to be listed on installed apps or installed plugins.
 
-![First Application](FirstApp.png)
+```
+mv your-app {DASHBOARD_PATH}/apps
+```
+
+If you installed the dashboard with `npm install -g netbeast-cli` they are often installed under `/usr/local/lib/node` or `/usr/local/lib/node_modules` in \*nix systems. In windows you can try `C:\Program Files (x86)\nodejs\node_modules`.
+
+
