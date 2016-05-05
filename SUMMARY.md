@@ -1,11 +1,12 @@
-# Summary 
-* [Documentation]()       
+# Summary
+
+* Documentation
 * [About Netbeast](README.md)
-* [Getting started]()   
+* Getting started
    * [Installation](chapters/getting_started/installing_and_cloning.md)
    * [The Dashboard](chapters/getting_started/dashboard.md)
    * [First steps](chapters/getting_started/first_steps.md)
-* [Developing]() 
+* Developing
    * [How to develop](chapters/developing/how_to_develop.md)
    * [Your first application](chapters/developing/apps/write_your_first_app.md)
    * [Installing your app](chapters/developing/apps/install_it_on_the_dashboard.md)
@@ -13,7 +14,8 @@
    * [Virtual plugins](chapters/developing/plugins/write_a_virtual_plugin.md)
    * [Installing your plugin](chapters/developing/plugins/install_it_on_the_dashboard.md)
    * [Publishing applications and plugins](chapters/developing/publish.md)
-* [API Reference]()
+   * Debugging
+* API Reference
    * [Introduction](chapters/api_reference/index.md)
    * [Structure Overview](chapters/api_reference/structure.md)
    * [Resources](chapters/api_reference/resources.md)
@@ -21,10 +23,10 @@
    * [Push notifications](chapters/api_reference/push_notifications.md)
    * [Events](chapters/api_reference/chain_events.md)
    * [Streams [Soon]](chapters/api_reference/streams.md)
-* [Compatibilities]()   
+* Compatibilities
    * [Smart devices supported](chapters/compatibilities/supported_devices.md)
    * [Currently running on](chapters/compatibilities/currently_running_on.md)
-* [Contributing]()
+* Contributing
    * [How to contribute](chapters/contributing/README.md)
    * [Write new documentation](chapters/write_new_documentation/README.md)
    * [License](chapters/license/README.md)
