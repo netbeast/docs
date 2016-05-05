@@ -11,7 +11,6 @@
    * [Your first application](chapters/developing/apps/write_your_first_app.md)
    * [Your first plugin](chapters/developing/plugins/write_your_first_plugin.md)
    * [Virtual plugins](chapters/developing/plugins/write_a_virtual_plugin.md)
-   * [Installing your plugin](chapters/developing/plugins/install_it_on_the_dashboard.md)
    * [Publishing applications and plugins](chapters/developing/publish.md)
    * [Debugging](chapters/developing/debugging.md)
 * API Reference
