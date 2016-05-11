@@ -1,6 +1,6 @@
 {
   "name": "internet-of-things",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Netbeast Internet Of Things Open Source documentation packaged to run offline",
   "main": "\"\"",
   "dependencies": {
