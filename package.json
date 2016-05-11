@@ -1,0 +1,35 @@
+{
+  "name": "internet-of-things",
+  "version": "0.4.0",
+  "description": "Netbeast Internet Of Things Open Source documentation packaged to run offline",
+  "main": "\"\"",
+  "dependencies": {
+    "gitbook-plugin-multipart": "^0.3.0",
+    "gitbook-plugin-advanced-emoji": "^0.1.6",
+    "gitbook-plugin-ungrey": "^1.2.0",
+    "gitbook-plugin-scripts": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netbeast/docs.git"
+  },
+  "keywords": [
+    "iot",
+    "internet",
+    "of",
+    "things",
+    "netbeast",
+    "raspberry",
+    "pi"
+  ],
+  "author": "staff@netbeast.co",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/netbeast/docs/issues"
+  },
+  "homepage": "https://github.com/netbeast/docs#readme"
+}
