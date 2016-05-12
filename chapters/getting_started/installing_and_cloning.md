@@ -76,13 +76,13 @@ Once cloned, the core pre-requisite modules must be installed:
 
 ```
 cd dashboard
-npm install
+npm install --production
 ```
 
-Now you have all the npm packages installed, run it as follows:
+Now you have all the needed npm packages installed, run it as follows:
 
 ```
-npm run dev
+npm start
 ```
 
 ##  You made it, huzzah!
