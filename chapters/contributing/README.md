@@ -128,7 +128,7 @@ We run our tests as a script contained in package.json file:
 
 ```json
 "scripts": {
-    "test": "export NODE_PATH=.:$NODE_PATH && export ENV=development && ./node_modules/.bin/gulp test",
+    "test": "./node_modules/.bin/gulp test",
 }```
 
 For now, we mainly use [the mocha test framework](https://mochajs.org/) and [travis ci](https://travis-ci.org/) to test the Dashboard and API. Feel free to experiment with other frameworks if these don't get the job done for you.
