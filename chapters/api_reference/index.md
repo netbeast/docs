@@ -5,7 +5,7 @@ Welcome to the Netbeast API Documentation!
 The main goal of this documentation is to explain how the Netbeast API works. All the information that you need to start building your Apps has been gathered here.
 
 <div class="alert alert-danger">
-  Experimental, will probably change 
+  Experimental, will probably change
 </div>
 
 ## How to use it?
@@ -19,11 +19,13 @@ npm install netbeast --save
 ```javascript
 var beast = require('netbeast')
 
-beast('lights').get()
+beast.find().then(function () {
+  beast('lights').get()
 
-beast('music').at('living-room').set({status: 'play', volume: 100})
+  beast('music').at('living-room').set({status: 'play', volume: 100})
 
-beast('video').get('status')
+  beast('video').get('status')  
+})
 ```
 
 Control your smart devices with Netbeast is as simple as that. Lets go deeper! :rocket:
@@ -33,12 +35,18 @@ Control your smart devices with Netbeast is as simple as that. Lets go deeper! :
 If you are using the Netbeast API out of our dashboard you will need to declare
 in which IP:PORT is the dashboard running.
 
-So, before requiring the npm module you should include a line like this:
+So, you can do it automatically with:
 
 ````javascript
-process.env.NETBEAST = '10.0.0.1:80'
 
-// or if it´s on the same machine
+netbeast.find()
 
-process.env.NETBEAST = 'localhost:8000'
+````
+
+or manually.
+
+````javascript
+
+netbeast.set({ address: localhost, port: 8000 })
+
 ````

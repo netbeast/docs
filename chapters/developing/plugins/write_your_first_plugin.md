@@ -23,8 +23,8 @@ A new folder named _myplugin_ will contain some code scaffolded.
 **A basic Netbeast plugin looks like this:**
 ```
 myplugin
-├── public
-|   └── settings.html
+├── settings
+|   └── index.html
 ├── README.md
 ├── index.js
 ├── package.json
@@ -43,7 +43,8 @@ Netbeast will make use of this file to reduce the overhead of configuration need
     "main": "index.js",
     "netbeast": {
       "bootOnLoad": true,
-      "type": "plugin"
+      "type": "plugin",
+      "settings": true
     },
     "dependencies": {
       "async": "^1.4.2",
@@ -80,12 +81,15 @@ Netbeast will make use of this file to reduce the overhead of configuration need
 ```
 
 The field `bootOnLoad` allows the plugin to start on boot.
+Put `settings: true` it allows you to create a settings route accesible through the dashboard
+
+![Settings](settings.png)
 
 **IMPORTANT**: don´t forget to fill `type` as *plugin*.
 
 ## index.js
 
-This file implement already implements callbacks for the main actions that a plugin should implement: **discover**, **get**, **set**, and **settings**.
+This file already implements callbacks for the main actions that a plugin should support: **discover**, **get**, **set**, and **settings**.
 
 **It is mandatory for `main` to be and executable file.** So make sure it can be executed:
 ```
@@ -102,75 +106,30 @@ After scanning, we should:
   2. If the device is not available anymore, we should delete it from the database
 
 ```javascript
-var request = require('request')
-var netbeast = require('netbeast')
+/*
+* Discover your resources / scan the network
+* And declare your routes into the API
+*/
 
-module.exports = function (callback) {
-  // First we ask the database for all the devices of the same brand that are stored
-  // We stored the hooks of this devices in the 'objects' array
-  var objects = []
+app.get('/discover', function (req, res) {
+	/* TODO, implement discovery */
 
-  // Request to the database
-  netbeast().get({app: NAME_PLUGIN})
-  .then(function (data) {
-    if (!data) return callback()
+  /* Then you have 2 options +/
 
-    // Store the found devices in 'objects' array
-    if (data.length > 0) {
-      data.forEach(function (device) {
-        if (objects.indexOf(device.hook) < 0) objects.push(device.hook)
-      })
-    }   
-  }).catch(function (err) {return callback(err)})
+	/* for each device */
+	netbeast('topic').create({ app: 'my-first-plugin', hook: 'DEVICE_ID' })
+	/* end of for */
+  /* and check the DB to delete the resources not availables */
 
-  // Implement the device discovery method
 
-  // When we find a device
-  //  1. Look if its already exists on the database.
-  var indx = objects.indexOf('/HOOK/id') // hook == /Namebrand/id. Example. /hueLights, /Sonos
-  // We will use the id to access to the device and modify it.
-  // Any value to refer this device (MacAddress, for example) can work as id
+	/* or */
 
-  //  2. If the hook is in 'objects' array, delete it from the array
-  if (indx >= 0) {
-    objects.splice(indx, 1)
 
-  // 3. If this device is not registered on the database, you should register it
-  } else {
-    //  Use this block to register the found device on the netbeast database
-    //  in order to using it later
-    netbeast('TOPIC').create({app: 'NAME_PLUGIN', hook: '/HOOK/id'})
-    .cathch(function (err) {
-      return callback(err)
-    })
-            // NAME_PLUGIN = Name of the plugin
-            // TOPIC = lights, bridge, switch, temperature, music, etc
-            // HOOK == /Namebrand  Example. /hueLights, /Sonos
-      // We will use the id to access to the device and modify it.
-      // Any value to refer this device (MacAddress, for example) can work as id
-      // netbeast('lights').create({app: 'philips-hue', hook: /hueLights/172.64.27.114})
-  }
+	/* Register all device together and delete the resources no longer available with only this method */
+	netbeast('topic').udateDB({ app: 'my-first-plugin', hook: ['DEVICE1_ID', 'DEVICE2_ID', 'DEVICE3_ID', 'DEVICE4_ID'] })
 
-  // If there exists 'hooks' stored on the 'objects' array, it means that
-  // this devices are stored on the databases but are not reachable. We should
-  // delete this devices from the database using the code given.
-  if (objects.length > 0) {
-    objects.forEach(function (hooks) {
-      //  Use this block to delete a device from the netbeast database
-      netbeast().delete({hook: hooks})
-      .catch(function (err) {
-        return callback (err)
-      })
-    })
-  }
-
-  /*
-  This function is called from route.js, so
-  if you need to pass any information to this file you can do it
-  by using the callback ( callback(error, devices) , for example)
-  */
-  return callback(null)
-}
+  res.json(DEVICES_FOUND)
+})
 
 ```
 
@@ -183,35 +142,36 @@ it to the proper methods. We have 3 routes.
 
 ```javascript
 
-var express = require('express')
-var router = express.Router()
-// Require the discovery function
-var loadResources = require('./resources')
+/*
+* Create here your API routes
+* app.get(...), app.post(...), app.put(...), app.delete(...)
+*/
 
-loadResources(function (err) {
-  if (err) return console.log(err)
+app.get('/:device_id', function (req, res) {
+	// id of the device the dashboard wants
+	// << req.params.device_id >>
+	// dashboard will do GET on this route when
+	// netbeast('topic').get({})
 
-  router.get('/HOOK/:id', function (req, res, next) {
-    ...
-  })
+	/* TODO: Return device values from req.query */
 
-  // Used to trigger the discovery method. Should return the new found devices
-  router.get('/discover', function (req, res, next) {
-    loadResources(function (err) {
-      if (err) return res.status(500).send(err)
-    })
-  })
-
-  router.post('/HOOK/:id', function (req, res, next) {
-    ...
-  })
+	// res.json({ YOUR_PLUGIN_DATA })
 })
 
-// Used to serve the routes
-module.exports = router
+app.post('/:device_id', function (req, res) {
+	// id of the device the dashboard wants
+	// << req.params.device_id >>
+	// dashboard will do POST on this route when
+	// netbeast('topic').set({})
+
+	/* TODO: Change device values from req.body */
+
+	// res.json({ YOUR_PLUGIN_DATA })
+})
+
 ```
 
-Use `get('/HOOK/:id')` to gather info from the device like in this example.
+Use `get('/:id')` to gather info from the device like in this example.
 The parameters that you should look for are provided in `req.query`.
 
 ```javascript
@@ -237,7 +197,7 @@ router.get('/hueLights/:id', function (req, res, next) {
   })
 ```
 
-Use `post('/HOOK/:id')` to change the device status like in this example.
+Use `post('/:id')` to change the device status like in this example.
 The parameters that you should modify are provided in `req.body`.
 
 ```javascript

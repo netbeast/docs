@@ -5,13 +5,19 @@ be notified when any device publish data about the given topic.
 
 ```javascript
 var netbeast = require('netbeast')
-netbeast('temperature').on(function (message) {
+netbeast.on('temperature', function (err, message) {
     // this function is called everytime temperature
     // event happens
     if (message.temperature > 30) {
         // do something
     }
 })
+```
+
+For publishing data on the MQTT channels can use this.
+
+```javascript
+netbeast('humidity').publish({ humidity: 50 }) 
 ```
 
 This is basically an usual subscription to a mqtt channel. If you feel more comfortable

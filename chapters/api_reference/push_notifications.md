@@ -7,10 +7,10 @@ var netbeast = require('netbeast')
 
 //  netbeast().info(body, title)
 
-netbeast().info('Something happened!')
-netbeast().error('Something crashed!')
-netbeast().warning('Something may crash next time!')
-netbeast().success('Voi-la')
+netbeast.info('Something happened!')
+netbeast.error('Something crashed!')
+netbeast.warning('Something may crash next time!')
+netbeast.success('Voi-la')
 ```
 
 ## Directly through MQTT
