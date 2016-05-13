@@ -159,7 +159,7 @@ Strictly speaking, applications don't need a UI. You can use other ways to inter
 Netbeast Dashboard clones or downloads apps to a *_apps* folder relative to its root. Move apps there for them to be listed on installed apps or installed plugins.
 
 ```
-mv your-app {DASHBOARD_PATH}/apps
+mv your-app <DASHBOARD_PATH>/_apps
 ```
 
 If you installed the dashboard with `npm install -g netbeast-cli` they are often installed under `/usr/local/lib/node` or `/usr/local/lib/node_modules` in \*nix systems. In windows you can try `C:\Program Files (x86)\nodejs\node_modules`.
