@@ -14,7 +14,7 @@ ___
 
 ## Plugin structure
 ```
-npm install -g netbeast-cli
+cd DASHBOARD_DIR/_apps # Now it will appear under "installed apps"
 netbeast new myplugin --plugin
 ```
 
