@@ -10,7 +10,7 @@
    * [How to develop](chapters/developing/how_to_develop.md)
    * [Your first application](chapters/developing/apps/write_your_first_app.md)
    * [Your first plugin](chapters/developing/plugins/write_your_first_plugin.md)
-   * [Virtual plugins](chapters/developing/plugins/write_a_virtual_plugin.md)
+   * [Virtual plugins](chapters/developing/plugins/virtual_plugins.md)
    * [Publishing applications and plugins](chapters/developing/publish.md)
    * [Debugging](chapters/developing/debugging.md)
 * API Reference
@@ -28,4 +28,3 @@
    * [How to contribute](chapters/contributing/README.md)
    * [Write new documentation](chapters/write_new_documentation/README.md)
    * [License](chapters/license/README.md)
-
