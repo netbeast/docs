@@ -78,7 +78,8 @@ We have compiled Netbeast for Open-WRT. The only thing you need to do is compile
 
 Netbeast has been successfully tested on the following hardware kits:
 
-1. Raspberry Pi 2
-2. Raspberry Pi 3
-3. Orange Pi
+1. Raspberry Pi 2 - Raspbian Jessie
+2. Raspberry Pi 3 - Raspbian Jessie Lite
+3. Orange Pi - Raspbian Jessie
+4. Pine64 - ArchLinux 64 bits
 
