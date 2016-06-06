@@ -5,6 +5,15 @@ Netbeast can run on any device that can run Node.js. That being said, there are 
 * The device should have a min storage of 4GB.
 * The device should have a min RAM memory of 1GB for good performance.
 
+## Netbeast on Hardware kits
+
+Netbeast has been successfully tested on the following hardware kits:
+
+1. Raspberry Pi 2 - Raspbian Jessie
+2. Raspberry Pi 3 - Raspbian Jessie Lite
+3. Orange Pi - Raspbian Jessie
+4. Pine64 - ArchLinux 64 bits
+
 ## Netbeast on Github
 
 Netbeast is available on its main github repository [here](https://github.com/netbeast/dashboard)
@@ -46,14 +55,6 @@ Now access to the docker container url
 
 >http://IP_assigned:49160
 
-## Netbeast on Node-Red
-
-Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.
-
-Netbeast has been uploaded as a flow for node-red. Look [here](http://flows.nodered.org/node/node-red-contrib-netbeast)
-
-You can check [this](https://www.toptal.com/nodejs/programming-visually-with-node-red) interesting post about how to start using Netbeast with Node-Red
-
 ## Netbeast as Desktop App
 
 Netbeast has been adapted to be compiled as desktop application with electron. 
@@ -73,13 +74,4 @@ It has been tested and compiled on:
 ## Netbeast on Open-WRT
 
 We have compiled Netbeast for Open-WRT. The only thing you need to do is compile Nodejs on it, see [this](https://netbeast.co/blog/how-to-cross-compile-nodejs-for-openwrt) and install Netbeast in any of this ways.
-
-## Netbeast on Hardware kits
-
-Netbeast has been successfully tested on the following hardware kits:
-
-1. Raspberry Pi 2 - Raspbian Jessie
-2. Raspberry Pi 3 - Raspbian Jessie Lite
-3. Orange Pi - Raspbian Jessie
-4. Pine64 - ArchLinux 64 bits
 

@@ -8,7 +8,7 @@
         <title>Resources | Netbeast Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.5.2">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -58,7 +58,13 @@
     <body>
         
         
-    <div class="book" data-level="4.3" data-chapter-title="Resources" data-filepath="chapters/api_reference/resources.md" data-basepath="../.." data-revision="Wed May 11 2016 15:34:20 GMT+0200 (CEST)">
+    <div class="book"
+        data-level="4.3"
+        data-chapter-title="Resources"
+        data-filepath="chapters/api_reference/resources.md"
+        data-basepath="../.."
+        data-revision="Mon Jun 06 2016 12:58:21 GMT+0200 (CEST)"
+        data-innerlanguage="">
     
 
 <div class="book-summary">
@@ -206,10 +212,10 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="chapters/developing/plugins/write_a_virtual_plugin.html">
+        <li class="chapter " data-level="3.4" data-path="chapters/developing/plugins/virtual_plugins.html">
             
                 
-                    <a href="../../chapters/developing/plugins/write_a_virtual_plugin.html">
+                    <a href="../../chapters/developing/plugins/virtual_plugins.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -412,6 +418,21 @@
             
         </li>
     
+        <li class="chapter " data-level="5.3" data-path="chapters/compatibilities/third_party_dev_tools.html">
+            
+                
+                    <a href="../../chapters/compatibilities/third_party_dev_tools.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Third party dev tools
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -511,49 +532,110 @@
                         <h1 id="resources">Resources</h1>
 <p>Netbeast API has methods for manage the smart devices stored on the Resources DB. With Netbeast we can:</p>
 <ul>
-<li>Obtain the current state of devices, for example<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;lights&apos;</span>).get()
+<li>Obtain the current state of devices.<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;lights&apos;</span>).get()
 </code></pre>
 </li>
-<li>Change the current state of devices, for example<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;switch&apos;</span>).set({power: <span class="hljs-literal">true</span>})
+<li>Change the current state of devices.<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;switch&apos;</span>).set({power: <span class="hljs-literal">true</span>})
 </code></pre>
 </li>
-<li>Select a device through its group or location, for example<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;music&apos;</span>).at(<span class="hljs-string">&apos;kitchen&apos;</span>).get(<span class="hljs-string">&apos;track&apos;</span>)
+<li>Select a device through its group or location.<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;music&apos;</span>).at(<span class="hljs-string">&apos;kitchen&apos;</span>).get(<span class="hljs-string">&apos;track&apos;</span>)
 netbeast(<span class="hljs-string">&apos;music&apos;</span>).groupBy(<span class="hljs-string">&apos;color-white&apos;</span>).get(<span class="hljs-string">&apos;track&apos;</span>)
+</code></pre>
+</li>
+<li>Declare a object or resource on DB.<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;camera&apos;</span>).create({ app: netatmo, hook: <span class="hljs-string">&apos;/103.23.65.84&apos;</span>})
+</code></pre>
+</li>
+<li>Delete it from DB.<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;lights&apos;</span>).delete()
 </code></pre>
 </li>
 </ul>
 <p>Index:</p>
 <ul>
-<li><a href="#at">.at()</a></li>
+<li><p>Manage DB</p>
+<ul>
 <li><a href="#create">.create()</a></li>
+<li><a href="#updateDB">.updateDB()</a></li>
+<li><a href="#changeAlias">.changeAlias()</a></li>
+<li><a href="#changeLocation">.changeLocation()</a></li>
+<li><a href="#groupDevices">.groupDevices()</a></li>
 <li><a href="#delete">.delete()</a></li>
 <li><a href="#deleteById">.deleteById()</a></li>
-<li><a href="#discoverDevices">.discoverDevices()</a></li>
-<li><a href="#find">.find()</a></li>
+<li><a href="#deleteByAlias">.deleteByAlias()</a></li>
+</ul>
+</li>
+<li><p>Read information from the resources</p>
+<ul>
 <li><a href="#get">.get()</a></li>
 <li><a href="#getById">.getById()</a></li>
-<li><a href="#groupBy">.groupBy()</a></li>
-<li><a href="#groupDevices">.groupDevices()</a></li>
+<li><a href="#getByAlias">.getByAlias()</a></li>
+</ul>
+</li>
+<li><p>Change resources status</p>
+<ul>
 <li><a href="#set">.set()</a></li>
 <li><a href="#setById">.setById()</a></li>
+<li><a href="#setByAlias">.setByAlias()</a></li>
 </ul>
-<p><a name="at"></a></p>
-<h4 id="netbeasttopicatlocationmethod">netbeast(<code>topic</code>).at(<code>location</code>).METHOD</h4>
-<p>This method allows us to select a group of devices form a specific location. It can&#xB4;t be used alone and should be follow by other method.</p>
-<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;lights&apos;</span>).at(<span class="hljs-string">&apos;bedroom&apos;</span>).get()
-.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
-.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
-</code></pre>
-<p>In this example, we get information about all the lights placed at the kitchen.</p>
+</li>
+<li><p>Selectors</p>
+<ul>
+<li><a href="#at">.at()</a></li>
+<li><a href="#alias">.alias()</a></li>
+<li><a href="#groupBy">.groupBy()</a></li>
+<li><a href="#topic">.topic()</a></li>
+</ul>
+</li>
+<li><p>Discovery</p>
+<ul>
+<li><a href="#set">.set()</a></li>
+<li><a href="#find">.find()</a></li>
+<li><a href="#discoveryDevices">.discoveryDevices()</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="manage-db">Manage DB</h2>
 <p><a name="create"></a></p>
 <h4 id="netbeasttopiccreateargs">netbeast(<code>topic</code>).create(<code>args</code>)</h4>
-<p>Create method is used to register a device on the resource on the database. Useful for <a href="../creating_a_plugin">creating plugins</a>. Argument should be a JSON object which contain the name of the app, and the hook to talk to the device.</p>
+<p>Create method is used to register a resource on the database. Useful for <a href="../creating_a_plugin">creating plugins</a>. Argument should be a JSON object which contain the name of the app, and the hook to talk to the device.</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> args = {app: <span class="hljs-string">&apos;flower-power&apos;</span>, hook: <span class="hljs-string">&apos;/temperature/10.162.63.114&apos;</span>}
 netbeast(<span class="hljs-string">&apos;temperature&apos;</span>).create(args)
 .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
 .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
 </code></pre>
+<p>The topic is always required on this method. You can pass the topic in the arguments also.</p>
+<p><a name="updateDB"></a></p>
+<h4 id="netbeasttopiccreateargs">netbeast(<code>topic</code>).create(<code>args</code>)</h4>
+<p>This method is used tu update the DB after a discover. Similar to create. Argument should be a JSON object which contain the name of the app, and all hooks of the devices found. This method
+will register on DB the new resources and delete the ones that are no longer available.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> args = {app: <span class="hljs-string">&apos;flower-power&apos;</span>, hook: [<span class="hljs-string">&apos;/temperature/10.162.63.114&apos;</span>, <span class="hljs-string">&apos;/temperature/10.162.63.100&apos;</span>, <span class="hljs-string">&apos;/luminosity/10.162.63.114&apos;</span>]}
+netbeast(<span class="hljs-string">&apos;temperature&apos;</span>).updateDB(args)
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
 <p>The topic is always required on this method.</p>
+<p><a name="changeAlias"></a></p>
+<h4 id="netbeastidchangealiasalias">netbeast(<code>id</code>).changeAlias(<code>alias</code>)</h4>
+<p>This method allows us provide or change the alias of a certain resource. You will need to know the resource id stored on DB.</p>
+<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;0cc1fdb1bcc40c86eba95b1f6a1724ab634691&apos;</span>).changeAlias(<span class="hljs-string">&apos;bed-light&apos;</span>)
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p><a name="changeLocation"></a></p>
+<h4 id="netbeastidchangelocationlocation">netbeast(<code>id</code>).changeLocation(<code>location</code>)</h4>
+<p>This method allows us provide or change the location of a certain resource. You will need to know the resource id stored on DB.</p>
+<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;0cc1fdb1bcc40c86eba95b1f6a1724ab634691&apos;</span>).changeLocation(<span class="hljs-string">&apos;bed-light&apos;</span>)
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p><a name="groupDevices"></a></p>
+<h4 id="netbeasttopicgroupdevicesname-ids">netbeast(<code>topic</code>).groupDevices(<code>name</code>, <code>ids</code>)</h4>
+<p>This functi&#xF3;n allows us to make group of devices. The argument <code>name</code> defines de group name. <code>Ids</code> will be an array of ids of the devices that should be grouped.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ids = [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>, <span class="hljs-number">7</span> }
+
+netbeast().groupDevices(<span class="hljs-string">&apos;roof&apos;</span>, ids)
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
 <p><a name="delete"></a></p>
 <h4 id="netbeasttopicdeleteargs">netbeast(<code>topic</code>).delete(<code>args</code>)</h4>
 <p>The delete method allow us to remove resources from the database. You can use an argument (args: json object) for this method that select an specific property of devices.</p>
@@ -577,24 +659,15 @@ netbeast(<span class="hljs-string">&apos;lights&apos;</span>).groupBy(<span clas
 .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
 </code></pre>
 <p>The topic is useless on this method.</p>
-<p><a name="discoveryDevices"></a></p>
-<h4 id="netbeastdiscoverdevicesappname">netbeast().discoverDevices(<code>app-name</code>)</h4>
-<p>This function allows us to activate the discovery process. With the <code>app-name</code> parameter you can specify a concrete app (like belkin-wemo, philips-hue). If you don&#xB4;t include this argument, the discovery will be apply to all available brands.</p>
-<pre><code class="lang-javascript">
-netbeast().discoveryDevices(<span class="hljs-string">&apos;sonos&apos;</span>)
+<p><a name="deleteByAlias"></a></p>
+<h4 id="netbeasttopicdeletebyaliasalias">netbeast(<code>topic</code>).deleteByAlias(<code>alias</code>)</h4>
+<p>The deleteByAlias method allows us to remove resources from the database. With the alias argument we select a specific device from the db.</p>
+<pre><code class="lang-javascript">netbeast().deleteByAlias(<span class="hljs-string">&apos;bed-light&apos;</span>)
 .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
 .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
 </code></pre>
-<p>It methods update the database and return an JSON object containing the found devices.</p>
-<p><a name="find"></a></p>
-<h4 id="netbeastfind">netbeast().find()</h4>
-<p>This function is useful to know where the Netbeast Dashboard is running. It returns the IP address and the port.</p>
-<pre><code class="lang-javascript">
-netbeast().find()
-.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{}) <span class="hljs-comment">// data = {adress: IP, port: PORT}</span>
-.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
-</code></pre>
-<p>It methods update the database and return an JSON object containing the found devices.</p>
+<p>The topic is useless on this method.</p>
+<h2 id="read-information-from-the-resources">Read information from the resources</h2>
 <p><a name="get"></a></p>
 <h4 id="netbeasttopicgetvalue">netbeast(<code>topic</code>).get(<code>value</code>)</h4>
 <p>The get method allows us to obtain information about the current state of the devices. You can obtain all the data about the state or specify a concrete value.</p>
@@ -623,23 +696,15 @@ netbeast(<span class="hljs-string">&apos;lights&apos;</span>).get(<span class="h
 .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
 </code></pre>
 <p>The topic is useless on this method.</p>
-<p><a name="groupBy"></a></p>
-<h4 id="netbeasttopicgroupbynamemethod">netbeast(<code>topic</code>).groupBy(<code>name</code>).METHOD</h4>
-<p>This method allows us to select devices form a specific group. It can&#xB4;t be used alone and should be follow by other method.</p>
-<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;lights&apos;</span>).groupBy(<span class="hljs-string">&apos;roof&apos;</span>).set({power: <span class="hljs-literal">true</span>})
+<p><a name="getByAlias"></a></p>
+<h4 id="netbeasttopicgetbyaliasalias">netbeast(<code>topic</code>).getByAlias(<code>alias</code>)</h4>
+<p>The getByAlias method allows us to get information about the current state of the devices. You will receive all the information of the specified device.</p>
+<pre><code class="lang-javascript">netbeast().getByAlias(<span class="hljs-string">&apos;bed-light&apos;</span>)
 .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
 .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
 </code></pre>
-<p>In this example, we switch all the lights of the group &#x2018;roof&#x2019; on.</p>
-<p><a name="groupDevices"></a></p>
-<h4 id="netbeasttopicgroupdevicesname-ids">netbeast(<code>topic</code>).groupDevices(<code>name</code>, <code>ids</code>)</h4>
-<p>This functi&#xF3;n allows us to make group of devices. The argument <code>name</code> defines de group name. <code>Ids</code> will be an array of ids of the devices that should be grouped.</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ids = [<span class="hljs-number">1</span>,<span class="hljs-number">3</span>, <span class="hljs-number">7</span> }
-
-netbeast().groupDevices(<span class="hljs-string">&apos;roof&apos;</span>, ids)
-.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
-.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
-</code></pre>
+<p>The topic is useless on this method.</p>
+<h2 id="change-resources-status">Change resources status</h2>
 <p><a name="set"></a></p>
 <h4 id="netbeasttopicsetargs">netbeast(<code>topic</code>).set(<code>args</code>)</h4>
 <p>The set method allows us to change the current state of the devices. You can modify different values at the same time.</p>
@@ -665,6 +730,73 @@ netbeast().setById(<span class="hljs-number">1</span>, args)
 .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
 </code></pre>
 <p>The topic is useless on this method.</p>
+<p><a name="setByAlias"></a></p>
+<h4 id="netbeasttopicsetbyaliasalias-args">netbeast(<code>topic</code>).setByAlias(<code>alias</code>, <code>args</code>)</h4>
+<p>The setByAlias method allows us to change the current state of the given device. You can modify different values of the specified device.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> args = { power: <span class="hljs-literal">true</span>, brightness: <span class="hljs-number">50</span> }
+
+netbeast().setByAlias(<span class="hljs-string">&apos;bed-light&apos;</span>, args)
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p>The topic is useless on this method.</p>
+<h2 id="selectors">Selectors</h2>
+<p><a name="at"></a></p>
+<h4 id="netbeasttopicatlocationmethod">netbeast(<code>topic</code>).at(<code>location</code>).METHOD</h4>
+<p>This method allows us to select a group of devices form a specific location. It can&#xB4;t be used alone and should be follow by other method.</p>
+<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;lights&apos;</span>).at(<span class="hljs-string">&apos;bedroom&apos;</span>).get()
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p>In this example, we get information about all the lights placed at the kitchen.</p>
+<p><a name="alias"></a></p>
+<h4 id="netbeasttopicaliasaliasmethod">netbeast(<code>topic</code>).alias(<code>alias</code>).METHOD</h4>
+<p>This method allows us to select a group of devices with a specific alias. It can&#xB4;t be used alone and should be follow by other method.</p>
+<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;lights&apos;</span>).alias(<span class="hljs-string">&apos;bed-light&apos;</span>).get()
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p>In this example, we get information about the light call bed-light.</p>
+<p><a name="groupBy"></a></p>
+<h4 id="netbeasttopicgroupbynamemethod">netbeast(<code>topic</code>).groupBy(<code>name</code>).METHOD</h4>
+<p>This method allows us to select devices form a specific group. It can&#xB4;t be used alone and should be follow by other method.</p>
+<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;lights&apos;</span>).groupBy(<span class="hljs-string">&apos;roof&apos;</span>).set({power: <span class="hljs-literal">true</span>})
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p>In this example, we switch all the lights of the group &#x2018;roof&#x2019; on.</p>
+<p><a name="topic"></a></p>
+<h4 id="netbeasttopictopicmethod">netbeast().topic(<code>topic</code>).METHOD</h4>
+<p>This method allows us to select a group of devices form a specific topic. It can&#xB4;t be used alone and should be follow by other method.</p>
+<pre><code class="lang-javascript">netbeast().topic(<span class="hljs-string">&apos;video&apos;</span>).get()
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p>In this example, we get information about all the cideo resources.</p>
+<h2 id="discovery">Discovery</h2>
+<p><a name="set"></a></p>
+<h4 id="netbeastset-address-ip-port-port-">netbeast().set({ address: <code>ip</code>, port: <code>port</code> })</h4>
+<p>If you are developing and testing and you know where is your Dashboard running. You can declare it directly with this auxiliar method.</p>
+<pre><code class="lang-javascript">
+netbeast().set({ adress: <span class="hljs-string">&apos;192.168.0.16&apos;</span>, port: <span class="hljs-number">8000</span> })
+</code></pre>
+<p><a name="find"></a></p>
+<h4 id="netbeastfind">netbeast().find()</h4>
+<p>This function is useful to know where the Netbeast Dashboard is running. It returns the IP address and the port and declare it on the process environment variables.</p>
+<pre><code class="lang-javascript">
+netbeast().find()
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{}) <span class="hljs-comment">// data = {adress: IP, port: PORT}</span>
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p><a name="discoveryDevices"></a></p>
+<h4 id="netbeastdiscoverdevicesappname">netbeast().discoverDevices(<code>app-name</code>)</h4>
+<p>This function allows us to activate the discovery process. With the <code>app-name</code> parameter you can specify a concrete app (like belkin-wemo, philips-hue). If you don&#xB4;t include this argument, the discovery will be apply to all available brands.</p>
+<pre><code class="lang-javascript">
+netbeast().discoveryDevices(<span class="hljs-string">&apos;sonos&apos;</span>)
+.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{})
+.catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{})
+</code></pre>
+<p>It methods update the database and return an JSON object containing the found devices.</p>
 
                     
                     </section>
@@ -687,7 +819,7 @@ netbeast().setById(<span class="hljs-number">1</span>, args)
 <script src="../../gitbook/app.js"></script>
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-scripts/1462973660487-analytics.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-scripts/1465210420510-analytics.js"></script>
     
 
     
@@ -712,7 +844,7 @@ netbeast().setById(<span class="hljs-number">1</span>, args)
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"advanced-emoji":{"embedEmojis":false},"scripts":{"files":["./analytics.js"]},"multipart":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    var config = {"advanced-emoji":{"embedEmojis":false},"scripts":{"files":["./analytics.js"]},"multipart":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
     gitbook.start(config);
 });
 </script>

@@ -8,7 +8,7 @@
         <title>Push notifications | Netbeast Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.5.2">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -58,7 +58,13 @@
     <body>
         
         
-    <div class="book" data-level="4.5" data-chapter-title="Push notifications" data-filepath="chapters/api_reference/push_notifications.md" data-basepath="../.." data-revision="Wed May 11 2016 15:34:20 GMT+0200 (CEST)">
+    <div class="book"
+        data-level="4.5"
+        data-chapter-title="Push notifications"
+        data-filepath="chapters/api_reference/push_notifications.md"
+        data-basepath="../.."
+        data-revision="Mon Jun 06 2016 12:58:21 GMT+0200 (CEST)"
+        data-innerlanguage="">
     
 
 <div class="book-summary">
@@ -206,10 +212,10 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="chapters/developing/plugins/write_a_virtual_plugin.html">
+        <li class="chapter " data-level="3.4" data-path="chapters/developing/plugins/virtual_plugins.html">
             
                 
-                    <a href="../../chapters/developing/plugins/write_a_virtual_plugin.html">
+                    <a href="../../chapters/developing/plugins/virtual_plugins.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -412,6 +418,21 @@
             
         </li>
     
+        <li class="chapter " data-level="5.3" data-path="chapters/compatibilities/third_party_dev_tools.html">
+            
+                
+                    <a href="../../chapters/compatibilities/third_party_dev_tools.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Third party dev tools
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -514,10 +535,10 @@
 
 <span class="hljs-comment">//  netbeast().info(body, title)</span>
 
-netbeast().info(<span class="hljs-string">&apos;Something happened!&apos;</span>)
-netbeast().error(<span class="hljs-string">&apos;Something crashed!&apos;</span>)
-netbeast().warning(<span class="hljs-string">&apos;Something may crash next time!&apos;</span>)
-netbeast().success(<span class="hljs-string">&apos;Voi-la&apos;</span>)
+netbeast.info(<span class="hljs-string">&apos;Something happened!&apos;</span>)
+netbeast.error(<span class="hljs-string">&apos;Something crashed!&apos;</span>)
+netbeast.warning(<span class="hljs-string">&apos;Something may crash next time!&apos;</span>)
+netbeast.success(<span class="hljs-string">&apos;Voi-la&apos;</span>)
 </code></pre>
 <h2 id="directly-through-mqtt">Directly through MQTT</h2>
 <p>Netbeast router uses MQTT for notifications and real time messaging. It is the preferred language for sensors and its exposed API is rather simple. If you are already using <a href="https://www.npmjs.com/package/mqtt" target="_blank">mqtt.js</a> you can send notifications without <a href="http://github.com/netbeast/api" target="_blank">Netbeast API module</a> easily.</p>
@@ -558,7 +579,7 @@ client.publish(<span class="hljs-string">&apos;netbeast/push&apos;</span>, <span
 <script src="../../gitbook/app.js"></script>
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-scripts/1462973660487-analytics.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-scripts/1465210420510-analytics.js"></script>
     
 
     
@@ -583,7 +604,7 @@ client.publish(<span class="hljs-string">&apos;netbeast/push&apos;</span>, <span
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"advanced-emoji":{"embedEmojis":false},"scripts":{"files":["./analytics.js"]},"multipart":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    var config = {"advanced-emoji":{"embedEmojis":false},"scripts":{"files":["./analytics.js"]},"multipart":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
     gitbook.start(config);
 });
 </script>

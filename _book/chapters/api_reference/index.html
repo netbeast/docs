@@ -8,7 +8,7 @@
         <title>Introduction | Netbeast Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.5.2">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -58,7 +58,13 @@
     <body>
         
         
-    <div class="book" data-level="4.1" data-chapter-title="Introduction" data-filepath="chapters/api_reference/index.md" data-basepath="../.." data-revision="Wed May 11 2016 15:34:20 GMT+0200 (CEST)">
+    <div class="book"
+        data-level="4.1"
+        data-chapter-title="Introduction"
+        data-filepath="chapters/api_reference/index.md"
+        data-basepath="../.."
+        data-revision="Mon Jun 06 2016 12:58:21 GMT+0200 (CEST)"
+        data-innerlanguage="">
     
 
 <div class="book-summary">
@@ -206,10 +212,10 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="chapters/developing/plugins/write_a_virtual_plugin.html">
+        <li class="chapter " data-level="3.4" data-path="chapters/developing/plugins/virtual_plugins.html">
             
                 
-                    <a href="../../chapters/developing/plugins/write_a_virtual_plugin.html">
+                    <a href="../../chapters/developing/plugins/virtual_plugins.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -412,6 +418,21 @@
             
         </li>
     
+        <li class="chapter " data-level="5.3" data-path="chapters/compatibilities/third_party_dev_tools.html">
+            
+                
+                    <a href="../../chapters/compatibilities/third_party_dev_tools.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Third party dev tools
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -512,7 +533,7 @@
 <p>Welcome to the Netbeast API Documentation!</p>
 <p>The main goal of this documentation is to explain how the Netbeast API works. All the information that you need to start building your Apps has been gathered here.</p>
 <div class="alert alert-danger">
-  Experimental, will probably change 
+  Experimental, will probably change
 </div>
 
 <h2 id="how-to-use-it">How to use it?</h2>
@@ -521,22 +542,25 @@
 </code></pre><p> Once the package is in the node_modules folder, you can require it from the code.</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> beast = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;netbeast&apos;</span>)
 
-beast(<span class="hljs-string">&apos;lights&apos;</span>).get()
+beast.find().then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  beast(<span class="hljs-string">&apos;lights&apos;</span>).get()
 
-beast(<span class="hljs-string">&apos;music&apos;</span>).at(<span class="hljs-string">&apos;living-room&apos;</span>).set({status: <span class="hljs-string">&apos;play&apos;</span>, volume: <span class="hljs-number">100</span>})
+  beast(<span class="hljs-string">&apos;music&apos;</span>).at(<span class="hljs-string">&apos;living-room&apos;</span>).set({status: <span class="hljs-string">&apos;play&apos;</span>, volume: <span class="hljs-number">100</span>})
 
-beast(<span class="hljs-string">&apos;video&apos;</span>).get(<span class="hljs-string">&apos;status&apos;</span>)
+  beast(<span class="hljs-string">&apos;video&apos;</span>).get(<span class="hljs-string">&apos;status&apos;</span>)  
+})
 </code></pre>
 <p>Control your smart devices with Netbeast is as simple as that. Lets go deeper! <img align="absmiddle" alt=":rocket:" class="emoji" src="../../gitbook/gitbook-plugin-advanced-emoji/emojis/rocket.png" title=":rocket:"></p>
 <h1 id="important">IMPORTANT</h1>
 <p>If you are using the Netbeast API out of our dashboard you will need to declare
 in which IP:PORT is the dashboard running.</p>
-<p>So, before requiring the npm module you should include a line like this:</p>
-<pre><code class="lang-javascript">process.env.NETBEAST = <span class="hljs-string">&apos;10.0.0.1:80&apos;</span>
-
-<span class="hljs-comment">// or if it&#xB4;s on the same machine</span>
-
-process.env.NETBEAST = <span class="hljs-string">&apos;localhost:8000&apos;</span>
+<p>So, you can do it automatically with:</p>
+<pre><code class="lang-javascript">
+netbeast.find()
+</code></pre>
+<p>or manually.</p>
+<pre><code class="lang-javascript">
+netbeast.set({ address: localhost, port: <span class="hljs-number">8000</span> })
 </code></pre>
 
                     
@@ -560,7 +584,7 @@ process.env.NETBEAST = <span class="hljs-string">&apos;localhost:8000&apos;</spa
 <script src="../../gitbook/app.js"></script>
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-scripts/1462973660487-analytics.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-scripts/1465210420510-analytics.js"></script>
     
 
     
@@ -585,7 +609,7 @@ process.env.NETBEAST = <span class="hljs-string">&apos;localhost:8000&apos;</spa
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"advanced-emoji":{"embedEmojis":false},"scripts":{"files":["./analytics.js"]},"multipart":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    var config = {"advanced-emoji":{"embedEmojis":false},"scripts":{"files":["./analytics.js"]},"multipart":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
     gitbook.start(config);
 });
 </script>

@@ -8,7 +8,7 @@
         <title>Events | Netbeast Documentation</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.5.2">
+        <meta name="generator" content="GitBook 2.6.7">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -58,7 +58,13 @@
     <body>
         
         
-    <div class="book" data-level="4.6" data-chapter-title="Events" data-filepath="chapters/api_reference/chain_events.md" data-basepath="../.." data-revision="Wed May 11 2016 15:34:20 GMT+0200 (CEST)">
+    <div class="book"
+        data-level="4.6"
+        data-chapter-title="Events"
+        data-filepath="chapters/api_reference/chain_events.md"
+        data-basepath="../.."
+        data-revision="Mon Jun 06 2016 12:58:21 GMT+0200 (CEST)"
+        data-innerlanguage="">
     
 
 <div class="book-summary">
@@ -206,10 +212,10 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="chapters/developing/plugins/write_a_virtual_plugin.html">
+        <li class="chapter " data-level="3.4" data-path="chapters/developing/plugins/virtual_plugins.html">
             
                 
-                    <a href="../../chapters/developing/plugins/write_a_virtual_plugin.html">
+                    <a href="../../chapters/developing/plugins/virtual_plugins.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -412,6 +418,21 @@
             
         </li>
     
+        <li class="chapter " data-level="5.3" data-path="chapters/compatibilities/third_party_dev_tools.html">
+            
+                
+                    <a href="../../chapters/compatibilities/third_party_dev_tools.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Third party dev tools
+                    </a>
+            
+            
+        </li>
+    
 
             </ul>
             
@@ -512,13 +533,16 @@
 <p>With Netbeast API you can subscribe to a specific topic. Using this method you will
 be notified when any device publish data about the given topic.</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> netbeast = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;netbeast&apos;</span>)
-netbeast(<span class="hljs-string">&apos;temperature&apos;</span>).on(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message</span>) </span>{
+netbeast.on(<span class="hljs-string">&apos;temperature&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, message</span>) </span>{
     <span class="hljs-comment">// this function is called everytime temperature</span>
     <span class="hljs-comment">// event happens</span>
     <span class="hljs-keyword">if</span> (message.temperature &gt; <span class="hljs-number">30</span>) {
         <span class="hljs-comment">// do something</span>
     }
 })
+</code></pre>
+<p>For publishing data on the MQTT channels can use this.</p>
+<pre><code class="lang-javascript">netbeast(<span class="hljs-string">&apos;humidity&apos;</span>).publish({ humidity: <span class="hljs-number">50</span> })
 </code></pre>
 <p>This is basically an usual subscription to a mqtt channel. If you feel more comfortable
 using mqtt directly, it will looks something like that.</p>
@@ -556,7 +580,7 @@ using mqtt directly, it will looks something like that.</p>
 <script src="../../gitbook/app.js"></script>
 
     
-    <script src="../../gitbook/plugins/gitbook-plugin-scripts/1462973660487-analytics.js"></script>
+    <script src="../../gitbook/plugins/gitbook-plugin-scripts/1465210420510-analytics.js"></script>
     
 
     
@@ -581,7 +605,7 @@ using mqtt directly, it will looks something like that.</p>
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"advanced-emoji":{"embedEmojis":false},"scripts":{"files":["./analytics.js"]},"multipart":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    var config = {"advanced-emoji":{"embedEmojis":false},"scripts":{"files":["./analytics.js"]},"multipart":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
     gitbook.start(config);
 });
 </script>

@@ -24,6 +24,7 @@
 * Compatibilities
    * [Smart devices supported](chapters/compatibilities/supported_devices.md)
    * [Currently running on](chapters/compatibilities/currently_running_on.md)
+   * [Third party dev tools](chapters/compatibilities/third_party_dev_tools.md)
 * Contributing
    * [How to contribute](chapters/contributing/README.md)
    * [Write new documentation](chapters/write_new_documentation/README.md)
