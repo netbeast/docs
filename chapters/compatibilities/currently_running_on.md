@@ -55,22 +55,6 @@ Now access to the docker container url
 
 >http://IP_assigned:49160
 
-## Netbeast as Desktop App
-
-Netbeast has been adapted to be compiled as desktop application with electron. 
-You can see the project repository [here](https://github.com/netbeast/dashboard/tree/electron)
-
-There you will find all the necessary information and steps to compile the code according to you operative system.
-
-- Don't forget to install github to have the best user experience.
-
-
-It has been tested and compiled on: 
-
-- Linux: 32 & 64 bits
-- Mac OSX
-- Windows: 32&64 bits
-
 ## Netbeast on Open-WRT
 
 We have compiled Netbeast for Open-WRT. The only thing you need to do is compile Nodejs on it, see [this](https://netbeast.co/blog/how-to-cross-compile-nodejs-for-openwrt) and install Netbeast in any of this ways.
