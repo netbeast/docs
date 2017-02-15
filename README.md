@@ -1,10 +1,16 @@
 # About Netbeast
 
-This documentation will show you all there is to know about Internet of Things development with Netbeast. For basic info on what Netbeast is about, please see [the main project website](https://netbeast.co).
+This documentation will show you all there is to know about Internet of Things development with Netbeast. For basic info on what Netbeast is about, please see [the main project github repository](https://github.com/netbeast).
 
 Anxious to start right away?
 
 [Get Started](chapters/getting_started/installing_and_cloning.md)
+
+<a href="https://getyeti.co" rel="some text">![works-with-yeti](/img/works-with-yeti.png)</a>
+
+Netbeast is developing the mobile application based on this open source project. If you want to get the mobile app go to the main website [here](https://getyeti.co)
+
+The app is available on the [AppStore](http://m.onelink.me/4e70ec81) for iOS and also on the [PlayStore](http://m.onelink.me/444eef11) for Android devices
 
 ## What is Netbeast?
 
@@ -34,7 +40,7 @@ var beast = require('netbeast')
 ```
 Here, the application is using:
 
-[The Netbeast API](http://docs.netbeast.co/chapters/api_reference/index.html) to tell a light, any light, to turn on and with a lime green color. 
+[The Netbeast API](http://docs.netbeast.co/chapters/api_reference/index.html) to tell a light, any light, to turn on and with a lime green color.
 
 [The Netbeast Dashboard](chapters/getting_started/dashboard.md) is running on the device where this application is running. This allow to translate messages from any kind of devices.
 
@@ -61,11 +67,3 @@ This documentation is broken down into four parts:
 * Developing teaches you all there is to know about creating applications and plugins for connected products.
 * API reference is the place to go to learn everything about the Netbeast API and its methods.
 * Contributing provides all the guidelines necessary to submit your code and help improve Netbeast.
-
-
-
-
-
-
-
-
